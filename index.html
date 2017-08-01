@@ -1,67 +1,10 @@
-<!DOCTYPE HTML>
-<html lang "en">
-    <head>
+
+<div id='react-container'> </div> 
+ <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
          <link rel="stylesheet" href="style.css" type="text/css" media="all">
-        <script src="script.js" ></script>
         <title> ATAR CALCULATOR </title>
     </head>
-<!---BODY-->
-    <body>
-        <header> 
-            <h1> ATAR CALCULATOR</h1>
-            <h3> Something about ATAR calc</h3>
-        </header>
-        
-        <main>
-          <!-- contains all the subjects -->
-            <section class="atarContainer">
-              <div class="titleContainer">
-                        <h3 class="markTitle"> Units </h3>
-                        <h3 class="markTitle"> Raw Mark </h3>
-                        <h3 class="markTitle"> HSC Mark </h3>
-                        <h3 class="markTitle"> Scaled Mark </h3>
-              </div>
-            
-            <div class="subjectContainer">
-                    <div class="selectContainer">
-                        <select id="english">
-                            <option value="std"> Standard English</option>
-                            <option value="Adv"> Advanced English</option>
-                            <option value="ESL"> ESL </option>
-                        </select>
-                    </div> <!--end select container-->
-
-                     <div class="marksContainer">
-                        <input type="number" id="unitsMark" step="0.5">
-                        <input type="number" id="rawMark">
-                        <input type="number" id="hscMark">
-                        <input type="number" id="scaledMark"> 
-                    </div> <!--end marks container-->
-              </div> <!--end subject container-->
-           <div class="btnWrapper">
-                 <button class="addSubject" type="button"> + </button>
-           </div>    
-      
-         </section>
-            <!-- ATAR WILL BE DISPLAYED HERE-->
-            <section class="atarGenerator">
-                <div class="btnWrapper">
-                 <button class="btn_atar" type="button"> Calculate </button>
-                </div>
-                <div>
-                <h2> Estimated ATAR </h2>
-                <h1 class="atarEstimate"> 99.95 </h1>
-            </section>
-        
-        </main>
-        
-        <footer class="contact">
-            <p> Contact us </p>
-        </footer>
-    
-    </body>
-
-</html>
+<script type="text/javascript" src="assets/bundle.js"></script>
