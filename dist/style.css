@@ -38,8 +38,6 @@ body {
  display: block;
  text-align: center;
  width: 900px;
- border-style: solid;
- border-color: black;
  margin:auto; /*center align*/
 }
 .titleContainer{

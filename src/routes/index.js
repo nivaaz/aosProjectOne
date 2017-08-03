@@ -15,7 +15,7 @@ const createRoutes = ( ) => {
                 component ={Quiz} 
             />
             <Route 
-                path ={'/ATAR'} 
+                path ={'/atar'} 
                 component ={ATAR}
                  />
             <Route 

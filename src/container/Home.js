@@ -5,8 +5,8 @@ class Home extends Component {
          return (
            <div>
             <header className= "headerContainer"> 
-                <h1> ATAR CALCULATOR</h1>
-                <h3> Something about ATAR calc</h3>
+                <h1 > ATAR CALCULATOR</h1>
+                <h3 > Something about ATAR calc</h3>
             </header>
                 <div className = "reactContainer">
                     {this.props.children}
