@@ -7,21 +7,26 @@ html {
 }
 /*NAV BAR*/
 nav {
-   margin:auto;
+    margin:auto;
+    text-align: center;
     background : whitesmoke;
     padding :15px;
 }
 .navBarTitle{
-   margin-left:25px;
-   margin-right: 25px;
+   margin-left:5%;
+   margin-right: 5%;
    text-align: center;
-   font-style: bold;
+   font-size: 18pt;x
 }
 /*Header*/
 header{
     margin: auto;
     text-align: center;
 }
+.headerContainer h1, h2, h3{
+color: green;    
+}
+
 /*BODY*/
 body {
     color: black;
@@ -33,6 +38,8 @@ body {
  display: block;
  text-align: center;
  width: 900px;
+ border-style: solid;
+ border-color: black;
  margin:auto; /*center align*/
 }
 .titleContainer{
@@ -48,6 +55,7 @@ body {
     width: 50px;
 }
 .atarEstimate{
+    text-align: center;
     display: inline-block;
     padding:20px;
     color: #52b760;
@@ -101,9 +109,46 @@ select {
     width: 50px;
     padding-left: 50px;
 }
+/*Questions*/
+.QuestionBox {
+    padding-top:20%;
+    padding-bottom: 20%;
+    text-align: center;
+    margin: auto;
+    background: linear-gradient(-45deg, #27ae60, #52b760);
+}
+h1{
+     text-align: center;
+    margin: auto;
+    margin-top:50px;
+    margin-bottom: 50px;
+    font-size: 40pt;
+    color:white;
+}
 /*BUTTON*/
 .btnWrapper{
     text-align: center;
+}
+#buttonNo{
+    border-color: #f1c40f;
+    color:#f1c40f;
+    width: 350px;
+    border-radius: 20px;
+    background: white;    
+}
+#buttonYes {
+    border-color:#52b760;
+    color:#27ae60;
+    width: 350px;
+    border-radius: 20px;
+    background: white;
+}
+#buttonMaybe{
+    border-color: #3498db;
+    color:#3498db;
+    width: 350px;
+    border-radius: 20px;
+    background: white;
 }
 .btn_atar, .addSubject {
     display: inline-block;

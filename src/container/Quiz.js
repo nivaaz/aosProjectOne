@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 class Quiz extends Component {
+
      render (){
          return (
             <div>
@@ -9,13 +10,13 @@ class Quiz extends Component {
                 <a className = "navBarTitle">Reverse ATAR Calculator</a> 
                 <a className = "navBarTitle">Art of Smart</a>   
              </nav>
-               <h1>  Goal Setting for HSC Students </h1>
-             <div > 
-                    <h1 > Question 1</h1>
+               <h1 >  Goal Setting for HSC Students </h1>
+             <div className = "QuestionBox"> 
+                    <h1 >Do you have an ATAR goal?</h1>
                     <div className = "btnWrapper">
-                        <button className = "btn_atar buttonYes">Option 1</button>
-                        <button className = "btn_atar buttonMaybe">Option 2</button>
-                        <button className = "btn_atar buttonNo">Option 3</button>
+                        <button  id = "buttonNo" className = "addSubject">I do not know my goal.</button>
+                        <button id = "buttonYes" className = "addSubject">I know my goal!</button>
+                        <button id = "buttonMaybe" className = "addSubject">What is an ATAR?</button>
                     </div>
              </div>
              </div>

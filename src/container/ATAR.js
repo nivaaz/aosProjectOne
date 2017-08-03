@@ -1,6 +1,14 @@
 import React, {Component} from 'react'
-
+import data from '../../Data/scaling.json'
 class ATAR extends Component {
+    constructor() {
+        super()
+        this.state = {
+                
+        }
+    }
+
+
      render ( ){
          return (
            <div>
