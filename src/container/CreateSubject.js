@@ -3,8 +3,8 @@ import React, {Component} from 'react'
 export class CreateSubject extends Component {
     constructor(props){
         super(props);
-        this.state {
-            error : null
+        this.state = {
+            error: null
         };
     }
     //this is dependant on the state 
