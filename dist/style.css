@@ -5,201 +5,148 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-/*NAV BAR*/
-nav {
-    margin:auto;
-    text-align: center;
-    background : whitesmoke;
-    padding :15px;
-}
-.navBarTitle{
-   margin-left:5%;
-   margin-right: 5%;
-   text-align: center;
-   font-size: 18px;
-}
 /*Header*/
 header{
     margin: auto;
     text-align: center;
 }
-.headerContainer h1, h2, h3{
-color: #2c3e50;    
-}
-.headerContainer{
-background: linear-gradient(-45deg, white, whitesmoke);
-padding:4%;
-}
 
-/*BODY*/
+/**PARTITION**/
 body {
-    color: #2c3e50;
-    font-family: 'Lato', sans-serif;
-    margin: 0;
+    background: linear-gradient( -45deg,white, whitesmoke);
 }
-/*ATAR CONTAINER*/
-.atarContainer{
- display: block;
- text-align: center;
- width: 100%;
- height: 100%;
-background: linear-gradient(-45deg, white, whitesmoke);
- margin:auto; /*center align*/
+h1, h2, h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.titleContainer{
-    text-align: left;
-    display: block;
-    width:440px;
-    margin-left:47%;
-    color: #2c3e50;
+header{
+    padding: 50px;
+    background: linear-gradient(-45deg, #52b760, #3da24b);
 }
-.markTitle{
+header .title {
+    color: white;
+}
+.partContainer{
+    text-align: center;
+    margin:auto;
+    height: 100%;
+    padding-top:50px;
+
+}
+.partition {
+    vertical-align: middle;
+    margin:auto;
+    width: 45%;
+    height: 100%;
+    border-radius: 5%;
     display: inline-block;
     text-align: center;
-    margin-left:57px;
-    width: 50px;
 }
-.atarEstimate{
-    text-align: center;
+#left {
     display: inline-block;
-    padding:20px;
-    color: #52b760;
-    font-size: 50px;
-    border-color: #2c3e50;
-    border-style: solid;
-    border-radius: 10px;
-    margin: 20px;
 }
-.atarGenerator{
-    display: block;
-    text-align: center;
-}
-.addedSubjects {
-    color: #27ae60;
-    font-size: 35px;
-}
-#addedMark {
+#right {
     display: inline-block;
-    margin: 2px;
-    width: 9%;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-    color: #34495e;
 }
-#subName {
-    color: #2c3e50;
-    font-size: 35px;
+.add {
+    margin:10px;
+    background: skyblue;
+    color:white;
+    font-size:48px;
+    border-radius: 100%;
 }
-#addedMarkCont{
-    color: #34495e;
-}
-/*SUBJECT*/
-.subjectContainer {
-    padding: 0px;
-    position: relative;
-    align-self: center;
-}
-.selectContainer{
-  /*border-style: dashed;   
-    border-color: magenta; */
-    display: inline-block;
+.addedSubject {
+    background : #52b760;
+    color : white;
+    margin:5px;
+    font-size: 200%;
+    padding: 5px;
+    border-radius: 20px;
+    width: 50%;
+    display:inline-block;
 }
 select {
+    padding: 1%;
     padding-left: 15px;
-    height: 50px;
-    width: 300px;
     border:hidden;
-    border-radius: 15px;
+    border-radius: 20px;
     color: white;
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    background-color: rgb(53, 183, 41);
+    font-size: 200%;
+    background-color: #52b760;
 }
-/*input boxes*/
-.marksContainer{
-    /*border-style: dashed;   
-    border-color: magenta;*/
-    display: inline-block;  
+input {
+    padding: 1%;
+    width: 20%;
+    padding-left: 15px;
+    border:hidden;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 200%;
+    background-color: #52b760;
+   }
+
+button {
+    margin: 25px;
+    border:hidden;
+    border-radius: 100%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 150%;
+    background: #99e265;
 }
-#rawMark, #hscMark, #scaledMark, #unitsMark {
-    margin-left: 55px;
-    display: inline-block;
-    color: #2c3e50;
-    background: rgba(53, 183, 41, 1);
-    border: hidden;
-    border-radius: 10px;
-    height: 50px;
-    width: 50px;
-    padding-left: 50px;
-}
-/*Questions*/
-.QuestionBox {
-    padding-top:20%;
-    padding-bottom: 20%;
-    text-align: center;
-    margin: auto;
-    background: linear-gradient(-45deg, #27ae60, #52b760);
-}
-h1{
-     text-align: center;
-    margin: auto;
-    margin-top:50px;
-    margin-bottom: 50px;
-    font-size: 40pt;
+.remove {
+  background:#FF6666;
+    border-radius: 100%;
     color:white;
+    font-size:24px;
+    padding:5px;
 }
-/*BUTTON*/
-.btnWrapper{
-    text-align: center;
+.estimate {
+    background: linear-gradient( #FF6644, #FF6666);
+    padding: 15px;
+    border-radius: 15px;
 }
-#buttonNo{
-    border-color: #f1c40f;
-    color:#f1c40f;
-    width: 350px;
-    border-radius: 20px;
-    background: white;    
+.add {
+    background: #3da24b;
+    vertical-align: middle;
 }
-#buttonYes {
-    border-color:#52b760;
-    color:#27ae60;
-    width: 350px;
-    border-radius: 20px;
-    background: white;
-}
-#buttonMaybe{
-    border-color: #3498db;
-    color:#3498db;
-    width: 350px;
-    border-radius: 20px;
-    background: white;
-}
-.btn_atar, .addSubject {
+.ATAR {
     display: inline-block;
-    height: 60px; 
-    font-family: 'Lato', sans-serif;
-    font-size: 30px;
-    background: #52b760;
-    color: white;
-    border: hidden;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 50px;
+    padding:1%;
 }
-.addSubject {
-border-radius: 100%;
- height: 60px; 
- width: 60px;
-color: #52b760;
-border-color: #52b760;
-border-style: solid;
-background: white;
+.ATAR h1 {
+    color: black;
+    font-size: 300%;
+}
+.ATAR #estimated {
+       border-style: solid;
+    border-color: #52b760;    
+    border-radius: 50px;
+}
+
+.ad {
+    border-style: solid;
+    border-color: #52b760;
+    color: darkslategrey;
+    border-radius: 50px;
+    margin: 5%;
+}
+.information {
+    margin:auto;
+    color: #ecf0f1;
+}
+.title {
+    display:block;
+    font-size: 200%;
 }
 
 /*FOOTER*/
 footer{
-    background: rgb(250,250,250);
-    color: grey;
+    height: 100%;   ;
+    padding: 20px;
+    background: linear-gradient( 42deg,white, whitesmoke);
+    color:  #95a5a6;
+    vertical-align: middle;
     text-align: center;
 }

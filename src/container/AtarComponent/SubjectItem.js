@@ -4,7 +4,6 @@ export class SubjectItem extends Component {
     //usually set state in the topmost component?
     constructor(props ){
         super (props);
-
             this.state = {
                     isEditing : false
             };
@@ -13,48 +12,55 @@ export class SubjectItem extends Component {
             const { name, isCompleted } = this.props;
             
             const subjectStyle = {
-                color : isCompleted ? 'green' : 'red',
+                color: isCompleted ? 'green' : 'darkgreen',
                 cursor: 'pointer'
             }
+
             if (this.state.isEditing){
                 return (
-                        <td>
+                        <div>
                         <form onSubmit={this.onSaveClick.bind(this)}>
-                            <input type="text" defaultValue={name} ref="editInput"  />
+                            <select type="text" defaultValue={name} ref="editInput">
+                                <option > Standard English</option>
+                                <option > Advanced English</option>
+                                <option > ESL </option>
+                         </select>
                             </form>
-                        </td>
+                        </div>
                 );
             }
             return (
-                <td style = {subjectStyle}
-                        onClick = {this.props.toggleSubject.bind(this, name)}>
-                 {name}
-                 </td> 
+                    <h1 className = "addedSubject" style = {subjectStyle}
+                            onClick = {this.props.toggleSubject.bind(this, name)}>
+                    {name}
+                 </h1> 
             );
         }
         renderActionSection(){
         if (this.state.isEditing){
                 return (
-                 <td> 
-                    <button onClick={this.onSaveClick.bind(this)} > Save </button>
-                    <button onClick = {this.onCancelClick.bind(this)}> Cancel </button>
-                </td>
+                 <div > 
+                     <i className = "addSubject" onClick={this.onSaveClick.bind(this)} className="material-icons">done</i>
+                    <button className = "addSubject" onClick = {this.onCancelClick.bind(this)}> Cancel </button>
+                </div>
                 );
             }
 
             return (
-                 <td> 
-                    <button onClick={this.onEditClick.bind(this)}> Edit </button>
-                    <button onClick={this.props.deleteSubject.bind(this, this.props.name)}> Delete </button>
-                </td>
+                 <div> 
+                    <i  className = "addSubject" onClick={this.onEditClick.bind(this)}
+                     className="material-icons">mode_edit</i>
+                    <i className = "addSubject" onClick={this.props.deleteSubject.bind(this, this.props.name)}
+                     className="material-icons remove">clear</i>
+                </div>
             );
         }
      render ( ){
          return (
-            <tr>
+            <div>
                 {this.renderSubjectSection()}
                 {this.renderActionSection()}
-                </tr>
+            </div>
         )
      }
     onEditClick (){

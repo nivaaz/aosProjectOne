@@ -3,12 +3,10 @@
 export class SubjectListHeader extends Component {
      render ( ){
          return (
-           <thead>
-                <tr>
-                <th> Subject </th>
-                <th> Actions </th>
-                </tr>
-            </thead>
+           <div className = "title">
+                <h1> Subject </h1>
+                <h1> Actions </h1>
+            </div>
          );
      }
 }

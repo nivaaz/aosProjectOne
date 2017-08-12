@@ -17,12 +17,10 @@ export class SubjectList extends Component {
     render ( ){
      
          return (
-           <table>
-               <SubjectListHeader/>
-                <tbody>
+           <div className = "subjectsAddedContainer">
+               <SubjectListHeader />
                 {this.renderSubjects()}
-                </tbody>
-          </table>
+          </div>
          );
      }
 }

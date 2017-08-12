@@ -19,9 +19,15 @@ export class CreateSubject extends Component {
     render ( ){
          return (
             <form onSubmit={this.handleCreate.bind(this)} >
-            <input type ="text" placeholder="Add a subject" 
-                                ref="createInput"  />
-            <button> Add </button>
+            <select  type ="text" defaultValue="Add a subject" 
+                                ref="createInput">
+                    <option > Standard English</option>
+                    <option > Advanced English</option>
+                    <option > ESL </option>
+            </select>
+            <div className = "buttonContainer">
+                <button> <i className="material-icons add"> add </i> </button>
+            </div>
             {this.renderError()}
             </form >
         );

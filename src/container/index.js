@@ -5,7 +5,7 @@ import {Router, browserHistory} from 'react-router'
 import Routes from '../routes/index' //links to ./routes/index.js
 
 import Quiz from '../container/Quiz'
-import ATAR from '../container/ATAR'
+import ATAR from '../container/ATAR.js'
 import Reverse from '../container/Reverse' 
 import Home from '../container/Home' 
 

@@ -4,16 +4,20 @@ class Home extends Component {
      render ( ){
          return (
            <div>
-            <header className= "headerContainer"> 
-                <h1 > ATAR CALCULATOR</h1>
-                <h3 > Something about ATAR calc</h3>
+            <header> 
+                <h1 className = "title"> The Ultimate Goal Setting Tool</h1>
             </header>
+
                 <div className = "reactContainer">
                     {this.props.children}
                 </div>
-                <footer className="contact">
-                    <p> Contact us </p>
-                </footer>
+            
+            <footer >
+                <p> Contact us </p>
+                <p> info@artofsmart.com.au </p>
+                <p> Facebook </p>
+            </footer>
+            
             </div>
          )
      }
