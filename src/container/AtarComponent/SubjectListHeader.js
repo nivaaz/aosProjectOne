@@ -3,9 +3,8 @@
 export class SubjectListHeader extends Component {
      render ( ){
          return (
-           <div className = "title">
-                <h1> Subject </h1>
-                <h1> Actions </h1>
+           <div>
+                    <h2 className="title">Subjects Added</h2>
             </div>
          );
      }

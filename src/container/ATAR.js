@@ -1,23 +1,28 @@
 import React, {Component} from 'react'
 import SubjectsList from './AtarComponent/SubjectsList'
 import CreateSubject from './AtarComponent/CreateSubject'
-
 //import data from '../../Data/scaling.json'
 //some data to get started with
 const subjects = [
 {
-    name: "English", 
+    name: "Advanced English", 
     isCompleted : true
 },
 {
-    name: "Mathematics", 
-    isCompleted : false
+    name: "Ext 1 English", 
+    isCompleted : true
 },
 {
-    name: "Economics", 
+    name: "Physics", 
+    isCompleted : true
+},
+{
+    name: "Ext 1 Mathematics", 
     isCompleted : true
 }
 ];
+const stress = "https://www.artofsmart.com.au/categories/exam-and-study-skills/stress-management/";
+const resources = "https://www.artofsmart.com.au/hsc-resources/";
 export class ATAR extends Component {
     constructor(props){
         super(props);
@@ -29,25 +34,19 @@ export class ATAR extends Component {
      render ( ){
          return (
           <div>
-            <header> 
-                <h1 className = "title"> ATAR CALCULATOR</h1>
-                <h3  className = "information"> Check out Art of Smart's newest goal setting tool, the ATAR Calculator!</h3>
-                <h3  className = "information"> Print out your goal in the end  & stick it in your wall</h3>
-            </header>
-
             <div className = "partContainer">
-                <div className = "partition" id = "left">    
-                    <h1 className = "title"> Add a subject </h1>
-
+                <div className = "partition" id = "left">
                     <CreateSubject subjects = {this.state.subjects} createSubject = {this.createSubject.bind(this)}/>
-                    <input type="number" id="unitsMark" step="0.5"/>
-
-                    <div className = "buttonContainer">
-                        <i className="material-icons add">add</i>
-                    </div>
+                      <div className= "ad">
+                    <h3 > <a href={stress}>  Tips on dealing with school stress</a> </h3>
+                      </div>
+                      <div className= "ad">
+                    <h3 > <a href={resources}></a> How to achieve Band 6s</h3>
+                      </div>  
                 </div>
 
-                <div className = "partition" id = "right">
+                <div className = "partition" id ="right">
+                  
                     <SubjectsList 
                     subjects = {this.state.subjects}
                     createSubject={this.createSubject.bind(this)}
@@ -55,27 +54,8 @@ export class ATAR extends Component {
                     toggleSubject = {this.toggleSubject.bind(this)}
                     deleteSubject = {this.deleteSubject.bind(this)}
                     />
-                </div>
             </div>
-
-                 <div className= "info">
-                    <h2> You need to add 2 units </h2>
-                </div>
-                <div className = "buttonContainer">
-                    <button className = "estimate"> Estimate ATAR</button>
-                </div>
-            <div className = "ATAR">
-                <div> 
-                        <h1 className = "title"> Estimated ATAR: </h1>
-                        <h1 id = "estimated"> 85.95 </h1>
-                </div>
-                 <div>   
-                        <button className = "estimate"> What is an ATAR </button>
-                        <button className = "estimate"> More on goal setting </button> 
-                        <button className = "estimate"> <i className="material-icons">arrow_downward</i> </button>
-                </div>        
             </div>
-
         </div>    
         );
      }

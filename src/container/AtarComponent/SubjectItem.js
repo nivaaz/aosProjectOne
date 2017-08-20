@@ -10,46 +10,47 @@ export class SubjectItem extends Component {
     }
         renderSubjectSection (){
             const { name, isCompleted } = this.props;
-            
             const subjectStyle = {
-                color: isCompleted ? 'green' : 'darkgreen',
+                color: isCompleted ? '#52b76' : '#52b70',
                 cursor: 'pointer'
             }
 
             if (this.state.isEditing){
                 return (
-                        <div>
-                        <form onSubmit={this.onSaveClick.bind(this)}>
-                            <select type="text" defaultValue={name} ref="editInput">
-                                <option > Standard English</option>
-                                <option > Advanced English</option>
-                                <option > ESL </option>
-                         </select>
-                            </form>
-                        </div>
+                    <form onSubmit={this.onSaveClick.bind(this)}>
+                            <div className = "addSubject">
+                                <select type="text" defaultValue = {name} ref="editInput">
+                                    <option > Standard English</option>
+                                    <option > Advanced English</option>
+                                    <option > ESL </option>
+                                </select>
+                                <input type="number" id="unitsMark" step="0.5"/>
+                            </div>
+                    </form>
                 );
             }
             return (
-                    <h1 className = "addedSubject" style = {subjectStyle}
+                    <h3 className = "addedSubject" style = {subjectStyle}
                             onClick = {this.props.toggleSubject.bind(this, name)}>
-                    {name}
-                 </h1> 
+                            {name}
+                    </h3> 
             );
         }
         renderActionSection(){
         if (this.state.isEditing){
                 return (
-                 <div > 
-                     <i className = "addSubject" onClick={this.onSaveClick.bind(this)} className="material-icons">done</i>
-                    <button className = "addSubject" onClick = {this.onCancelClick.bind(this)}> Cancel </button>
+                 <div className ="editContainer"> 
+                     <i onClick={this.onSaveClick.bind(this)} 
+                        className="material-icons done">done</i>
+                    <button className = "addSubject" id="cancel"
+                     onClick = {this.onCancelClick.bind(this)}> Cancel </button>
                 </div>
                 );
             }
-
             return (
-                 <div> 
+                 <div className ="editContainer" > 
                     <i  className = "addSubject" onClick={this.onEditClick.bind(this)}
-                     className="material-icons">mode_edit</i>
+                     className="material-icons edit">mode_edit</i>
                     <i className = "addSubject" onClick={this.props.deleteSubject.bind(this, this.props.name)}
                      className="material-icons remove">clear</i>
                 </div>

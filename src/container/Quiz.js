@@ -4,19 +4,18 @@ class Quiz extends Component {
 
      render (){
          return (
-            <div>
-            <nav>
-                <a className = "navBarTitle">ATAR Calculator</a> 
-                <a className = "navBarTitle">Reverse ATAR Calculator</a> 
-                <a className = "navBarTitle">Art of Smart</a>   
-             </nav>
-               <h1 >  Goal Setting for HSC Students </h1>
-             <div className = "QuestionBox"> 
-                    <h1 >Do you have an ATAR goal?</h1>
-                    <div className = "btnWrapper">
-                        <button  id = "buttonNo" className = "addSubject">I do not know my goal.</button>
-                        <button id = "buttonYes" className = "addSubject">I know my goal!</button>
-                        <button id = "buttonMaybe" className = "addSubject">What is an ATAR?</button>
+            <div name ="quiz" className = "bodyCont">
+            <div className = "questionBox"> 
+                    <h1 className = "middle" >Do you have an ATAR goal?</h1>
+                    <div className = "btnWrapper middle">
+                        <button  id = "buttonNo" className = "addSubject">
+                            <a href = "/atar">I do not know my goal.</a></button>
+                        <button id = "buttonYes" className = "addSubject">
+                            <a href="/reverse">
+                            I know my goal!</a></button>
+                        <button id = "buttonMaybe" className = "addSubject">
+                            <a href="https://www.artofsmart.com.au/deconstructing-the-atar-how-to-understand-the-hsc-atars-and-uac/">
+                                What is an ATAR? </a></button>
                     </div>
              </div>
              </div>

@@ -6,8 +6,7 @@
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server"
   },
-  "author": "Eve Porcello",
-  "license": "MIT",
+  "author": "nks",
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
     "babel-cli": "^6.18.0",
