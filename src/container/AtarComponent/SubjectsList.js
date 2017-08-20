@@ -3,7 +3,6 @@
 import SubjectItem from './SubjectItem.js'
 import AtarEstimate from '../AtarComponent/AtarEstimate.js'
  import _ from 'lodash'
-
  /* This class is for the LHS selection of a subject &  mark */
 export class SubjectList extends Component {  
     constructor(props){

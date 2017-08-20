@@ -60,7 +60,6 @@ export class ATAR extends Component {
         );
      }
      // the bind makes sure the state is bound to this comp only
-
         toggleSubject (addedSub){
             const foundSubject = _.find(this.state.subjects, subject => subject.name === addedSub);
             foundSubject.isCompleted = !foundSubject.isCompleted;

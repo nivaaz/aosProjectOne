@@ -28,12 +28,10 @@ export class CreateSubject extends Component {
                          <option > ESL </option>
                     </select>
                 </div>
-
                 <div className = "markR" id="right">
                     <h2 className="title">Add mark </h2>
                     <input id="markInput" defaultValue='75' type="number" ref="rawMark" step="0.5"/>
-                </div>
-                
+                </div>           
                 <div className = "buttonContainer">
                             <button className = "addButton" ><i className="material-icons"> add </i></button>
                             {this.renderError()} 
@@ -51,7 +49,6 @@ export class CreateSubject extends Component {
         const name = createInput.value;
         //run validatee function
         const validateInput = this.validateInput(name);
-        
         //if function returns true
         if(validateInput){
             //gets set as the error
