@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
+import subData from '../../../Data/subDat.json'
 /* This class is for the LHS selection of a subject &  mark */
+
 export class CreateSubject extends Component {
     constructor(props){
         super(props);
@@ -17,34 +19,38 @@ export class CreateSubject extends Component {
         );
     }
     render ( ){
+        const renderOptions = subData.subName.map((Name, index) =>
+        <option key = {index}> {Name.name}   </option>
+        );
          return (
             <form onSubmit={this.handleCreate.bind(this)} >
                <div className = "markL" id="left">
                 <h2 className="subtitle">Add subject </h2>
-                   <select  type ="text" defaultValue="Standard English" 
-                                 ref="createInput">
-                         <option > Standard English</option>
-                         <option > Advanced English</option>
-                         <option > ESL </option>
-                    </select>
+                <select  type ="text" defaultValue="Standard English" 
+                ref="createInput"   >
+                    { renderOptions }
+              </select>
+                  
                 </div>
                 <div className = "markR" id="right">
                     <h2 className="title">Add mark </h2>
                     <input id="markInput" defaultValue='75' type="number" ref="rawMark" step="0.5"/>
                 </div>           
                 <div className = "buttonContainer">
-                            <button className = "addButton" ><i className="material-icons"> add </i></button>
-                            {this.renderError()} 
+                            <button className = "addButton" ><i className="material-icons"> add </i></button> 
+                            <h1> {this.state.error} </h1>
                 </div>
         </form>
         );
+
+        
      }
 
      handleCreate(e){
         e.preventDefault(); //onsubmit default to refreshing page
                                     //this gets rid of this
-        
         this.setState({error: null});   //inital set state
+        console.log("target value " + e.target.value);
         const createInput = this.refs.createInput;
         const name = createInput.value;
         //run validatee function

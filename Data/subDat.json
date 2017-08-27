@@ -1,0 +1,18 @@
+
+{    
+    "subName" : [
+         { 
+            "name": "English",
+            "mark": 94
+        },
+        {  "name": "Maths",
+            "mark": 84
+        },
+        {  "name": "Sciene",
+            "mark": 44
+        },
+        {  "name": "Language",
+            "mark": 33
+        }
+    ]
+}

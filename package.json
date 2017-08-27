@@ -4,7 +4,8 @@
   "description": "A project focusing on React and related tools",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server"
+    "start": "./node_modules/.bin/webpack-dev-server",
+    "postinstall": "npm install && npm start"
   },
   "author": "nks",
   "devDependencies": {

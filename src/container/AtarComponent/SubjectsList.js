@@ -11,11 +11,7 @@ export class SubjectList extends Component {
             units: 0
         };
     }
-    renderSubjects (){
-        this.setState({
-            units: 2*(this.props.subjects.length)
-          });
-            
+    renderSubjects (){            
         const props = _.omit(this.props, 'subjects');
             //this will iterate through our subs & apply a function
             //returns a subject in html
@@ -42,11 +38,7 @@ export class SubjectList extends Component {
             </div>
             );           
         }
-    else{
-        this.setState({units:10});
-        return null;       
-    }       
-    } 
+    }
     calcATAR (){
         if (this.props.units >= 10){
             return 
