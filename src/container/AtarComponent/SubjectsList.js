@@ -12,21 +12,14 @@ export class SubjectList extends Component {
         };
     }
     renderSubjects (){            
+        console.log(this.props)
         const props = _.omit(this.props, 'subjects');
             //this will iterate through our subs & apply a function
             //returns a subject in html
+            
             return _.map ( this.props.subjects , (subject, index) =>
                                      <SubjectItem key= {index} {...subject} {...this.props} />) ;                         
-        } 
-        estimateATAR( ){
-        //if subs DONT need to be added 
-        if (!this.subjectsNeeded()){
-            console.log("subjectsNeeded");
-            return (
-               <AtarEstimate/>
-            );
-        }
-    }
+    } 
         /*total number of units for ATAR = 10 */
     subjectsNeeded (){ 
      const numItem = this.props.subjects.length; //how many subjects
@@ -39,25 +32,12 @@ export class SubjectList extends Component {
             );           
         }
     }
-    calcATAR (){
-        if (this.props.units >= 10){
-            return 
-        }
-    }
     render ( ){
          return (
            <div className = "subjectsAddedContainer">
-               <SubjectListHeader />
-                <div>
+               <SubjectListHeader/>
                 {this.renderSubjects()}
                 {this.subjectsNeeded()}
-                <div className = "ATAR">
-                    {this.estimateATAR()}
-                </div>
-                <div className = "middle">
-                    {this.calcATAR()}
-                </div>
-               </div>
           </div>
          );
      }
