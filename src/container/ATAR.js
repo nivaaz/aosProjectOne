@@ -1,62 +1,47 @@
+
 import React, {Component} from 'react'
+import AtarEstimate from './AtarComponent/AtarEstimate.js'
 import SubjectsList from './AtarComponent/SubjectsList'
+import List from './AtarComponent/List'
 import CreateSubject from './AtarComponent/CreateSubject'
 //import data from '../../Data/scaling.json'
 //some data to get started with
-const subjects = [
-{
-    name: "Advanced English", 
-    isCompleted : true
-},
-{
-    name: "Ext 1 English", 
-    isCompleted : true
-},
-{
-    name: "Physics", 
-    isCompleted : true
-},
-{
-    name: "Ext 1 Mathematics", 
-    isCompleted : true
-}
-];
-const stress = "https://www.artofsmart.com.au/categories/exam-and-study-skills/stress-management/";
-const resources = "https://www.artofsmart.com.au/hsc-resources/";
 export class ATAR extends Component {
     constructor(props){
         super(props);
 
         this.state = {
-            subjects
+            subjects: [],
+            marks: []
         };
     }
      render ( ){
          return (
           <div>
-            <div className = "partContainer">
-                <div className = "partition" id = "left">
-                    <CreateSubject subjects = {this.state.subjects} createSubject = {this.createSubject.bind(this)}/>
-                      <div className= "ad">
-                    <h3 > <a href={stress}>  Tips on dealing with school stress</a> </h3>
-                      </div>
-                      <div className= "ad">
-                    <h3 > <a href={resources}></a> How to achieve Band 6s</h3>
-                      </div>  
-                </div>
-
-                <div className = "partition" id ="right">
-                  
+            <div className = "partContainer" href="#CALC">
+                <h1 className = "calcTitle">Atar Calculator</h1>
+                <div className ="partition left">
+                    <CreateSubject subjects = {this.state.subjects} marks={this.state.marks} 
+                                            createSubject = {this.createSubject.bind(this)}/>
                     <SubjectsList 
-                    subjects = {this.state.subjects}
-                    createSubject={this.createSubject.bind(this)}
-                    saveSubject ={this.saveSubject.bind(this)}
-                    toggleSubject = {this.toggleSubject.bind(this)}
-                    deleteSubject = {this.deleteSubject.bind(this)}
+                        subjects = {this.state.subjects}
+                        createSubject={this.createSubject.bind(this)}
+                        saveSubject ={this.saveSubject.bind(this)}
+                        toggleSubject = {this.toggleSubject.bind(this)}
+                        deleteSubject = {this.deleteSubject.bind(this)}
                     />
-            </div>
-            </div>
-        </div>    
+                </div>
+                <div className = "partition right">
+                <AtarEstimate/>
+                </div>            
+        </div>
+        <List/> 
+        <div className ="middle">   
+           <button className = "estimate"> What is an ATAR </button>
+            <button className = "estimate"> More on goal setting </button> 
+            <button className = "estimate"> <i className="material-icons">arrow_downward</i> </button>
+        </div>        
+        </div>   
         );
      }
      // the bind makes sure the state is bound to this comp only
@@ -66,20 +51,29 @@ export class ATAR extends Component {
             this.setState ({subjects : this.state.subjects});
         }
 
-     createSubject(name){
+     createSubject(name, mark){
+         console.log("create sub & mark" + name + mark)
+         // var scaledMark = getscaledmark(name, mark)
             this.state.subjects.push({
                 name,
-                isCompleted: false 
+                isCompleted: false, 
+                marks: mark
+                // scaledMark: scaledMark
+            })
+            this.setState({ 
+                 subjects: this.state.subjects,
+                 marks: this.state.marks 
             });
-            this.setState({ subjects: this.state.subjects });
+                 console.log("marks state" + this.state.marks)
      }
-        saveSubject (oldSubject, newSubject){
+        saveSubject (oldSubject, newSubject, newMark){
             const foundSubject = _.find(this.state.subjects, subject => subject.name === oldSubject);
-            console.log(newSubject);
             foundSubject.name = newSubject;
+            foundSubject.marks = newMark;
                  this.setState({ subjects: this.state.subjects})
         }
         deleteSubject(delName){
+            //find the index of the subject and delete corrsp mark too 
             _.remove(this.state.subjects, subject =>subject.name === delName);
             this.setState({subjects : this.state.subjects});
         }

@@ -1,9 +1,8 @@
 
 {
   "subData": [
-  {
     {
-      "Course Number": "Aboriginal Studies",
+      "Course": "Aboriginal Studies",
       "numStudent": "410",
       "Type": " HSC ",
       "Mean": 33.5,
@@ -16,7 +15,7 @@
       "P25": 29
     },
     {
-      "Course Number": "",
+      "Course": "",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 13.2,
@@ -29,7 +28,7 @@
       "P25": 3.2
     },
     {
-      "Course Number": "Agriculture",
+      "Course": "Agriculture",
       "numStudent": "1,372",
       "Type": " HSC ",
       "Mean": 35.2,
@@ -42,7 +41,7 @@
       "P25": 31
     },
     {
-      "Course Number": "",
+      "Course": "",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 19.7,
@@ -55,7 +54,7 @@
       "P25": 10.1
     },
     {
-      "Course Number": "Ancient History",
+      "Course": "Ancient History",
       "numStudent": "11,198",
       "Type": " HSC ",
       "Mean": 36.1,
@@ -68,7 +67,7 @@
       "P25": 32
     },
     {
-      "Course Number": "",
+      "Course": "",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 24.4,
@@ -81,7 +80,7 @@
       "P25": 16.3
     },
     {
-      "Course Number": "Biology",
+      "Course": "Biology",
       "numStudent": "17,138",
       "Type": " HSC ",
       "Mean": 36,
@@ -94,7 +93,7 @@
       "P25": 32.5
     },
     {
-      "Course Number": "",
+      "Course": "",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 26.6,
@@ -107,7 +106,7 @@
       "P25": 19.4
     },
     {
-      "Course Number": "Business Studies",
+      "Course": "Business Studies",
       "numStudent": "15,991",
       "Type": " HSC ",
       "Mean": 37.2,
@@ -120,7 +119,7 @@
       "P25": 33
     },
     {
-      "Course Number": "",
+      "Course": "",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 23.8,
@@ -133,7 +132,7 @@
       "P25": 15.2
     },
     {
-      "Course Number": "Chemistry",
+      "Course": "Chemistry",
       "numStudent": "11,173",
       "Type": " HSC ",
       "Mean": 38.3,
@@ -146,7 +145,7 @@
       "P25": 35
     },
     {
-      "Course Number": "",
+      "Course": "",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 31.5,
@@ -159,7 +158,7 @@
       "P25": 25.1
     },
     {
-      "Course Number": "Community & Family Studies",
+      "Course": "Community & Family Studies",
       "numStudent": "7,687",
       "Type": " HSC ",
       "Mean": 37.4,
@@ -172,7 +171,7 @@
       "P25": 34
     },
     {
-      "Course Number": "",
+      "Course": "",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 18.9,
@@ -185,7 +184,7 @@
       "P25": 10.3
     },
     {
-      "Course Number": "Dance",
+      "Course": "Dance",
       "numStudent": "920",
       "Type": " HSC ",
       "Mean": 38.8,
@@ -198,7 +197,7 @@
       "P25": 35
     },
     {
-      "Course Number": "",
+      "Course": "",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 22.8,
@@ -211,7 +210,7 @@
       "P25": 14
     },
     {
-      "Course Number": "Design & Technology",
+      "Course": "Design & Technology",
       "numStudent": "3,121",
       "Type": " HSC ",
       "Mean": 38.2,
@@ -224,7 +223,7 @@
       "P25": 35
     },
     {
-      "Course Number": "",
+      "Course": "",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 21.4,
@@ -237,7 +236,7 @@
       "P25": 12.7
     },
     {
-      "Course Number": "Drama",
+      "Course": "Drama",
       "numStudent": "4,753",
       "Type": " HSC ",
       "Mean": 39.2,
@@ -250,7 +249,7 @@
       "P25": 36
     },
     {
-      "Course Number": "",
+      "Course": "",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 23.7,
@@ -263,7 +262,7 @@
       "P25": 15.8
     },
     {
-      "Course Number": "Earth & Environmental Science",
+      "Course": "Earth & Environmental Science",
       "numStudent": "1,494",
       "Type": " HSC ",
       "Mean": 37.6,
@@ -276,7 +275,7 @@
       "P25": 34.5
     },
     {
-      "Course Number": "Earth & Environmental Science",
+      "Course": "Earth & Environmental Science",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 24.1,
@@ -289,7 +288,7 @@
       "P25": 16.3
     },
     {
-      "Course Number": "Economics",
+      "Course": "Economics",
       "numStudent": "5,131",
       "Type": " HSC ",
       "Mean": 38.1,
@@ -302,7 +301,7 @@
       "P25": 34.5
     },
     {
-      "Course Number": "Economics",
+      "Course": "Economics",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 32.2,
@@ -315,7 +314,7 @@
       "P25": 26.8
     },
     {
-      "Course Number": "Engineering Studies",
+      "Course": "Engineering Studies",
       "numStudent": "2,043",
       "Type": " HSC ",
       "Mean": 36.8,
@@ -328,7 +327,7 @@
       "P25": 33
     },
     {
-      "Course Number": "Engineering Studies",
+      "Course": "Engineering Studies",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 25.6,
@@ -341,7 +340,7 @@
       "P25": 18.7
     },
     {
-      "Course Number": "English Standard",
+      "Course": "English Standard",
       "numStudent": "31,483",
       "Type": " HSC ",
       "Mean": 33.9,
@@ -354,7 +353,7 @@
       "P25": 31.5
     },
     {
-      "Course Number": "English Standard",
+      "Course": "English Standard",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 19.1,
@@ -367,7 +366,7 @@
       "P25": 13.1
     },
     {
-      "Course Number": "English Advanced",
+      "Course": "English Advanced",
       "numStudent": "26,729",
       "Type": " HSC ",
       "Mean": 40.5,
@@ -380,7 +379,7 @@
       "P25": 38
     },
     {
-      "Course Number": "English Advanced",
+      "Course": "English Advanced",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 32,
@@ -393,7 +392,7 @@
       "P25": 26.8
     },
     {
-      "Course Number": "English Extension 1",
+      "Course": "English Extension 1",
       "numStudent": "4,848",
       "Type": " HSC ",
       "Mean": 41.6,
@@ -406,7 +405,7 @@
       "P25": 39
     },
     {
-      "Course Number": "English Extension 1",
+      "Course": "English Extension 1",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 36.3,
@@ -419,7 +418,7 @@
       "P25": 32.3
     },
     {
-      "Course Number": "English Extension 2",
+      "Course": "English Extension 2",
       "numStudent": "1,776",
       "Type": " HSC ",
       "Mean": 39.1,
@@ -432,7 +431,7 @@
       "P25": 35
     },
     {
-      "Course Number": "English Extension 2",
+      "Course": "English Extension 2",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 35.9,
@@ -445,7 +444,7 @@
       "P25": 31.2
     },
     {
-      "Course Number": "ESL",
+      "Course": "ESL",
       "numStudent": "2,291",
       "Type": " HSC ",
       "Mean": 36.6,
@@ -458,7 +457,7 @@
       "P25": 33.5
     },
     {
-      "Course Number": "ESL",
+      "Course": "ESL",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 22.1,
@@ -471,7 +470,7 @@
       "P25": 12.9
     },
     {
-      "Course Number": "Food Technology",
+      "Course": "Food Technology",
       "numStudent": "3,538",
       "Type": " HSC ",
       "Mean": 35.6,
@@ -484,7 +483,7 @@
       "P25": 31
     },
     {
-      "Course Number": "Food Technology",
+      "Course": "Food Technology",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 19.6,
@@ -497,7 +496,7 @@
       "P25": 10.3
     },
     {
-      "Course Number": "Geography",
+      "Course": "Geography",
       "numStudent": "4,418",
       "Type": " HSC ",
       "Mean": 37,
@@ -510,7 +509,7 @@
       "P25": 33
     },
     {
-      "Course Number": "Geography",
+      "Course": "Geography",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 25.1,
@@ -523,7 +522,7 @@
       "P25": 16.7
     },
     {
-      "Course Number": "Industrial Technology",
+      "Course": "Industrial Technology",
       "numStudent": "5,360",
       "Type": " HSC ",
       "Mean": 35.6,
@@ -536,7 +535,7 @@
       "P25": 31.5
     },
     {
-      "Course Number": "Industrial Technology",
+      "Course": "Industrial Technology",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 16.3,
@@ -549,7 +548,7 @@
       "P25": 8.4
     },
     {
-      "Course Number": "Information Processes & Technology",
+      "Course": "Information Processes & Technology",
       "numStudent": "2,756",
       "Type": " HSC   scaled",
       "Mean": 36.7,
@@ -562,7 +561,7 @@
       "P25": 33.5
     },
     {
-      "Course Number": "Information Processes & Technology",
+      "Course": "Information Processes & Technology",
       "numStudent": "  ",
       "Type": "",
       "Mean": 21.2,
@@ -575,7 +574,7 @@
       "P25": 12.6
     },
     {
-      "Course Number": "Legal Studies",
+      "Course": "Legal Studies",
       "numStudent": "10,052",
       "Type": " HSC ",
       "Mean": 36.9,
@@ -588,7 +587,7 @@
       "P25": 32.5
     },
     {
-      "Course Number": "Legal Studies",
+      "Course": "Legal Studies",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 25.5,
@@ -601,7 +600,7 @@
       "P25": 17.4
     },
     {
-      "Course Number": "Mathematics General 2",
+      "Course": "Mathematics General 2",
       "numStudent": "31,321",
       "Type": " HSC ",
       "Mean": 34.6,
@@ -614,7 +613,7 @@
       "P25": 30
     },
     {
-      "Course Number": "Mathematics General 2",
+      "Course": "Mathematics General 2",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 21.6,
@@ -627,7 +626,7 @@
       "P25": 13.2
     },
     {
-      "Course Number": "Mathematics",
+      "Course": "Mathematics",
       "numStudent": "16,693",
       "Type": " HSC ",
       "Mean": 39.4,
@@ -640,7 +639,7 @@
       "P25": 36.5
     },
     {
-      "Course Number": "Mathematics",
+      "Course": "Mathematics",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 31.2,
@@ -653,7 +652,7 @@
       "P25": 24.9
     },
     {
-      "Course Number": "Mathematics Extension 1",
+      "Course": "Mathematics Extension 1",
       "numStudent": "9,022",
       "Type": " HSC ",
       "Mean": 40.6,
@@ -666,7 +665,7 @@
       "P25": 37
     },
     {
-      "Course Number": "Mathematics Extension 1",
+      "Course": "Mathematics Extension 1",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 39.2,
@@ -679,7 +678,7 @@
       "P25": 35.8
     },
     {
-      "Course Number": "Mathematics Extension 2",
+      "Course": "Mathematics Extension 2",
       "numStudent": "3,371",
       "Type": " HSC ",
       "Mean": 41,
@@ -692,7 +691,7 @@
       "P25": 38
     },
     {
-      "Course Number": "Mathematics Extension 2",
+      "Course": "Mathematics Extension 2",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 43,
@@ -705,7 +704,7 @@
       "P25": 41.1
     },
     {
-      "Course Number": "Modern History",
+      "Course": "Modern History",
       "numStudent": "10,306",
       "Type": " HSC ",
       "Mean": 37.7,
@@ -718,7 +717,7 @@
       "P25": 35
     },
     {
-      "Course Number": "Modern History",
+      "Course": "Modern History",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 26.6,
@@ -731,7 +730,7 @@
       "P25": 19.2
     },
     {
-      "Course Number": "History Extension",
+      "Course": "History Extension",
       "numStudent": "1,934",
       "Type": " HSC ",
       "Mean": 39.2,
@@ -744,7 +743,7 @@
       "P25": 35
     },
     {
-      "Course Number": "History Extension",
+      "Course": "History Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 34,
@@ -757,7 +756,7 @@
       "P25": 30.1
     },
     {
-      "Course Number": "Music 1",
+      "Course": "Music 1",
       "numStudent": "5,002",
       "Type": " HSC ",
       "Mean": 40.4,
@@ -770,7 +769,7 @@
       "P25": 37.5
     },
     {
-      "Course Number": "Music 1",
+      "Course": "Music 1",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 21.3,
@@ -783,7 +782,7 @@
       "P25": 12.7
     },
     {
-      "Course Number": "Music 2",
+      "Course": "Music 2",
       "numStudent": "765",
       "Type": " HSC ",
       "Mean": 43.3,
@@ -796,7 +795,7 @@
       "P25": 41
     },
     {
-      "Course Number": "Music 2",
+      "Course": "Music 2",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 33.9,
@@ -809,7 +808,7 @@
       "P25": 28
     },
     {
-      "Course Number": "Music Extension",
+      "Course": "Music Extension",
       "numStudent": "475",
       "Type": " HSC ",
       "Mean": 46.2,
@@ -822,7 +821,7 @@
       "P25": 44
     },
     {
-      "Course Number": "Music Extension",
+      "Course": "Music Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 35.4,
@@ -835,7 +834,7 @@
       "P25": 28.6
     },
     {
-      "Course Number": "PDH&PE",
+      "Course": "PDH&PE",
       "numStudent": "14,396",
       "Type": " HSC ",
       "Mean": 36.6,
@@ -848,7 +847,7 @@
       "P25": 33
     },
     {
-      "Course Number": "PDH&PE",
+      "Course": "PDH&PE",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 23.1,
@@ -861,7 +860,7 @@
       "P25": 14.8
     },
     {
-      "Course Number": "Physics",
+      "Course": "Physics",
       "numStudent": "9,598",
       "Type": " HSC ",
       "Mean": 37,
@@ -874,7 +873,7 @@
       "P25": 33.5
     },
     {
-      "Course Number": "Physics",
+      "Course": "Physics",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 30.5,
@@ -887,7 +886,7 @@
       "P25": 23.9
     },
     {
-      "Course Number": "Senior Science",
+      "Course": "Senior Science",
       "numStudent": "6,328",
       "Type": " HSC ",
       "Mean": 37.3,
@@ -900,7 +899,7 @@
       "P25": 33.5
     },
     {
-      "Course Number": "Senior Science",
+      "Course": "Senior Science",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 18.8,
@@ -913,7 +912,7 @@
       "P25": 10.6
     },
     {
-      "Course Number": "Society & Culture",
+      "Course": "Society & Culture",
       "numStudent": "4,398",
       "Type": " HSC ",
       "Mean": 38.6,
@@ -926,7 +925,7 @@
       "P25": 35.5
     },
     {
-      "Course Number": "Society & Culture",
+      "Course": "Society & Culture",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 23.5,
@@ -939,7 +938,7 @@
       "P25": 15.7
     },
     {
-      "Course Number": "Software Design & Development",
+      "Course": "Software Design & Development",
       "numStudent": "1,719",
       "Type": " HSC ",
       "Mean": 36.8,
@@ -952,7 +951,7 @@
       "P25": 33.5
     },
     {
-      "Course Number": "Software Design & Development",
+      "Course": "Software Design & Development",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 23.7,
@@ -965,7 +964,7 @@
       "P25": 15
     },
     {
-      "Course Number": "Studies of Religion I",
+      "Course": "Studies of Religion I",
       "numStudent": "9,299",
       "Type": " HSC ",
       "Mean": 38.5,
@@ -978,7 +977,7 @@
       "P25": 35
     },
     {
-      "Course Number": "Studies of Religion I",
+      "Course": "Studies of Religion I",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 27.6,
@@ -991,7 +990,7 @@
       "P25": 21.7
     },
     {
-      "Course Number": "Studies of Religion II",
+      "Course": "Studies of Religion II",
       "numStudent": "5,464",
       "Type": " HSC ",
       "Mean": 37.9,
@@ -1004,7 +1003,7 @@
       "P25": 34.5
     },
     {
-      "Course Number": "Studies of Religion II",
+      "Course": "Studies of Religion II",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 27.3,
@@ -1017,7 +1016,7 @@
       "P25": 20.6
     },
     {
-      "Course Number": "Textiles & Design",
+      "Course": "Textiles & Design",
       "numStudent": "1,874",
       "Type": " HSC ",
       "Mean": 38.1,
@@ -1030,7 +1029,7 @@
       "P25": 34
     },
     {
-      "Course Number": "Textiles & Design",
+      "Course": "Textiles & Design",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 22.6,
@@ -1043,7 +1042,7 @@
       "P25": 14.2
     },
     {
-      "Course Number": "Visual Arts",
+      "Course": "Visual Arts",
       "numStudent": "9,071",
       "Type": " HSC ",
       "Mean": 39.4,
@@ -1056,7 +1055,7 @@
       "P25": 36.5
     },
     {
-      "Course Number": "Visual Arts",
+      "Course": "Visual Arts",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 22.3,
@@ -1069,7 +1068,7 @@
       "P25": 13.6
     },
     {
-      "Course Number": "Arabic Continuers",
+      "Course": "Arabic Continuers",
       "numStudent": "211",
       "Type": " HSC ",
       "Mean": 37.9,
@@ -1082,7 +1081,7 @@
       "P25": 36
     },
     {
-      "Course Number": "Arabic Continuers",
+      "Course": "Arabic Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 17.5,
@@ -1095,7 +1094,7 @@
       "P25": 7.4
     },
     {
-      "Course Number": "Arabic Extension",
+      "Course": "Arabic Extension",
       "numStudent": "63",
       "Type": " HSC ",
       "Mean": 38.6,
@@ -1108,7 +1107,7 @@
       "P25": 34
     },
     {
-      "Course Number": "Arabic Extension",
+      "Course": "Arabic Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 25.5,
@@ -1121,7 +1120,7 @@
       "P25": 21.6
     },
     {
-      "Course Number": "Armenian",
+      "Course": "Armenian",
       "numStudent": "23",
       "Type": " HSC ",
       "Mean": 42.7,
@@ -1134,7 +1133,7 @@
       "P25": null
     },
     {
-      "Course Number": "Armenian",
+      "Course": "Armenian",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 31,
@@ -1147,7 +1146,7 @@
       "P25": null
     },
     {
-      "Course Number": "Chinese Beginners",
+      "Course": "Chinese Beginners",
       "numStudent": "54",
       "Type": " HSC ",
       "Mean": 39,
@@ -1160,7 +1159,7 @@
       "P25": 33
     },
     {
-      "Course Number": "Chinese Beginners",
+      "Course": "Chinese Beginners",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 24.4,
@@ -1173,7 +1172,7 @@
       "P25": 12.9
     },
     {
-      "Course Number": "Chinese Continuers",
+      "Course": "Chinese Continuers",
       "numStudent": "83",
       "Type": " HSC ",
       "Mean": 40.9,
@@ -1186,7 +1185,7 @@
       "P25": 38
     },
     {
-      "Course Number": "Chinese Continuers",
+      "Course": "Chinese Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 32.4,
@@ -1199,7 +1198,7 @@
       "P25": 26.3
     },
     {
-      "Course Number": "Chinese Extension",
+      "Course": "Chinese Extension",
       "numStudent": "26",
       "Type": " HSC ",
       "Mean": 46.4,
@@ -1212,7 +1211,7 @@
       "P25": null
     },
     {
-      "Course Number": "Chinese Extension",
+      "Course": "Chinese Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 37.6,
@@ -1225,7 +1224,7 @@
       "P25": null
     },
     {
-      "Course Number": "Chinese Background Speakers",
+      "Course": "Chinese Background Speakers",
       "numStudent": "635",
       "Type": " HSC ",
       "Mean": 41.4,
@@ -1238,7 +1237,7 @@
       "P25": 39.5
     },
     {
-      "Course Number": "Chinese Background Speakers",
+      "Course": "Chinese Background Speakers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 22.7,
@@ -1251,7 +1250,7 @@
       "P25": 13.5
     },
     {
-      "Course Number": "Heritage Chinese (Mandarin)",
+      "Course": "Heritage Chinese (Mandarin)",
       "numStudent": "121",
       "Type": " HSC ",
       "Mean": 42.4,
@@ -1264,7 +1263,7 @@
       "P25": 41
     },
     {
-      "Course Number": "Heritage Chinese (Mandarin)",
+      "Course": "Heritage Chinese (Mandarin)",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 30.4,
@@ -1277,7 +1276,7 @@
       "P25": 25.1
     },
     {
-      "Course Number": "Classical Greek Continuers",
+      "Course": "Classical Greek Continuers",
       "numStudent": "19",
       "Type": " HSC ",
       "Mean": 46.5,
@@ -1290,7 +1289,7 @@
       "P25": null
     },
     {
-      "Course Number": "Classical Greek Continuers",
+      "Course": "Classical Greek Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 40.6,
@@ -1303,7 +1302,7 @@
       "P25": null
     },
     {
-      "Course Number": "Classical Greek Extension",
+      "Course": "Classical Greek Extension",
       "numStudent": "13",
       "Type": " HSC ",
       "Mean": 48.2,
@@ -1316,7 +1315,7 @@
       "P25": null
     },
     {
-      "Course Number": "Classical Greek Extension",
+      "Course": "Classical Greek Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 42.5,
@@ -1329,7 +1328,7 @@
       "P25": null
     },
     {
-      "Course Number": "Classical Hebrew Continuers",
+      "Course": "Classical Hebrew Continuers",
       "numStudent": "35",
       "Type": " HSC ",
       "Mean": 40.9,
@@ -1342,7 +1341,7 @@
       "P25": null
     },
     {
-      "Course Number": "Classical Hebrew Continuers",
+      "Course": "Classical Hebrew Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 34.5,
@@ -1355,7 +1354,7 @@
       "P25": null
     },
     {
-      "Course Number": "Classical Hebrew Extension",
+      "Course": "Classical Hebrew Extension",
       "numStudent": "16",
       "Type": " HSC ",
       "Mean": 44.6,
@@ -1368,7 +1367,7 @@
       "P25": null
     },
     {
-      "Course Number": "Classical Hebrew Extension",
+      "Course": "Classical Hebrew Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 38.9,
@@ -1381,7 +1380,7 @@
       "P25": null
     },
     {
-      "Course Number": "Croatian",
+      "Course": "Croatian",
       "numStudent": "14",
       "Type": " HSC ",
       "Mean": 40.1,
@@ -1394,7 +1393,7 @@
       "P25": null
     },
     {
-      "Course Number": "Croatian",
+      "Course": "Croatian",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 27.1,
@@ -1407,7 +1406,7 @@
       "P25": null
     },
     {
-      "Course Number": "Filipino",
+      "Course": "Filipino",
       "numStudent": "11",
       "Type": " HSC ",
       "Mean": 44.7,
@@ -1420,7 +1419,7 @@
       "P25": null
     },
     {
-      "Course Number": "Filipino",
+      "Course": "Filipino",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 19.3,
@@ -1433,7 +1432,7 @@
       "P25": null
     },
     {
-      "Course Number": "French Beginners",
+      "Course": "French Beginners",
       "numStudent": "677",
       "Type": " HSC ",
       "Mean": 38.4,
@@ -1446,7 +1445,7 @@
       "P25": 34.5
     },
     {
-      "Course Number": "French Beginners",
+      "Course": "French Beginners",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 24.9,
@@ -1459,7 +1458,7 @@
       "P25": 16.3
     },
     {
-      "Course Number": "French Continuers",
+      "Course": "French Continuers",
       "numStudent": "799",
       "Type": " HSC ",
       "Mean": 41.5,
@@ -1472,7 +1471,7 @@
       "P25": 38
     },
     {
-      "Course Number": "French Continuers",
+      "Course": "French Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 34.8,
@@ -1485,7 +1484,7 @@
       "P25": 29.5
     },
     {
-      "Course Number": "French Extension",
+      "Course": "French Extension",
       "numStudent": "200",
       "Type": " HSC ",
       "Mean": 42.5,
@@ -1498,7 +1497,7 @@
       "P25": 40
     },
     {
-      "Course Number": "French Extension",
+      "Course": "French Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 40.7,
@@ -1511,7 +1510,7 @@
       "P25": 38
     },
     {
-      "Course Number": "German Beginners",
+      "Course": "German Beginners",
       "numStudent": "69",
       "Type": " HSC ",
       "Mean": 41.5,
@@ -1524,7 +1523,7 @@
       "P25": 38
     },
     {
-      "Course Number": "German Beginners",
+      "Course": "German Beginners",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 30.6,
@@ -1537,7 +1536,7 @@
       "P25": 23.7
     },
     {
-      "Course Number": "German Continuers",
+      "Course": "German Continuers",
       "numStudent": "277",
       "Type": " HSC ",
       "Mean": 40.7,
@@ -1550,7 +1549,7 @@
       "P25": 37
     },
     {
-      "Course Number": "German Continuers",
+      "Course": "German Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 33,
@@ -1563,7 +1562,7 @@
       "P25": 27.2
     },
     {
-      "Course Number": "German Extension",
+      "Course": "German Extension",
       "numStudent": "61",
       "Type": " HSC ",
       "Mean": 42,
@@ -1576,7 +1575,7 @@
       "P25": 39
     },
     {
-      "Course Number": "German Extension",
+      "Course": "German Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 39,
@@ -1589,7 +1588,7 @@
       "P25": 34.9
     },
     {
-      "Course Number": "Hindi",
+      "Course": "Hindi",
       "numStudent": "19",
       "Type": " HSC ",
       "Mean": 45,
@@ -1602,7 +1601,7 @@
       "P25": null
     },
     {
-      "Course Number": "Hindi",
+      "Course": "Hindi",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 30,
@@ -1615,7 +1614,7 @@
       "P25": null
     },
     {
-      "Course Number": "Indonesian Beginners",
+      "Course": "Indonesian Beginners",
       "numStudent": "43",
       "Type": " HSC ",
       "Mean": 37.1,
@@ -1628,7 +1627,7 @@
       "P25": 32
     },
     {
-      "Course Number": "Indonesian Beginners",
+      "Course": "Indonesian Beginners",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 22.4,
@@ -1641,7 +1640,7 @@
       "P25": 13
     },
     {
-      "Course Number": "Indonesian Continuers",
+      "Course": "Indonesian Continuers",
       "numStudent": "64",
       "Type": " HSC ",
       "Mean": 41.8,
@@ -1654,7 +1653,7 @@
       "P25": 38.5
     },
     {
-      "Course Number": "Indonesian Continuers",
+      "Course": "Indonesian Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 31,
@@ -1667,7 +1666,7 @@
       "P25": 23.8
     },
     {
-      "Course Number": "Indonesian Extension",
+      "Course": "Indonesian Extension",
       "numStudent": "13",
       "Type": " HSC ",
       "Mean": 43.3,
@@ -1680,7 +1679,7 @@
       "P25": null
     },
     {
-      "Course Number": "Indonesian Extension",
+      "Course": "Indonesian Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 36.5,
@@ -1693,7 +1692,7 @@
       "P25": null
     },
     {
-      "Course Number": "Indonesian Background Speakers",
+      "Course": "Indonesian Background Speakers",
       "numStudent": "68",
       "Type": " HSC ",
       "Mean": 37.3,
@@ -1706,7 +1705,7 @@
       "P25": 35.5
     },
     {
-      "Course Number": "Indonesian Background Speakers",
+      "Course": "Indonesian Background Speakers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 31.2,
@@ -1719,7 +1718,7 @@
       "P25": 27.1
     },
     {
-      "Course Number": "Italian Beginners",
+      "Course": "Italian Beginners",
       "numStudent": "351",
       "Type": " HSC ",
       "Mean": 35.5,
@@ -1732,7 +1731,7 @@
       "P25": 31
     },
     {
-      "Course Number": "Italian Beginners",
+      "Course": "Italian Beginners",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 25.7,
@@ -1745,7 +1744,7 @@
       "P25": 17
     },
     {
-      "Course Number": "Italian Continuers",
+      "Course": "Italian Continuers",
       "numStudent": "298",
       "Type": " HSC ",
       "Mean": 39.6,
@@ -1758,7 +1757,7 @@
       "P25": 36.5
     },
     {
-      "Course Number": "Italian Continuers",
+      "Course": "Italian Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 31.5,
@@ -1771,7 +1770,7 @@
       "P25": 26.3
     },
     {
-      "Course Number": "Italian Extension",
+      "Course": "Italian Extension",
       "numStudent": "67",
       "Type": " HSC ",
       "Mean": 39.1,
@@ -1784,7 +1783,7 @@
       "P25": 35
     },
     {
-      "Course Number": "Italian Extension",
+      "Course": "Italian Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 38.9,
@@ -1797,7 +1796,7 @@
       "P25": 35.8
     },
     {
-      "Course Number": "Japanese Beginners",
+      "Course": "Japanese Beginners",
       "numStudent": "687",
       "Type": " HSC ",
       "Mean": 37.4,
@@ -1810,7 +1809,7 @@
       "P25": 32.5
     },
     {
-      "Course Number": "Japanese Beginners",
+      "Course": "Japanese Beginners",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 23.2,
@@ -1823,7 +1822,7 @@
       "P25": 14.5
     },
     {
-      "Course Number": "Japanese Continuers",
+      "Course": "Japanese Continuers",
       "numStudent": "624",
       "Type": " HSC ",
       "Mean": 39.7,
@@ -1836,7 +1835,7 @@
       "P25": 35.5
     },
     {
-      "Course Number": "Japanese Continuers",
+      "Course": "Japanese Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 32.6,
@@ -1849,7 +1848,7 @@
       "P25": 26.1
     },
     {
-      "Course Number": "Japanese Extension",
+      "Course": "Japanese Extension",
       "numStudent": "191",
       "Type": " HSC ",
       "Mean": 41.7,
@@ -1862,7 +1861,7 @@
       "P25": 39
     },
     {
-      "Course Number": "Japanese Extension",
+      "Course": "Japanese Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 38.2,
@@ -1875,7 +1874,7 @@
       "P25": 35.3
     },
     {
-      "Course Number": "Japanese Background Speakers",
+      "Course": "Japanese Background Speakers",
       "numStudent": "11",
       "Type": " HSC ",
       "Mean": 40.8,
@@ -1888,7 +1887,7 @@
       "P25": null
     },
     {
-      "Course Number": "Japanese Background Speakers",
+      "Course": "Japanese Background Speakers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 24.7,
@@ -1901,7 +1900,7 @@
       "P25": null
     },
     {
-      "Course Number": "Heritage Japanese",
+      "Course": "Heritage Japanese",
       "numStudent": "18",
       "Type": " HSC ",
       "Mean": 42,
@@ -1914,7 +1913,7 @@
       "P25": null
     },
     {
-      "Course Number": "Heritage Japanese",
+      "Course": "Heritage Japanese",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 27.4,
@@ -1927,7 +1926,7 @@
       "P25": null
     },
     {
-      "Course Number": "Khmer",
+      "Course": "Khmer",
       "numStudent": "18",
       "Type": " HSC ",
       "Mean": 40.7,
@@ -1940,7 +1939,7 @@
       "P25": null
     },
     {
-      "Course Number": "Khmer",
+      "Course": "Khmer",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 18.6,
@@ -1953,7 +1952,7 @@
       "P25": null
     },
     {
-      "Course Number": "Korean Continuers",
+      "Course": "Korean Continuers",
       "numStudent": "13",
       "Type": " HSC ",
       "Mean": 45.8,
@@ -1966,7 +1965,7 @@
       "P25": null
     },
     {
-      "Course Number": "Korean Continuers",
+      "Course": "Korean Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 31.2,
@@ -1979,7 +1978,7 @@
       "P25": null
     },
     {
-      "Course Number": "Korean Background Speakers",
+      "Course": "Korean Background Speakers",
       "numStudent": "63",
       "Type": " HSC ",
       "Mean": 40,
@@ -1992,7 +1991,7 @@
       "P25": 37
     },
     {
-      "Course Number": "Korean Background Speakers",
+      "Course": "Korean Background Speakers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 23,
@@ -2005,7 +2004,7 @@
       "P25": 14.6
     },
     {
-      "Course Number": "Heritage Korean",
+      "Course": "Heritage Korean",
       "numStudent": "39",
       "Type": " HSC ",
       "Mean": 45,
@@ -2018,7 +2017,7 @@
       "P25": null
     },
     {
-      "Course Number": "Heritage Korean",
+      "Course": "Heritage Korean",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 24.9,
@@ -2031,7 +2030,7 @@
       "P25": null
     },
     {
-      "Course Number": "Latin Continuers",
+      "Course": "Latin Continuers",
       "numStudent": "161",
       "Type": " HSC ",
       "Mean": 42.6,
@@ -2044,7 +2043,7 @@
       "P25": 39.5
     },
     {
-      "Course Number": "Latin Continuers",
+      "Course": "Latin Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 40.2,
@@ -2057,7 +2056,7 @@
       "P25": 37
     },
     {
-      "Course Number": "Latin Extension",
+      "Course": "Latin Extension",
       "numStudent": "105",
       "Type": " HSC ",
       "Mean": 44,
@@ -2070,7 +2069,7 @@
       "P25": 42
     },
     {
-      "Course Number": "Latin Extension",
+      "Course": "Latin Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 42.7,
@@ -2083,7 +2082,7 @@
       "P25": 40.2
     },
     {
-      "Course Number": "Macedonian",
+      "Course": "Macedonian",
       "numStudent": "22",
       "Type": " HSC ",
       "Mean": 42.1,
@@ -2096,7 +2095,7 @@
       "P25": null
     },
     {
-      "Course Number": "Macedonian",
+      "Course": "Macedonian",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 22,
@@ -2109,7 +2108,7 @@
       "P25": null
     },
     {
-      "Course Number": "Modern Greek Beginners",
+      "Course": "Modern Greek Beginners",
       "numStudent": "47",
       "Type": " HSC ",
       "Mean": 40.5,
@@ -2122,7 +2121,7 @@
       "P25": 35.5
     },
     {
-      "Course Number": "Modern Greek Beginners",
+      "Course": "Modern Greek Beginners",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 25.9,
@@ -2135,7 +2134,7 @@
       "P25": 12.6
     },
     {
-      "Course Number": "Modern Greek Continuers",
+      "Course": "Modern Greek Continuers",
       "numStudent": "102",
       "Type": " HSC ",
       "Mean": 41.9,
@@ -2148,7 +2147,7 @@
       "P25": 39
     },
     {
-      "Course Number": "Modern Greek Continuers",
+      "Course": "Modern Greek Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 27.4,
@@ -2161,7 +2160,7 @@
       "P25": 18.6
     },
     {
-      "Course Number": "Modern Greek Extension",
+      "Course": "Modern Greek Extension",
       "numStudent": "47",
       "Type": " HSC ",
       "Mean": 43.3,
@@ -2174,7 +2173,7 @@
       "P25": 39
     },
     {
-      "Course Number": "Modern Greek Extension",
+      "Course": "Modern Greek Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 31.3,
@@ -2187,7 +2186,7 @@
       "P25": 21.9
     },
     {
-      "Course Number": "Modern Hebrew",
+      "Course": "Modern Hebrew",
       "numStudent": "56",
       "Type": " HSC ",
       "Mean": 44.8,
@@ -2200,7 +2199,7 @@
       "P25": 43.5
     },
     {
-      "Course Number": "Modern Hebrew",
+      "Course": "Modern Hebrew",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 37.4,
@@ -2213,7 +2212,7 @@
       "P25": 32.2
     },
     {
-      "Course Number": "Persian",
+      "Course": "Persian",
       "numStudent": "21",
       "Type": " HSC ",
       "Mean": 40.9,
@@ -2226,7 +2225,7 @@
       "P25": null
     },
     {
-      "Course Number": "Persian",
+      "Course": "Persian",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 14.3,
@@ -2239,7 +2238,7 @@
       "P25": null
     },
     {
-      "Course Number": "Polish",
+      "Course": "Polish",
       "numStudent": "21",
       "Type": " HSC ",
       "Mean": 45,
@@ -2252,7 +2251,7 @@
       "P25": null
     },
     {
-      "Course Number": "Polish",
+      "Course": "Polish",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 28.3,
@@ -2265,7 +2264,7 @@
       "P25": null
     },
     {
-      "Course Number": "Portuguese",
+      "Course": "Portuguese",
       "numStudent": "18",
       "Type": " HSC ",
       "Mean": 35.5,
@@ -2278,7 +2277,7 @@
       "P25": null
     },
     {
-      "Course Number": "Portuguese",
+      "Course": "Portuguese",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 26.6,
@@ -2291,7 +2290,7 @@
       "P25": null
     },
     {
-      "Course Number": "Russian",
+      "Course": "Russian",
       "numStudent": "17",
       "Type": " HSC ",
       "Mean": 45.4,
@@ -2304,7 +2303,7 @@
       "P25": null
     },
     {
-      "Course Number": "Russian",
+      "Course": "Russian",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 26,
@@ -2317,7 +2316,7 @@
       "P25": null
     },
     {
-      "Course Number": "Serbian",
+      "Course": "Serbian",
       "numStudent": "14",
       "Type": " HSC ",
       "Mean": 44.1,
@@ -2330,7 +2329,7 @@
       "P25": null
     },
     {
-      "Course Number": "Serbian",
+      "Course": "Serbian",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 24.8,
@@ -2343,7 +2342,7 @@
       "P25": null
     },
     {
-      "Course Number": "Spanish Beginners",
+      "Course": "Spanish Beginners",
       "numStudent": "202",
       "Type": " HSC ",
       "Mean": 37.5,
@@ -2356,7 +2355,7 @@
       "P25": 33
     },
     {
-      "Course Number": "Spanish Beginners",
+      "Course": "Spanish Beginners",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 24.2,
@@ -2369,7 +2368,7 @@
       "P25": 15.2
     },
     {
-      "Course Number": "Spanish Continuers",
+      "Course": "Spanish Continuers",
       "numStudent": "169",
       "Type": " HSC ",
       "Mean": 38.7,
@@ -2382,7 +2381,7 @@
       "P25": 35.5
     },
     {
-      "Course Number": "Spanish Continuers",
+      "Course": "Spanish Continuers",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 24.1,
@@ -2395,7 +2394,7 @@
       "P25": 15.4
     },
     {
-      "Course Number": "Spanish Extension",
+      "Course": "Spanish Extension",
       "numStudent": "49",
       "Type": " HSC ",
       "Mean": 39.3,
@@ -2408,7 +2407,7 @@
       "P25": 35
     },
     {
-      "Course Number": "Spanish Extension",
+      "Course": "Spanish Extension",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 31.7,
@@ -2421,7 +2420,7 @@
       "P25": 26.3
     },
     {
-      "Course Number": "Turkish",
+      "Course": "Turkish",
       "numStudent": "34",
       "Type": " HSC ",
       "Mean": 40.4,
@@ -2434,7 +2433,7 @@
       "P25": null
     },
     {
-      "Course Number": "Turkish",
+      "Course": "Turkish",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 19.3,
@@ -2447,7 +2446,7 @@
       "P25": null
     },
     {
-      "Course Number": "Vietnamese",
+      "Course": "Vietnamese",
       "numStudent": "140",
       "Type": " HSC ",
       "Mean": 38.1,
@@ -2460,7 +2459,7 @@
       "P25": 36
     },
     {
-      "Course Number": "Vietnamese",
+      "Course": "Vietnamese",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 22.2,
@@ -2473,7 +2472,7 @@
       "P25": 14
     },
     {
-      "Course Number": "Automotive Exam",
+      "Course": "Automotive Exam",
       "numStudent": "415",
       "Type": " HSC ",
       "Mean": 33.9,
@@ -2486,7 +2485,7 @@
       "P25": 30.5
     },
     {
-      "Course Number": "Automotive Exam",
+      "Course": "Automotive Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 12.5,
@@ -2499,7 +2498,7 @@
       "P25": 5
     },
     {
-      "Course Number": "Business Services Exam",
+      "Course": "Business Services Exam",
       "numStudent": "1,141",
       "Type": " HSC ",
       "Mean": 35.7,
@@ -2512,7 +2511,7 @@
       "P25": 32.5
     },
     {
-      "Course Number": "Business Services Exam",
+      "Course": "Business Services Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 16.9,
@@ -2525,7 +2524,7 @@
       "P25": 8.9
     },
     {
-      "Course Number": "Construction Exam",
+      "Course": "Construction Exam",
       "numStudent": "1,631",
       "Type": " HSC ",
       "Mean": 36.1,
@@ -2538,7 +2537,7 @@
       "P25": 33.5
     },
     {
-      "Course Number": "Construction Exam",
+      "Course": "Construction Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 15.1,
@@ -2551,7 +2550,7 @@
       "P25": 6.9
     },
     {
-      "Course Number": "Electrotechnology Exam",
+      "Course": "Electrotechnology Exam",
       "numStudent": "305",
       "Type": " HSC ",
       "Mean": 34.8,
@@ -2564,7 +2563,7 @@
       "P25": 32
     },
     {
-      "Course Number": "Electrotechnology Exam",
+      "Course": "Electrotechnology Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 17.1,
@@ -2577,7 +2576,7 @@
       "P25": 9.3
     },
     {
-      "Course Number": "Entertainment Industry Exam",
+      "Course": "Entertainment Industry Exam",
       "numStudent": "911",
       "Type": " HSC ",
       "Mean": 35.8,
@@ -2590,7 +2589,7 @@
       "P25": 33
     },
     {
-      "Course Number": "Entertainment Industry Exam",
+      "Course": "Entertainment Industry Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 21.2,
@@ -2603,7 +2602,7 @@
       "P25": 14.5
     },
     {
-      "Course Number": "Financial Services Exam",
+      "Course": "Financial Services Exam",
       "numStudent": "229",
       "Type": " HSC ",
       "Mean": 37.3,
@@ -2616,7 +2615,7 @@
       "P25": 34
     },
     {
-      "Course Number": "Financial Services Exam",
+      "Course": "Financial Services Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 26.8,
@@ -2629,7 +2628,7 @@
       "P25": 19.6
     },
     {
-      "Course Number": "Hospitality Exam",
+      "Course": "Hospitality Exam",
       "numStudent": "5,559",
       "Type": " HSC ",
       "Mean": 37.6,
@@ -2642,7 +2641,7 @@
       "P25": 34.5
     },
     {
-      "Course Number": "Hospitality Exam",
+      "Course": "Hospitality Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 19.4,
@@ -2655,7 +2654,7 @@
       "P25": 11.8
     },
     {
-      "Course Number": "Human Services Exam",
+      "Course": "Human Services Exam",
       "numStudent": "576",
       "Type": " HSC ",
       "Mean": 36.3,
@@ -2668,7 +2667,7 @@
       "P25": 33.5
     },
     {
-      "Course Number": "Human Services Exam",
+      "Course": "Human Services Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 19.3,
@@ -2681,7 +2680,7 @@
       "P25": 11.1
     },
     {
-      "Course Number": "Information & Digital Technology",
+      "Course": "Information & Digital Technology",
       "numStudent": "1,015",
       "Type": " HSC   scaled",
       "Mean": 36.6,
@@ -2694,7 +2693,7 @@
       "P25": 34.5
     },
     {
-      "Course Number": "Exam",
+      "Course": "Exam",
       "numStudent": "  ",
       "Type": "",
       "Mean": 17.8,
@@ -2707,7 +2706,7 @@
       "P25": 10.4
     },
     {
-      "Course Number": "Metal & Engineering Exam",
+      "Course": "Metal & Engineering Exam",
       "numStudent": "756",
       "Type": " HSC ",
       "Mean": 33.4,
@@ -2720,7 +2719,7 @@
       "P25": 30.5
     },
     {
-      "Course Number": "Metal & Engineering Exam",
+      "Course": "Metal & Engineering Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 14.6,
@@ -2733,7 +2732,7 @@
       "P25": 7.2
     },
     {
-      "Course Number": "Primary Industries Exam",
+      "Course": "Primary Industries Exam",
       "numStudent": "614",
       "Type": " HSC ",
       "Mean": 37.3,
@@ -2746,7 +2745,7 @@
       "P25": 35.5
     },
     {
-      "Course Number": "Primary Industries Exam",
+      "Course": "Primary Industries Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 16,
@@ -2759,7 +2758,7 @@
       "P25": 9
     },
     {
-      "Course Number": "Retail Services Exam",
+      "Course": "Retail Services Exam",
       "numStudent": "1,024",
       "Type": " HSC ",
       "Mean": 35.4,
@@ -2772,7 +2771,7 @@
       "P25": 32
     },
     {
-      "Course Number": "Retail Services Exam",
+      "Course": "Retail Services Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 16,
@@ -2785,7 +2784,7 @@
       "P25": 7.5
     },
     {
-      "Course Number": " Tourism & Events Exam",
+      "Course": " Tourism & Events Exam",
       "numStudent": "331",
       "Type": " HSC ",
       "Mean": 37.7,
@@ -2798,7 +2797,7 @@
       "P25": 35.5
     },
     {
-      "Course Number": " Tourism & Events Exam",
+      "Course": " Tourism & Events Exam",
       "numStudent": "  ",
       "Type": " scaled",
       "Mean": 19.6,

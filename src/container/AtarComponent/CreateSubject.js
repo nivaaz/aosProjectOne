@@ -19,25 +19,37 @@ export class CreateSubject extends Component {
         );
     }
     render ( ){
-        const renderOptions = subData.subName.map((Name, index) =>
-        <option key = {index}> {Name.name}   </option>
+        const renderOptions = subData.subs.map((Name, index) =>
+        <option key = {index}> {Name.Course}   </option>
         );
          return (
-            <form onSubmit={this.handleCreate.bind(this)} >
-               <div className = "markL" id="left">
-                <h2 className="subtitle">Add subject </h2>
-                <select  type ="text" defaultValue="Standard English" 
-                ref="createInput"   >
-                    { renderOptions }
-              </select>
-                  
+            <form className = "formAdd" onSubmit={this.handleCreate.bind(this)} >
+               <div className = "markL" 
+                        id="left">
+                    <h2 className="title"> Add subject </h2>
+                    <select name="subSelect" 
+                                type ="text" 
+                                defaultValue="Standard English" 
+                                ref="createInput">
+                                { renderOptions }
+                    </select>  
                 </div>
-                <div className = "markR" id="right">
+
+                <div className = "markR"
+                         id="right">
                     <h2 className="title">Add mark </h2>
-                    <input id="markInput" defaultValue='75' type="number" ref="rawMark" step="0.5"/>
-                </div>           
+                    <input name= "markInput" 
+                                id="markInput" 
+                                defaultValue='75' 
+                                type="number" 
+                                ref="createMark" 
+                                step="0.5"/>
+                </div> 
+
                 <div className = "buttonContainer">
-                            <button className = "addButton" ><i className="material-icons"> add </i></button> 
+                            <button id = "addButton" >
+                              <a>  <i className="material-icons add"> add </i> </a>
+                            </button> 
                             <h1> {this.state.error} </h1>
                 </div>
         </form>
@@ -50,9 +62,15 @@ export class CreateSubject extends Component {
         e.preventDefault(); //onsubmit default to refreshing page
                                     //this gets rid of this
         this.setState({error: null});   //inital set state
-        console.log("target value " + e.target.value);
+     
+        console.log("subject value " + this.refs.createInput.value);
+        console.log("mark value " + this.refs.createMark.value);
+        
         const createInput = this.refs.createInput;
+        const createMark = this.refs.createMark;
+        const mark = createMark.value;
         const name = createInput.value;
+        
         //run validatee function
         const validateInput = this.validateInput(name);
         //if function returns true
@@ -62,8 +80,7 @@ export class CreateSubject extends Component {
             return;
         }
         //create new entry
-        console.log (this.refs.createInput.value); //returns your input IFF "value"
-        this.props.createSubject(name);
+        this.props.createSubject(name, mark); //check this takes in a mark
         this.refs.createInput.value =  ' '; //clear the inputs
      }
     /*Validate function check if already added*/
