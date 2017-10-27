@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import subData from '../../../Data/subDat.json'
+import subData from '../../../Data/subName.json'
 /* This class is for the LHS selection of a subject &  mark */
 
 export class CreateSubject extends Component {
@@ -19,8 +19,8 @@ export class CreateSubject extends Component {
         );
     }
     render ( ){
-        const renderOptions = subData.subs.map((Name, index) =>
-        <option key = {index}> {Name.Course}   </option>
+        const renderOptions = subData.name.map((Name, index) =>
+        <option key = {index}> {Name}   </option>
         );
          return (
             <form className = "formAdd" onSubmit={this.handleCreate.bind(this)} >
@@ -54,8 +54,6 @@ export class CreateSubject extends Component {
                 </div>
         </form>
         );
-
-        
      }
 
      handleCreate(e){
@@ -81,7 +79,8 @@ export class CreateSubject extends Component {
         }
         //create new entry
         this.props.createSubject(name, mark); //check this takes in a mark
-        this.refs.createInput.value =  ' '; //clear the inputs
+        this.props.scaleSubject(name, mark);
+        this.refs.createInput.value =  ''; //clear the inputs
      }
     /*Validate function check if already added*/
     validateInput(name){

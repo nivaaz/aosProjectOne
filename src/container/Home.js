@@ -3,9 +3,9 @@ import React, {Component} from 'react'
 class Home extends Component {
      render ( ){
          return (
-           <div>
+           <div className = "homeContainer">
                <nav>
-                    <h2><a href= "/">Home</a></h2>
+                    <h2><a href= "/">  Home</a></h2>
                     <h2><a href="/reverse">Reverse Calculator</a></h2>
                     <h2><a href="/atar">ATAR Calculator</a></h2>
                      <h2><a href="/">Quiz</a></h2>

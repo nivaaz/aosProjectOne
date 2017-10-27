@@ -12,13 +12,17 @@ export class SubjectList extends Component {
         };
     }
     renderSubjects (){            
-        console.log(this.props)
-        const props = _.omit(this.props, 'subjects');
+       //s console.log(this.props)
+       const props = _.omit(this.props, 'subjects');
             //this will iterate through our subs & apply a function
             //returns a subject in html
             
-            return _.map ( this.props.subjects , (subject, index) =>
-                                     <SubjectItem key= {index} {...subject} {...this.props} />) ;                         
+            return _.map ( this.props.subjects, (subject, index) => {
+                const scaledMark = this.props.scaledMarks[index];
+                return (
+                    <SubjectItem key={index} scaledMark={scaledMark} {...subject} {...this.props} />                    
+                );
+            } )                                           
     } 
         /*total number of units for ATAR = 10 */
     subjectsNeeded (){ 

@@ -4,15 +4,15 @@ import AtarEstimate from './AtarComponent/AtarEstimate.js'
 import SubjectsList from './AtarComponent/SubjectsList'
 import List from './AtarComponent/List'
 import CreateSubject from './AtarComponent/CreateSubject'
-//import data from '../../Data/scaling.json'
+//import data from '../../../Data/subDat.json'
+import data from '../../Data/subDat.json'
 //some data to get started with
 export class ATAR extends Component {
     constructor(props){
         super(props);
-
         this.state = {
             subjects: [],
-            marks: []
+            scaledMarks: []
         };
     }
      render ( ){
@@ -21,10 +21,14 @@ export class ATAR extends Component {
             <div className = "partContainer" href="#CALC">
                 <h1 className = "calcTitle">Atar Calculator</h1>
                 <div className ="partition left">
-                    <CreateSubject subjects = {this.state.subjects} marks={this.state.marks} 
-                                            createSubject = {this.createSubject.bind(this)}/>
+                    <CreateSubject subjects = {this.state.subjects} 
+                                            marks={this.state.marks} 
+                                            createSubject = {this.createSubject.bind(this)}
+                                            scaleSubject = {this.scaleSubject.bind(this)}/>
                     <SubjectsList 
                         subjects = {this.state.subjects}
+                        scaledMarks = {this.state.scaledMarks}
+                        scaleSubject = {this.scaleSubject.bind(this)}
                         createSubject={this.createSubject.bind(this)}
                         saveSubject ={this.saveSubject.bind(this)}
                         toggleSubject = {this.toggleSubject.bind(this)}
@@ -50,7 +54,22 @@ export class ATAR extends Component {
             foundSubject.isCompleted = !foundSubject.isCompleted;
             this.setState ({subjects : this.state.subjects});
         }
-
+        scaleSubject (name, mark){
+            var indexS = _.findIndex(data.subs, subject => subject.Course === name);
+            console.log("index is "+ indexS);
+            var index = _.findIndex(this.state.subjects, subject => subject.name === name);
+            
+            /*scale subjects & add to state*/
+            fetch("http://localhost:5000/scalesubject"+ "/" + indexS + "/"+ mark)
+            .then(res => res.json()) //made json obj
+            .then (res => {
+                console.log("Scaled mark is "+res.mark)
+                const scaled = this.state.scaledMarks;
+                scaled[index] = res.mark; //this take mark part of res
+                console.log(scaled);
+                this.setState({ scaledMarks : scaled})  
+            })
+        }
      createSubject(name, mark){
          console.log("create sub & mark" + name + mark)
          // var scaledMark = getscaledmark(name, mark)
@@ -70,13 +89,14 @@ export class ATAR extends Component {
             const foundSubject = _.find(this.state.subjects, subject => subject.name === oldSubject);
             foundSubject.name = newSubject;
             foundSubject.marks = newMark;
-                 this.setState({ subjects: this.state.subjects})
+            this.setState({ subjects: this.state.subjects})
         }
         deleteSubject(delName){
             //find the index of the subject and delete corrsp mark too 
             _.remove(this.state.subjects, subject =>subject.name === delName);
             this.setState({subjects : this.state.subjects});
         }
+        
 }
 export default ATAR
 /*anything needed

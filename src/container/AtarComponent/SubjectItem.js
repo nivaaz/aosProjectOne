@@ -1,5 +1,5 @@
  import React, {Component} from 'react'
- import subData from '../../../Data/subDat.json'
+ import subData from '../../../Data/subName.json'
 /* This class is for the LHS selection of a subject &  mark */
 export class SubjectItem extends Component {
     //usually set state in the topmost component?
@@ -10,14 +10,14 @@ export class SubjectItem extends Component {
             };
     }
         renderSubjectSection (){
-            const {marks,  name, isCompleted } = this.props;
+            const {marks,  name, scaledMark, isCompleted } = this.props;
             const subjectStyle = {
                 color: isCompleted ? '#52b76' : '#52b70',
                 cursor: 'pointer'
             }
             if (this.state.isEditing){
-                const renderOptions = subData.subs.map((Name, index) =>
-                <option key = {index}> {Name.Course}   </option>
+                const renderOptions = subData.name.map((Name, index) =>
+                <option key = {index}> {Name}   </option>
                 );
                 return (
                     <form className="formedit" onSubmit={this.onSaveClick.bind(this)}>
@@ -41,7 +41,7 @@ export class SubjectItem extends Component {
                             {marks}
                         </h3> 
                         <h3 className = "scaledMark" >
-                            {marks}
+                            {2*scaledMark}
                         </h3>
                     </div> 
             );

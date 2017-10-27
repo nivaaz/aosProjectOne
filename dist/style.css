@@ -19,33 +19,28 @@ header{
 /*navitem*/
 nav{
     display:block;
-    width: 50%;
-    margin-left: 25%;
-    background: white;
     text-align: center; 
-    box-shadow: 0px 5px 5px #eee;
+    box-shadow: 0px 5px 10px rgba(24, 43, 44, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 a, nav h2{
-    display: inline;
-    width: 20%;
-    margin: 0 auto;
-    padding: 10px;
     text-decoration: none;  
     text-transform: uppercase;
     font-weight: 100;
 }
 nav a:link {
-    color: #575757;
+    color: #111;
 }
 nav a:visited{
     font-weight: 100;
-    color: #575757;
+    color: #555;
 }
 nav a:hover {
-    color: #52b760;
+    color: #111;
 }
 nav a:active{
-    color: green;
+    color: #eee;
 }
 /*
 
@@ -78,12 +73,20 @@ input.goalAtar {
     text-align: center;
     font-size: 30px;
 }
+/*
+HOME
+*/
+.homeContainer{
+    background-image:  linear-gradient(
+        to bottom,
+         rgba(191, 227, 230, 0.5),
+         rgba(255, 255, 255, 0.9)),
+          url(background.JPG);
+}
+
 
 /* ATAR */
-.reactContainer {
-    /* background: linear-gradient( 45deg,white, whitesmoke); */
-    background: #52b760;
-}
+
 .formAdd { 
     margin: 1%;
     background:  white;
@@ -153,7 +156,10 @@ header .title {
     width : 30%;
 } */
 .headingCont {
-    margin: 0 ;
+    display: grid;
+    grid-template-columns: 5fr 1fr ;
+}
+.innerHeading {
     display: grid;
     grid-template-columns: 4fr 1fr 1fr ;
 }
@@ -183,7 +189,6 @@ header .title {
 .scaledMark {
     background : #52b760;
     color : white;
-    border: solid 2px black;
     margin: 10px;
     padding: 15px;
     font-size: 150%;
@@ -199,7 +204,7 @@ header .title {
 .subitem {
     display: grid;
     grid-gap: 0px;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 5fr 1fr;
 }
 .editContainer{
     align-self: center;
@@ -240,7 +245,7 @@ select {
     text-transform: uppercase;
 }
 ::-webkit-scrollbar-thumb{
-    background: #3da24b;
+    background: #336699;
     border-radius: 15px;
 }
 ::-webkit-scrollbar {
@@ -276,7 +281,7 @@ button {
     background: white;
     /* box-shadow: 0 0 1px grey; */
 }
-button a:hover {
+button a:hover, button a:link {
   color: #339999;
   text-shadow: 0 0 5px white;
 }
@@ -308,27 +313,36 @@ buttonContainer {
     padding:0;
     color:#336699;
 }
-.
+.btnWrapper{
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10%;
+}
+h1.middle {
+    margin-bottom: 10%;
+}
 #buttonNo{
     color:#FF6644;
 }
 #buttonMaybe{
-    color:#339999 ;
+    color:#339999;
 }
 #buttonYes, #buttonNo, #buttonMaybe{
-  height: 45px;
+  padding: 40px;    
   font-family: 'Roboto', sans-serif;
-  font-size: 11px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
-  background-color: #fff;
+  background-color:rgba(255, 255, 255, 0.4) ;
   border: none;
   border-radius: 45px;
   cursor: pointer;
   outline: none;
 }
-
+a:visited {
+    color: #555;
+}
 .estimate {
     background: #52b760;
     padding: 15px;
@@ -392,7 +406,7 @@ display: inline-block;
 footer{
     height: 10%;
     padding: 20px;
-    background:#3da24b;
+    background:#ccc;
     color: white;
     vertical-align: middle;
     text-align: center;
