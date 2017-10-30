@@ -3,6 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.getMarks = getMarks;
+exports.aggregateToAtar = aggregateToAtar;
 exports.ScaleCourse = ScaleCourse;
 
 var _subDat = require('../../../Data/subDat.json');
@@ -75,53 +77,6 @@ function getMarks(index) {
     return marks;
 }
 
-/*
-index : index of the subject in subDat
-rawmark: input mark from form corsp subject
-** Takes a single mark and scales it
-*/
-/**
- * 
- * @param {*} index 
- * @param {*} rawMark 
- */
-// function ScaleCourse(index, rawMark){
-//     var hsc = getMarks(index);    //index will hold hsc mark
-//     var scaled = getMarks(index+1);   //index + 1 will hold scaled mark 
-//     var raw = rawMark/2;
-
-//     if (raw == hsc[hsc.length-1] || (raw > hsc[hsc.length-1] )){
-//         return(scaled[scaled.length-1]);
-//     } 
-//     if (raw == 0){
-//         return 0;
-//     }
-//     /*iterate through array to find place*/
-//     var i = 1;
-//     while (i < hsc.length){
-//         /*equal to scaling pt*/
-//         if (raw == hsc[i]){
-//             return scaled[i]; //direct correlation
-//         }
-//         /*falls within range*/        
-//         if (raw < hsc[i]){
-//             break; // go onto scale
-//         }
-//         i++;
-//     } //end while loop
-//     /*scaling algo*/ 
-//     var dHSC = hsc[i] - hsc[i-1];
-//     var dscale = scaled[i] - scaled[i-1];
-//     if (dscale == 0){
-//         dscale = scaled[i-1] - scaled[i-2];
-//     }
-//     console.log("dscale = " + dscale)
-//         var draw = rawMark - hsc[i-1]
-//         var scale = scaled[i-1] + ((draw/sHSC)*dscale);
-//     return scale.toFixed(2);
-// } 
-
-
 /* scale mark 
 @CourseName is the subject name corsp to file
 @rawMark is crosp mark to be scaled */
@@ -146,24 +101,25 @@ function scaleArray(Courses, Rawmarks) {
 
 /* normal ATAR Scaling functions */
 /**
- * 
+ *  NEED TO IMPORT 
  * @param {*} agg 
  */
 function aggregateToAtar(agg) {
     var i = 0;
-    while (i <= agg.Atar.length - 1) {
-        if (agg == agg.Aggregate(i)) {
-            return agg.Atar[i];
+
+    while (i < _agg2.default.Atar.length) {
+        if (agg == _agg2.default.Aggregate[i]) {
+            return _agg2.default.Atar[i];
         }
         //if in range
-        if (agg > agg.Aggregate(i)) {
+        if (agg > _agg2.default.Aggregate[i]) {
             break;
         }
         i++;
     }
-    var datar = agg.Atar(i) - agg.Atar(i - 1);
-    var dscale = agg - agg.Aggregate(i);
-    var atar = agg.Atar(i) + dscale / 50 * datar;
+    var datar = _agg2.default.Atar[i] - _agg2.default.Atar[i - 1];
+    var dscale = agg - _agg2.default.Aggregate[i];
+    var atar = _agg2.default.Atar[i] + dscale / 50 * datar;
     return atar;
 }
 
@@ -193,7 +149,7 @@ function returnATAR(subjects, marks) {
     var agg = getSum(marks);
     //scale aggreate to ATAR
     //return atar
-    return aggregateToAtar(agg);;
+    return aggregateToAtar(agg);
 }
 
 /*
@@ -319,6 +275,7 @@ function ScaleCourse(index, hscMark) {
     /*scaling algo*/
     var dHSC = HSC[i] - HSC[i - 1];
     var dscale = Scaled[i] - Scaled[i - 1]; // this is getting rounded so it's buggy
+    /* Check this !! */
     if (dscale == 0 || dHSC == 0) {
         dHSC = HSC[i - 1] - HSC[i - 2];
         dscale = Scaled[i - 1] - Scaled[i - 2];

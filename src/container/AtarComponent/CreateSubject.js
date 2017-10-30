@@ -79,7 +79,7 @@ export class CreateSubject extends Component {
         }
         //create new entry
         this.props.createSubject(name, mark); //check this takes in a mark
-        this.props.scaleSubject(name, mark);
+//        this.props.scaleSubject(name, mark);
         this.refs.createInput.value =  ''; //clear the inputs
      }
     /*Validate function check if already added*/

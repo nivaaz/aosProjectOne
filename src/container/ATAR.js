@@ -12,19 +12,21 @@ export class ATAR extends Component {
         super(props);
         this.state = {
             subjects: [],
-            scaledMarks: []
+            atar : "Add more subjects"
         };
     }
+
      render ( ){
          return (
           <div>
             <div className = "partContainer" href="#CALC">
                 <h1 className = "calcTitle">Atar Calculator</h1>
                 <div className ="partition left">
-                    <CreateSubject subjects = {this.state.subjects} 
-                                            marks={this.state.marks} 
-                                            createSubject = {this.createSubject.bind(this)}
-                                            scaleSubject = {this.scaleSubject.bind(this)}/>
+                    <CreateSubject 
+                        subjects = {this.state.subjects} 
+                        marks={this.state.marks} 
+                        createSubject = {this.createSubject.bind(this)}
+                        scaleSubject = {this.scaleSubject.bind(this)}/>
                     <SubjectsList 
                         subjects = {this.state.subjects}
                         scaledMarks = {this.state.scaledMarks}
@@ -33,10 +35,15 @@ export class ATAR extends Component {
                         saveSubject ={this.saveSubject.bind(this)}
                         toggleSubject = {this.toggleSubject.bind(this)}
                         deleteSubject = {this.deleteSubject.bind(this)}
+                        updateATAR = {this.updateATAR.bind(this)}
                     />
                 </div>
                 <div className = "partition right">
-                <AtarEstimate/>
+                <AtarEstimate
+                    subjects = {this.state.subjects}
+                    updateATAR = {this.updateATAR.bind(this)}
+                    atar = {this.state.atar}
+                />
                 </div>            
         </div>
         <List/> 
@@ -60,41 +67,65 @@ export class ATAR extends Component {
             var index = _.findIndex(this.state.subjects, subject => subject.name === name);
             
             /*scale subjects & add to state*/
-            fetch("http://localhost:5000/scalesubject"+ "/" + indexS + "/"+ mark)
+            fetch("http://localhost:5000/atar/scalesubject"+ "/" + indexS + "/"+ mark)
             .then(res => res.json()) //made json obj
             .then (res => {
                 console.log("Scaled mark is "+res.mark)
-                const scaled = this.state.scaledMarks;
-                scaled[index] = res.mark; //this take mark part of res
-                console.log(scaled);
-                this.setState({ scaledMarks : scaled})  
+                this.state.subjects[index].scaled = res.mark; //this take mark part of res
+                this.setState({ subjects : this.state.subjects})  
             })
         }
      createSubject(name, mark){
          console.log("create sub & mark" + name + mark)
-         // var scaledMark = getscaledmark(name, mark)
             this.state.subjects.push({
                 name,
                 isCompleted: false, 
-                marks: mark
-                // scaledMark: scaledMark
+                marks: mark,
+                scaled: 0
             })
+            this.scaleSubject(name, mark);
             this.setState({ 
-                 subjects: this.state.subjects,
-                 marks: this.state.marks 
+                 subjects: this.state.subjects
             });
-                 console.log("marks state" + this.state.marks)
      }
         saveSubject (oldSubject, newSubject, newMark){
             const foundSubject = _.find(this.state.subjects, subject => subject.name === oldSubject);
             foundSubject.name = newSubject;
             foundSubject.marks = newMark;
+            foundSubject.scaled = this.scaleSubject(newSubject, newMark);
             this.setState({ subjects: this.state.subjects})
         }
         deleteSubject(delName){
             //find the index of the subject and delete corrsp mark too 
             _.remove(this.state.subjects, subject =>subject.name === delName);
             this.setState({subjects : this.state.subjects});
+        }
+        /* ATAR */
+        updateATAR(subjects){
+            var i = 0 ;
+            //sort by scaled mark
+         /*   subjects = subjects.sort(subject, b => {//a didnt work??
+                return (a.scaled - b.scaled)
+            })
+         */   //get agg
+
+             var sum = -1;
+            // sum = subjects.sum(sum, subject => {
+            //     return total + subject.scaled
+            // })
+            console.log(this.state.subjects)
+            while (i < 6){ /* units is less than 5 */
+                sum = parseFloat(sum) + parseFloat(this.state.subjects[i++].scaled);
+            }
+
+            fetch("http://localhost:5000/atar/getatar"+ "/" + sum )
+            .then(res => res.json()) //made json obj
+            .then (res => {
+                console.log(res.atar)
+                this.state.atar = res.atar; //this take mark part of res
+                this.setState({ atar : this.state.atar})    //updating state
+            })
+            //sort them from highest to lowest 
         }
         
 }

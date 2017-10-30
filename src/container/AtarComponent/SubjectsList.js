@@ -18,9 +18,9 @@ export class SubjectList extends Component {
             //returns a subject in html
             
             return _.map ( this.props.subjects, (subject, index) => {
-                const scaledMark = this.props.scaledMarks[index];
+               /* const scaledMark = this.props.scaledMarks[index];*/
                 return (
-                    <SubjectItem key={index} scaledMark={scaledMark} {...subject} {...this.props} />                    
+                    <SubjectItem key={index} /*scaledMark={scaledMark}*/ {...subject} {...this.props} />                    
                 );
             } )                                           
     } 
@@ -35,6 +35,9 @@ export class SubjectList extends Component {
             </div>
             );           
         }
+    if (needed <= 0 ){
+            this.props.updateATAR(this.props.subjects);
+        }
     }
     render ( ){
          return (
@@ -46,6 +49,6 @@ export class SubjectList extends Component {
          );
      }
 }
-export default SubjectList  
+export default SubjectList
 /*anything needed
  to be used elsehwere needs to be exported*/

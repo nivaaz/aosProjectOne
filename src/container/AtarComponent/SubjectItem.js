@@ -10,7 +10,7 @@ export class SubjectItem extends Component {
             };
     }
         renderSubjectSection (){
-            const {marks,  name, scaledMark, isCompleted } = this.props;
+            const {marks,  name, scaled, isCompleted } = this.props;
             const subjectStyle = {
                 color: isCompleted ? '#52b76' : '#52b70',
                 cursor: 'pointer'
@@ -41,7 +41,7 @@ export class SubjectItem extends Component {
                             {marks}
                         </h3> 
                         <h3 className = "scaledMark" >
-                            {2*scaledMark}
+                            {2*scaled}
                         </h3>
                     </div> 
             );
@@ -90,6 +90,7 @@ export class SubjectItem extends Component {
         const oldSub = this.props.name;
         const newSub = this.refs.createInput.value;
         const newMark = this.refs.createMark.value;
+        
         this.props.saveSubject(oldSub, newSub, newMark);
         this.setState({
                 isEditing: false

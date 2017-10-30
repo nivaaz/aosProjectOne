@@ -3,23 +3,15 @@ export class AtarEstimate extends Component {
     //usually set state in the topmost component?
     constructor(props ){
         super (props);
-            this.state = {
-            atar : 50        
-            };
     }
-    // calculateATAR(){
-    //     const mark = this.props.subjects.marks;
-    //     const atarInternal = _.sum(mark);
-    //     this.setState({
-    //         atar:atarInternal
-    //     })
+
     render(){
         return (
             <div >
                 <div className = "ATAR">
                     <div> 
                             <h1 className = "title"> Estimated ATAR </h1>
-                            <h1 id = "estimated"> {55.6} </h1>
+                           {this.renderATAR()}
                     </div>
                     <div>   
                             <button className = "estimate"> <i className="material-icons">arrow_downward</i> </button>
@@ -28,5 +20,12 @@ export class AtarEstimate extends Component {
             </div>           
         )
      }
+     renderATAR(){
+        if (typeof this.props.atar === 'string'){
+            return <h1 id = "addMore"> {this.props.atar} </h1>
+        }else {
+            return <h1 id = "estimated" > {this.props.atar.toFixed(2)} </h1>
+        }            
+    }
 }
 export default AtarEstimate
