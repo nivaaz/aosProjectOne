@@ -1,7 +1,7 @@
 //const scale = require(scaledSub)
 import subData from '../../../Data/subDat.json'
 import ranks from '../../../Data/agg.json'
-import { ScaleCourse, getMarks, aggregateToAtar } from './algos.js'
+import { ScaleCourse, getMarks, aggregateToAtar, atarToAggregate, reverseScale } from './algos.js'
 var subs = subData.subs;
 
 const express = require('express');
@@ -40,3 +40,23 @@ app.get('/atar/getAtar/:agg', function(req, res){
   res.send( {"atar" : atar});
 });
 /****************************************** */
+
+/*
+Reverse
+*/
+/**aggregate to atar 
+ * works
+*/
+app.get('/reverse/atartoagg/:atar', function(req, res){
+  var atar = req.params.atar; //can't put in name?
+  var agg = atarToAggregate(atar);
+  res.send( {"agg" : agg});
+});
+
+//mark and subject to reverse scale
+app.get('/reverse/reverseScale/:in/:mark', function(req, res){
+  var index = req.params.in; //can't put in name?
+  var mark = req.params.mark;
+ var nmark =  reverseScale( index, mark);
+  res.send( {"mark" : nmark});
+});

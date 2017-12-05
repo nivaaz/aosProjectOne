@@ -1,6 +1,10 @@
+/**
+ * 
+ *  revese atar calc
+ * 
+ */
 import React, {Component} from 'react'
 import subData from '../../../Data/subName.json'
-/* This class is for the LHS selection of a subject &  mark */
 
 export class CreateSubject extends Component {
     constructor(props){
@@ -35,17 +39,6 @@ export class CreateSubject extends Component {
                     </select>  
                 </div>
 
-                <div className = "markR"
-                         id="right">
-                    <h2 className="title">Add mark </h2>
-                    <input name= "markInput" 
-                                id="markInput" 
-                                defaultValue='75' 
-                                type="number" 
-                                ref="createMark" 
-                                step="0.5"/>
-                </div> 
-
                 <div className = "buttonContainer">
                             <button id = "addButton" >
                               <a>  <i className="material-icons add"> add </i> </a>
@@ -62,11 +55,8 @@ export class CreateSubject extends Component {
         this.setState({error: null});   //inital set state
      
         console.log("subject value " + this.refs.createInput.value);
-        console.log("mark value " + this.refs.createMark.value);
         
         const createInput = this.refs.createInput;
-        const createMark = this.refs.createMark;
-        const mark = createMark.value;
         const name = createInput.value;
         
         //run validatee function
@@ -78,18 +68,23 @@ export class CreateSubject extends Component {
             return;
         }
         //create new entry
-        this.props.createSubject(name, mark); //check this takes in a mark
-        this.props.scaleSubject(name, mark);
+        this.props.createSubject(name, this.props.agg); //check this takes in a mark
+        this.props.addMark(this.props.subjects.length-1, this.props.agg); 
+//        this.props.scaleSubject(name, mark);
         this.refs.createInput.value =  ''; //clear the inputs
      }
     /*Validate function check if already added*/
     validateInput(name){
+        if(this.props.agg == 1){
+            console.log("invalid 0")
+            return "Opps! You need to add an atar"
+        }
         if (!name){
             console.log("invalid1");
-            return "Please choose a subject";
+            return "Whoops! Please choose a subject";
         }else if(_.find (this.props.subjects, subject =>subject.name === name)) {
             console.log("invalid2");
-            return 'You already added this!';
+            return 'Looks like we have this one!';
         }else return null;
     }
 }

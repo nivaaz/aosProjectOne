@@ -47,19 +47,7 @@ nav a:active{
 REVERSE ATAR 
 
 */
-.partContainer.reverse {
-    grid-template-columns: 1fr 2fr;
-}
-/*takes up 2/3 of the page width*/
-.partition.left.reverse{
-    grid-column-start:1;
-    grid-column-end: 2;
-}
-/*takes up final 1/3 of page width*/
-.partition.rightR.reverse {
-    grid-column-start:2;
-    /* grid-column-end:3; */
-}
+
 .goalAtar {
     font-size: 30px;
 }
@@ -77,13 +65,23 @@ input.goalAtar {
 HOME
 */
 .homeContainer{
+    background: transparent;
+}
+.background{
     background-image:  linear-gradient(
         to bottom,
          rgba(191, 227, 230, 0.5),
          rgba(255, 255, 255, 0.9)),
           url(background.JPG);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center; 
+          position: fixed;
+          height: 100%;
+          z-index: -1;
+          width: 100%;    
+          
 }
-
 
 /* ATAR */
 

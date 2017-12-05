@@ -15,7 +15,6 @@ export class ATAR extends Component {
             atar : "Add more subjects"
         };
     }
-
      render ( ){
          return (
           <div>
@@ -109,7 +108,7 @@ export class ATAR extends Component {
             })
          */   //get agg
 
-             var sum = -1;
+             var sum = 0;
             // sum = subjects.sum(sum, subject => {
             //     return total + subject.scaled
             // })
@@ -117,7 +116,6 @@ export class ATAR extends Component {
             while (i < 6){ /* units is less than 5 */
                 sum = parseFloat(sum) + parseFloat(this.state.subjects[i++].scaled);
             }
-
             fetch("http://localhost:5000/atar/getatar"+ "/" + sum )
             .then(res => res.json()) //made json obj
             .then (res => {
@@ -127,7 +125,6 @@ export class ATAR extends Component {
             })
             //sort them from highest to lowest 
         }
-        
 }
 export default ATAR
 /*anything needed

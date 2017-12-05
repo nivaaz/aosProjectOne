@@ -31,12 +31,15 @@ export class SubjectList extends Component {
      if (needed > 0){ //you need to add subs
         return ( 
             <div className = "info">
-                    You need to add {needed} more units to estimate an ATAR 
+                <p>
+                    You need to add {needed} more units to estimate an ATAR. 
+                </p>
+              
             </div>
             );           
         }
     if (needed <= 0 ){
-            this.props.updateATAR(this.props.subjects);
+            this.props.updateMarks(this.props.atar);
         }
     }
     render ( ){

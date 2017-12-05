@@ -5,6 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getMarks = getMarks;
 exports.aggregateToAtar = aggregateToAtar;
+exports.atarToAggregate = atarToAggregate;
+exports.reverseScale = reverseScale;
+exports.reverseATAR = reverseATAR;
 exports.ScaleCourse = ScaleCourse;
 
 var _subDat = require('../../../Data/subDat.json');
@@ -18,6 +21,10 @@ var _agg2 = _interopRequireDefault(_agg);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var subs = _subDat2.default.subs;
+var agg = _agg2.default.Aggregate;
+var atar = _agg2.default.Atar;
+
+/** */
 
 function checkSubjects(subjects) {
     //check there is enough units 
@@ -106,8 +113,8 @@ function scaleArray(Courses, Rawmarks) {
  */
 function aggregateToAtar(agg) {
     var i = 0;
-
-    while (i < _agg2.default.Atar.length) {
+    agg = agg * 2;
+    while (i < atar.length) {
         if (agg == _agg2.default.Aggregate[i]) {
             return _agg2.default.Atar[i];
         }
@@ -120,6 +127,7 @@ function aggregateToAtar(agg) {
     var datar = _agg2.default.Atar[i] - _agg2.default.Atar[i - 1];
     var dscale = agg - _agg2.default.Aggregate[i];
     var atar = _agg2.default.Atar[i] + dscale / 50 * datar;
+    console.log("ATAR: " + atar);
     return atar;
 }
 
@@ -127,7 +135,7 @@ function getSum(marks) {
     var i = 0;
     var sum = 0;
     while (i < marks.length - 1) {
-        sum += marks[i];
+        sum += marks[i++];
     }
     return sum;
 }
@@ -165,21 +173,29 @@ function returnATAR(subjects, marks) {
  * 
  * @param {*} atar 
  */
-function atarToAggregate(atar) {
+function atarToAggregate(newAtar) {
     var i = 0;
-    while (i <= agg.Atar.length - 1) {
-        if (atar == agg.Atar(i)) {
+    if (newAtar == 99.95) {
+        return 500;
+    }
+    newAtar = parseFloat(newAtar);
+
+    while (i <= atar.length - 1) {
+        if (newAtar == atar[i]) {
             return aggregateToAtar.Aggregate[i];
         }
         //if in range
-        if (atar > agg.Atar(i)) {
+        if (newAtar > atar[i]) {
             break;
         }
         i++;
     }
-    var datar = agg.Atar(i) - agg.Atar(i - 1);
-    var dscale = atar - agg.Atar(i);
-    var aggregate = agg.Aggregate(i) + dscale / datar * 50;
+    var datar = atar[i - 1] - atar[i];
+    console.log(atar[i]);
+    var dscale = newAtar - atar[i];
+    console.log(dscale);
+    console.log(datar);
+    var aggregate = agg[i] + dscale / datar * 50;
     return aggregate;
 }
 /**
@@ -191,23 +207,40 @@ function atarToAggregate(atar) {
  */
 function reverseScale(index, mark) {
     //find subject 
+    mark = mark / 2;
+    console.log(index + " " + mark);
     var Scaled = getMarks(index); //index will hold Scaled mark
-    var HSC = getMarks(index + 1); //index will hold Scaled mark
-    //finf where it sits in scaled
+    var index1 = ++index;
+    var HSC = getMarks(index1); //index + 1 will hold hsc mark 
+
     if (mark == Scaled[0]) {
         return HSC[0];
     }
     var i = 0;
-    while (i <= HSC.length - 1) {
-        if (mark == Scaled[i]) return HSC[i];
-        if (mark < Scaled) break;
+    while (i < HSC.length) {
+        console.log(i);
+        console.log(Scaled[i]);
+        if (mark == Scaled[i]) {
+            console.log(" EXIT ONE");
+            return HSC[i];
+        }
+        if (mark < Scaled[i]) {
+            console.log(" EXIT TWO");
+            break;
+        }
         i++;
     }
     var dmark = mark - Scaled[i - 1];
+    console.log("dmark " + dmark);
+    console.log(Scaled[i] + " " + Scaled[i - 1]);
     var dscale = Scaled[i] - Scaled[i - 1];
+    console.log("dscale " + dscale);
     var dhsc = HSC[i] - HSC[i - 1];
+    console.log(HSC[i] + " " + HSC[i - 1]);
+    console.log("dhsc " + dhsc);
+    console.log("HSC-1 " + HSC[i - 1]);
 
-    return HSC[i - 1] + dmark / dscale * dHSC;;
+    return HSC[i - 1] + dmark / dscale * dhsc;
 }
 /**
  * 
@@ -232,14 +265,14 @@ function reverseATAR(atar, subjects) {
     var agg = atarToAggregate(atar);
     var rough = agg / 10;
     //divide agg by 10 
-    reverseScaleArray(subjects, rough);
+    subjects = reverseScaleArray(subjects, rough);
     //reverse scale subjects to this mark  
 
     //find the highest subejcts to match mark 
 
     //reorder subjects from highest marks to lowest 
 
-    //return 
+    return subjects;
 }
 /**
  * 
@@ -249,7 +282,7 @@ function reverseATAR(atar, subjects) {
 function ScaleCourse(index, hscMark) {
     var Scaled = getMarks(index); //index will hold Scaled mark
     var index1 = index++;
-    var HSC = getMarks(index); //index + 1 will hold hsc mark 
+    var HSC = getMarks(index1); //index + 1 will hold hsc mark 
     var raw = hscMark / 2;
 
     //is the max value

@@ -2,6 +2,10 @@ import subData from '../../../Data/subDat.json'
 import ranks from '../../../Data/agg.json'
 
 var subs = subData.subs;
+var agg = ranks.Aggregate;
+var atar = ranks.Atar;
+
+/** */
 
 function checkSubjects (subjects){
     //check there is enough units 
@@ -81,8 +85,8 @@ function scaleArray(Courses, Rawmarks){
  */
 export function aggregateToAtar (agg){
     var i = 0;
-  
-    while (i < ranks.Atar.length){
+    agg = agg*2;
+    while (i < atar.length){
         if (agg == ranks.Aggregate[i]){
             return ranks.Atar[i];
         }
@@ -141,21 +145,29 @@ function getSum(marks){
  * 
  * @param {*} atar 
  */
-function atarToAggregate (atar){
+export function atarToAggregate (newAtar){
     var i = 0;
-    while (i <= agg.Atar.length-1){
-        if (atar == agg.Atar(i)){
+    if (newAtar == 99.95){
+        return 500;
+    }
+    newAtar =parseFloat(newAtar)
+
+    while (i <= atar.length -1){
+        if (newAtar == atar[i]){
             return aggregateToAtar.Aggregate[i];
         }
         //if in range
-        if (atar > agg.Atar(i)){
+        if (newAtar > atar[i]){
             break;
         }
         i++; 
     }
-    var datar = agg.Atar(i) - agg.Atar(i-1);
-    var dscale = atar - agg.Atar(i);
-    var aggregate = agg.Aggregate(i) + (dscale/datar)*50;
+    var datar = atar[i-1] - atar[i];
+    console.log(atar[i])
+    var dscale = newAtar - atar[i];
+    console.log(dscale)
+    console.log(datar)
+    var aggregate = agg[i] + (dscale/datar)*50;
     return aggregate ;
 }
 /**
@@ -165,25 +177,42 @@ function atarToAggregate (atar){
  * @param {*} subject 
  * @param {*} mark 
  */
-function reverseScale (index, mark){
+export function reverseScale (index, mark){
     //find subject 
+    mark = mark/2;
+    console.log(index +" "+ mark);
     var Scaled = getMarks(index);    //index will hold Scaled mark
-    var HSC = getMarks(index+1);    //index will hold Scaled mark
-    //finf where it sits in scaled
+    var index1 = ++index;
+    var HSC = getMarks(index1);   //index + 1 will hold hsc mark 
+    
     if(mark == Scaled[0]){
         return HSC[0];
     }
     var i = 0 ;
-    while (i <=HSC.length-1 ){
-        if (mark == Scaled[i]) return HSC[i];
-        if(mark < Scaled) break;
+    while (i <HSC.length ){
+        console.log(i)
+        console.log(Scaled[i])
+        if (mark == Scaled[i]) {
+            console.log(" EXIT ONE")
+            return HSC[i];
+        }
+        if(mark < Scaled[i]) {
+            console.log(" EXIT TWO")
+            break;
+        }
     i++;
     }
-    var dmark = mark - Scaled[i-1];
+    var dmark = mark-Scaled[i-1];
+        console.log("dmark " +dmark);
+        console.log( Scaled[i] + " " +  Scaled[i-1])
     var dscale = Scaled[i] - Scaled[i-1];
+        console.log("dscale " +dscale);    
     var dhsc = HSC[i] - HSC [i-1];
-
-    return HSC[i-1] + (dmark/dscale) * dHSC;;
+        console.log(HSC[i]+" "+ HSC [i-1])
+        console.log("dhsc " +dhsc);    
+        console.log("HSC-1 " +HSC[i-1]);    
+    
+    return HSC[i-1] + (dmark/dscale) * dhsc;
 }
 /**
  * 
@@ -203,19 +232,19 @@ function reverseScaleArray(subjects, mark){
  * @param {*} atar 
  * @param {*} subjects 
  */
-function reverseATAR (atar, subjects){
+export function reverseATAR (atar, subjects){
     //checks units 
     var agg = atarToAggregate(atar);
     var rough = agg/10;
     //divide agg by 10 
-    reverseScaleArray (subjects, rough);
+    subjects = reverseScaleArray (subjects, rough);
     //reverse scale subjects to this mark  
     
     //find the highest subejcts to match mark 
     
     //reorder subjects from highest marks to lowest 
     
-    //return 
+    return subjects; 
 }
 /**
  * 
@@ -225,7 +254,7 @@ function reverseATAR (atar, subjects){
 export function ScaleCourse(index, hscMark){
     var Scaled = getMarks(index);    //index will hold Scaled mark
     var index1 = index ++;
-    var HSC = getMarks(index);   //index + 1 will hold hsc mark 
+    var HSC = getMarks(index1);   //index + 1 will hold hsc mark 
     var  raw = hscMark/2;
 
         //is the max value
