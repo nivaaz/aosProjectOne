@@ -16,7 +16,6 @@ export class AddAtar extends Component {
         return (
             <div className = "ATAR reverse">
                 <div >
-                            <h1 className = "title"> Add an ATAR Goal and hit enter</h1>
                             <form onSubmit = {this.handleCreate.bind(this)} className = "addAtar" /* on change update subjects if enough */onSubmit={this.handleCreate.bind(this)}>
                                 <div className = "goalAtar">
                                     <input 
@@ -29,6 +28,7 @@ export class AddAtar extends Component {
                                     defaultValue = "80.55" />
                                 </div>
                             </form>        
+                            <p className = "info"> Add an ATAR goal and hit enter</p>      
                 </div>
             </div>           
         )
@@ -39,7 +39,8 @@ export class AddAtar extends Component {
         this.setState({error: null});   //inital set state
         console.log(this.refs.goal.value); // Added atar
         this.props.addAtar(this.refs.goal.value);       //adding to state  
-        this.props.addAgg(this.refs.goal.value);  
+        this.props.addAgg(this.refs.goal.value); 
+        this.props.updateMarks(this.props.agg); 
     }
     }
 

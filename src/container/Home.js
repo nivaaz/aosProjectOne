@@ -8,7 +8,9 @@ class Home extends Component {
             </div>
                <nav>
                     <h2><a href= "/"> <i className="fa fa-home" aria-hidden="true"></i></a></h2>
-                    <h2><a href="/reverse"><i className="fa fa-calculator" aria-hidden="true"></i></a></h2>
+                    <h2><a href="/reverse"> <i className="fa fa-calculator" aria-hidden="true"></i>
+                    <i className ="material-icons">subdirectory_arrow_left</i>
+                                                                </a></h2>
                     <h2><a href="/atar"><i className="fa fa-calculator" aria-hidden="true"></i></a></h2>
                      <h2><a href="/">Quiz</a></h2>
                 </nav>

@@ -61,9 +61,9 @@ export class SubjectItem extends Component {
            }
            return (
                 <div className ="editContainer" > 
-                  <a> <i  className = "addSubject" onClick={this.onEditClick.bind(this)}
+                  <a className = "addSubject"> <i  className = "addSubject" onClick={this.onEditClick.bind(this)}
                     className="material-icons edit">mode_edit</i></a>
-                    <a><i className = "addSubject" onClick={this.props.deleteSubject.bind(this, this.props.name)}
+                    <a className = "addSubject"><i className = "addSubject" onClick={this.props.deleteSubject.bind(this, this.props.name)}
                    className="material-icons delete">delete</i></a>
                    
                </div>

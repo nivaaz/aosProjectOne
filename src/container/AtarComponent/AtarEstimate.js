@@ -22,7 +22,7 @@ export class AtarEstimate extends Component {
      }
      renderATAR(){
         if (typeof this.props.atar === 'string'){
-            return <h1 id = "addMore"> {this.props.atar} </h1>
+            return <p className= "info"> {this.props.atar} </p>
         }else {
             return <h1 id = "estimated" > {this.props.atar.toFixed(2)} </h1>
         }            

@@ -39,8 +39,8 @@ export class SubjectList extends Component {
             );           
         }
     if (needed <= 0 ){
-            this.props.updateMarks(this.props.atar);
-        }
+        this.props.updateATAR(this.props.subjects)
+    }
     }
     render ( ){
          return (

@@ -15,8 +15,10 @@
     border: solid;
 }
 .calcTitle.reverse {
-    font-size: small;
+    font-size: xx-large;
     text-align: center;
+    font-weight: initial;
+    color: #333333;
 }
 .ATAR.reverse{
     text-align: center;
@@ -25,6 +27,15 @@
     padding-bottom: 0;
 width: 100%;
 }
+.reverse .title {
+    text-transform: initial;
+    font-size: x-large;
+}
+.ATAR.reverse h1.title{
+    color:grey;
+    font-size: large; 
+    text-transform: initial;
+}
 .partContainer.reverse{
     min-height: 80%;
     padding:0px;
@@ -32,4 +43,15 @@ width: 100%;
 }
 .partition.reverse {
     align-self: center;
+}
+.markL.reverse{
+    width: unset;
+}
+input.goalAtar:focus{
+background : rgba(255, 255, 255, 0.5);
+color: #52b760;
+}
+input.goalAtar:hover{
+    cursor: pointer;
+    box-shadow-color: green;
 }

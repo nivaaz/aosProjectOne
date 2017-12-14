@@ -50,6 +50,8 @@ export class Reverse extends Component {
                 <AddAtar 
                         /* needs to bind to state here! */
                         atar = {this.state.atar}
+                        agg = {this.state.agg}
+                        updateMarks = {this.updateMarks.bind(this)}
                         addAtar = {this.addAtar.bind(this)}
                         addAgg = {this.addAgg.bind(this)}
                 />
@@ -84,7 +86,6 @@ export class Reverse extends Component {
             this.setState({
                 atar: newATAR
             })
-            // addAgg(newAtar);
         } 
         addAgg(atar){
             fetch("http://localhost:5000/reverse/atartoagg/" + atar )
@@ -94,6 +95,18 @@ export class Reverse extends Component {
                 this.state.agg = res.agg; //this take mark part of res
                 this.setState({ agg : this.state.agg})  
             })
+        }
+        /*updates all the subjects to a new agg*/
+        updateMarks(agg){
+            var i = 0;
+            for (i=0; i< this.subjects.length; i++){
+                addMark(i, agg);
+            }
+            var subjects = this.subjects;
+            for (i=0; i< this.subjects.length; i++){
+                subjects[i].scaled = (agg/10).toFixed(0);
+            }
+            this.setState({ subjects : this.state.subjects})          
         }
         /*index of sub in state*/
         /*you need to also pass in state: agg and subs*/
@@ -108,7 +121,7 @@ export class Reverse extends Component {
             .then (res => {
                 console.log("hsc mark is "+ res.mark);
                 // sub.scaled = agg/10; //this take mark part of res                    
-                this.state.subjects[subIndex].hsc = 2*res.mark.toFixed(0);
+                this.state.subjects[subIndex].hsc = res.mark.toFixed(0);
                 this.setState({ subjects : this.state.subjects})  
             })
         }
@@ -140,7 +153,7 @@ export class Reverse extends Component {
             foundSubject.name = newSubject;
             // foundSubject.hsc = this.addMark(ind, agg); ??????
             var ind = _.findIndex(this.state.subjects, subject => subject.name === oldSubject);
-            foundSubject.scaled =(this.state.agg/10).toFixed(0);
+            // foundSubject.scaled =(this.state.agg/10).toFixed(0);
             this.setState({ subjects: this.state.subjects})
         }
         deleteSubject(delName){

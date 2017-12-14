@@ -24,8 +24,6 @@ var subs = _subDat2.default.subs;
 var agg = _agg2.default.Aggregate;
 var atar = _agg2.default.Atar;
 
-/** */
-
 function checkSubjects(subjects) {
     //check there is enough units 
     //chec k catgeories
@@ -281,10 +279,11 @@ function reverseATAR(atar, subjects) {
  */
 function ScaleCourse(index, hscMark) {
     var Scaled = getMarks(index); //index will hold Scaled mark
-    var index1 = index++;
+    var index1 = ++index;
     var HSC = getMarks(index1); //index + 1 will hold hsc mark 
     var raw = hscMark / 2;
-
+    console.log(HSC);
+    console.log(Scaled);
     //is the max value
     if (raw == HSC[HSC.length - 1] || raw > HSC[HSC.length - 1]) {
         return Scaled[Scaled.length - 1];

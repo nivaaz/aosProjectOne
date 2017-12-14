@@ -7,11 +7,18 @@ import CreateSubject from './AtarComponent/CreateSubject'
 //import data from '../../../Data/subDat.json'
 import data from '../../Data/subDat.json'
 //some data to get started with
+var testsub = [
+    {name: "Aboriginal Studies", isCompleted: false, marks: "75", scaled: "35.9"},
+    {name: "Drama", isCompleted: false, marks: "75", scaled: "45.2"},
+    {name: "Chemistry", isCompleted: false, marks: "75", scaled: "42.0"},
+    {name: "Ancient History", isCompleted: false, marks: "75", scaled: "43.9"},
+    {name: "Agriculture", isCompleted: false, marks: "75", scaled: "44.1"}
+]
 export class ATAR extends Component {
     constructor(props){
         super(props);
         this.state = {
-            subjects: [],
+            subjects: testsub,
             atar : "Add more subjects"
         };
     }
@@ -102,21 +109,15 @@ export class ATAR extends Component {
         /* ATAR */
         updateATAR(subjects){
             var i = 0 ;
-            //sort by scaled mark
-         /*   subjects = subjects.sort(subject, b => {//a didnt work??
-                return (a.scaled - b.scaled)
-            })
-         */   //get agg
-
              var sum = 0;
-            // sum = subjects.sum(sum, subject => {
-            //     return total + subject.scaled
-            // })
-            console.log(this.state.subjects)
-            while (i < 6){ /* units is less than 5 */
-                sum = parseFloat(sum) + parseFloat(this.state.subjects[i++].scaled);
-            }
-            fetch("http://localhost:5000/atar/getatar"+ "/" + sum )
+            var subjects=  _.sortBy(subjects, [function(o) { return o.scaled; }]);
+            console.log("LOG")
+            console.log( subjects)
+             while (i <= 5){ /* units is less than 5 */
+                 sum = parseFloat(sum) + parseFloat(subjects[i++].scaled);
+             console.log ("sum "+ i +" "+ sum)
+             }
+             fetch("http://localhost:5000/atar/getatar"+ "/" + sum )
             .then(res => res.json()) //made json obj
             .then (res => {
                 console.log(res.atar)

@@ -28,9 +28,9 @@ export class CreateSubject extends Component {
         );
          return (
             <form className = "formAdd" onSubmit={this.handleCreate.bind(this)} >
-               <div className = "markL" 
+               <div className = "markL reverse" 
                         id="left">
-                    <h2 className="title"> Add subject </h2>
+                    <h2 className="title reverse"> Add a subject </h2>
                     <select name="subSelect" 
                                 type ="text" 
                                 defaultValue="Standard English" 
