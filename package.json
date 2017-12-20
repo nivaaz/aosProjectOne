@@ -4,8 +4,7 @@
   "description": "A project focusing on React and related tools",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server",
-    "postinstall": "npm install && npm start"
+    "start": "concurrently \"./node_modules/.bin/webpack-dev-server\" \"cd src/serve && npm start\" "
   },
   "author": "nks",
   "devDependencies": {
@@ -21,11 +20,12 @@
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^1.16.2",
+    "server-dependencies": "file:src/serve"
   },
   "dependencies": {
     "add": "^2.0.6",
-    "express": "^4.16.1",
+    "concurrently": "^3.5.1",
     "lodash": "^4.17.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

@@ -113,7 +113,7 @@ export class ATAR extends Component {
             var subjects=  _.sortBy(subjects, [function(o) { return o.scaled; }]);
             console.log("LOG")
             console.log( subjects)
-             while (i <= 5){ /* units is less than 5 */
+             while (i < 5){ /* units is less than 5 */
                  sum = parseFloat(sum) + parseFloat(subjects[i++].scaled);
              console.log ("sum "+ i +" "+ sum)
              }

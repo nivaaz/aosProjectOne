@@ -1,6 +1,6 @@
 //const scale = require(scaledSub)
-import subData from '../../../Data/subDat.json'
-import ranks from '../../../Data/agg.json'
+import subData from '../../Data/subDat.json'
+import ranks from '../../Data/agg.json'
 import { ScaleCourse, getMarks, aggregateToAtar, atarToAggregate, reverseScale } from './algos.js'
 var subs = subData.subs;
 
