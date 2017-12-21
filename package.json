@@ -25,6 +25,7 @@
   "scripts": {
     "start": "concurrently \"nodemon -r babel-register server.js\" \"cd client && npm start\" ",
     "install": "cd client && npm install",
-    "build": "cd client && npm run build"
-  },
+    "build": "cd client && npm run build",
+    "server": "nodemon -r babel-register server.js"
+  }
 }

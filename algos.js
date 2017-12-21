@@ -1,5 +1,5 @@
-import subData from '../../../Data/subDat.json'
-import ranks from '../../../Data/agg.json'
+import subData from './data/subDat.json'
+import ranks from './data/agg.json'
 
 var subs = subData.subs;
 var agg = ranks.Aggregate;
