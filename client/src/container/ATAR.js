@@ -74,7 +74,7 @@ export class ATAR extends Component {
             var index = _.findIndex(this.state.subjects, subject => subject.name === name);
             
             /*scale subjects & add to state*/
-            fetch("http://localhost:5000/atar/scalesubject/"+indexS+"/"+mark)
+            fetch("/atar/scalesubject/"+indexS+"/"+mark)
             .then(res => res.json()) //made json obj
             .then (res => {
                 console.log("Scaled mark is "+res.mark)

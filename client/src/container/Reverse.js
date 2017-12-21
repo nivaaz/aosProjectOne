@@ -51,7 +51,7 @@ export default class Reverse extends Component {
         var indexS = _.findIndex(data.subs, subject => subject.Course === name);
         var sub = this.state.subjects[subIndex];
         var scale = (agg/10).toFixed(0)
-        var query = "http://localhost:5000/reverse/reverseScale/" + indexS + "/"+ scale
+        var query = "/reverse/reverseScale/" + indexS + "/"+ scale
         /*scale subjects & add to state*/
         fetch(query)
         .then(res => res.json()) //made json obj
@@ -71,7 +71,7 @@ export default class Reverse extends Component {
         })
     } 
     addAgg(atar){
-        fetch("http://localhost:5000/reverse/atartoagg/" + atar )
+        fetch("/reverse/atartoagg/" + atar )
         .then(res => res.json()) //made json obj
         .then (res => {
             console.log("Agg"+res.agg)
