@@ -1,11 +1,12 @@
-
 import React, {Component} from 'react'
 import AtarEstimate from './AtarComponent/AtarEstimate.js'
 import SubjectsList from './AtarComponent/SubjectsList'
 import List from './AtarComponent/List'
 import CreateSubject from './AtarComponent/CreateSubject'
 //import data from '../../../Data/subDat.json'
-import data from '../../Data/subDat.json'
+import data from '../data/subDat.json'
+import _ from 'lodash'
+
 //some data to get started with
 var testsub = [
     {name: "Aboriginal Studies", isCompleted: false, marks: "75", scaled: "35.9"},
@@ -73,7 +74,7 @@ export class ATAR extends Component {
             var index = _.findIndex(this.state.subjects, subject => subject.name === name);
             
             /*scale subjects & add to state*/
-            fetch("http://localhost:5000/atar/scalesubject"+ "/" + indexS + "/"+ mark)
+            fetch("http://localhost:5000/atar/scalesubject/"+indexS+"/"+mark)
             .then(res => res.json()) //made json obj
             .then (res => {
                 console.log("Scaled mark is "+res.mark)
@@ -117,7 +118,7 @@ export class ATAR extends Component {
                  sum = parseFloat(sum) + parseFloat(subjects[i++].scaled);
              console.log ("sum "+ i +" "+ sum)
              }
-             fetch("http://localhost:5000/atar/getatar"+ "/" + sum )
+             fetch("http://localhost:5000/atar/getatar/" + sum )
             .then(res => res.json()) //made json obj
             .then (res => {
                 console.log(res.atar)

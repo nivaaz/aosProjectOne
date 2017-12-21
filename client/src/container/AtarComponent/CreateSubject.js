@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import subData from '../../../Data/subName.json'
+import subData from '../../data/subName.json'
+import _ from 'lodash'
 /* This class is for the LHS selection of a subject &  mark */
 
 export class CreateSubject extends Component {

@@ -4,7 +4,8 @@
  * 
  */
 import React, {Component} from 'react'
-import subData from '../../../Data/subName.json'
+import subData from '../../data/subName.json'
+import _ from 'lodash'
 
 export class CreateSubject extends Component {
     constructor(props){

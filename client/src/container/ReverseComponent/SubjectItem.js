@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import subData from '../../../Data/subName.json'
+import subData from '../../data/subName.json'
 /* This class is for the LHS selection of a subject &  mark */
 export class SubjectItem extends Component {
    //usually set state in the topmost component?
