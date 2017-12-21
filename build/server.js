@@ -23,22 +23,12 @@ var express = require('express');
 var app = express();
 
 // Serve static files from the React app
-app.use(express.static(_path2.default.join(__dirname, 'client/build')));
+app.use(express.static(_path2.default.join(__dirname, '../client/build')));
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
-});
-
-app.get('/', function (req, res) {
-  res.send("The server is working!");
-});
-
-/* starts and listens on 5000 */
-var port = process.env.PORT || 5000;
-app.listen(port, function () {
-  console.log('Example app listening on port 5000!');
 });
 
 /**atar */
@@ -78,4 +68,14 @@ app.get('/reverse/reverseScale/:in/:mark', function (req, res) {
   var mark = req.params.mark;
   var nmark = (0, _algos.reverseScale)(index, mark);
   res.send({ "mark": nmark });
+});
+
+app.get('*', function (request, response) {
+  response.sendFile(_path2.default.join(__dirname, '../client/build/index.html'));
+});
+
+/* starts and listens on 5000 */
+var port = process.env.PORT || 5000;
+app.listen(port, function () {
+  console.log('Example app listening on port 5000!');
 });

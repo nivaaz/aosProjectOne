@@ -25,8 +25,8 @@
   "scripts": {
     "start": "concurrently \"nodemon -r babel-register server/server.js\" \"cd client && npm start\" ",
     "install": "cd client && npm install",
-    "build": "concurrently \"babel ./server --ignore node_modules,build --out-dir ./server/build --copy-files \" \"cd client && npm run build\" ",
-    "build:server": "babel ./server --ignore node_modules,build --out-dir ./server/build --copy-files ",
+    "build": "concurrently \"babel ./server --ignore node_modules,build --out-dir build --copy-files \" \"cd client && npm run build\" ",
+    "build:server": "babel ./server --ignore node_modules,build --out-dir build --copy-files ",
     "server": "nodemon -r babel-register server/server.js"
   }
 }
