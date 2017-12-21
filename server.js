@@ -1,11 +1,16 @@
 //const scale = require(scaledSub)
-import subData from '../../Data/subDat.json'
-import ranks from '../../Data/agg.json'
+import subData from '../../../Data/subDat.json'
+import ranks from '../../../Data/agg.json'
 import { ScaleCourse, getMarks, aggregateToAtar, atarToAggregate, reverseScale } from './algos.js'
+import path from 'path'
+
 var subs = subData.subs;
 
 const express = require('express');
 const app = express();
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -18,9 +23,11 @@ app.get('/', function(req, res){
 });
 
 /* starts and listens on 5000 */
-app.listen(5000, function(){
+const port = process.env.PORT || 5000;
+app.listen(port, function(){
   console.log('Example app listening on port 5000!');
 });
+
 
 /**atar */
 /*Scale a single subjsct*/
