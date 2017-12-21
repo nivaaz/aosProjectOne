@@ -118,14 +118,14 @@ export class ATAR extends Component {
                  sum = parseFloat(sum) + parseFloat(subjects[i++].scaled);
              console.log ("sum "+ i +" "+ sum)
              }
-             fetch("http://localhost:5000/atar/getatar/" + sum )
-            .then(res => res.json()) //made json obj
-            .then (res => {
-                console.log(res.atar)
-                this.state.atar = res.atar; //this take mark part of res
-                this.setState({ atar : this.state.atar})    //updating state
-            })
-            //sort them from highest to lowest 
+             fetch("/atar/getatar/" + sum )
+                .then( res => res.json() ) //made json obj
+                .then (res => {
+                    console.log(res.atar)
+                    this.state.atar = res.atar; //this take mark part of res
+                    this.setState({ atar : this.state.atar})    //updating state
+                })
+                //sort them from highest to lowest 
         }
 }
 export default ATAR

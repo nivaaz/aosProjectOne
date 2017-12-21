@@ -41,7 +41,8 @@ class Quiz extends Component {
         console.log("state now is " + this.state.name);
 
     }
-}/*This part is what gets rendered */
+}
+/*This part is what gets rendered */
 export default Quiz  
 /*anything needed
  to be used elsehwere needs to be exported*/

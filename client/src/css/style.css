@@ -20,9 +20,9 @@ body{
 .backgroundBlur{
     background-image:  linear-gradient(
         to bottom,
-         rgba(255, 255, 255, 0.5),
-         rgba(255, 255, 255, 0.9)),
-          url(background.JPG);
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.9)),
+        url('../img/background.JPG');
     background-size: cover;
     overflow: hidden;
     filter: blur(4px);

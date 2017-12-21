@@ -1,31 +1,21 @@
+//need too add in react-router to import browser history
 import React from 'react'
-import {Route, IndexRoute} from 'react-router'
-import Quiz from './container/Quiz' /*routes>src>container */
-import ATAR from './container/ATAR'
+import ReactDOM from 'react-dom'
+import {Router, browserHistory} from 'react-router'
+import Routes from './routes/index' //links to ./routes/index.js
+
+import Quiz from './container/Quiz'
+import ATAR from './container/ATAR.js'
 import Reverse from './container/Reverse' 
 import Home from './container/Home' 
-/*https://github.com/reactjs/react-router-tutorial/tree/master/lessons/08-index-routes#index-routes */
-const createRoutes = ( ) => {
-    return (
-        <Route
-             path ='/'
-             component={Home} 
-        >
-            <IndexRoute 
-                component ={Quiz} 
-            />
-            <Route 
-                path ={'/atar'} 
-                component ={ATAR}
-                 />
-            <Route 
-                path ={'/reverse'} 
-                component ={Reverse}
-            />
-        </Route>
-    )
-}
+import styles from './css/style.css'
+import reverseStyles from './css/reverse.css'
 
-const Routes = createRoutes( )
-
-export default Routes 
+ReactDOM.render(
+  //<Router history={hashHistory} /> //For production gotta use browserHistory with a server (look up browserHistory vs hashHistory )
+  <Router 
+  history = {browserHistory}
+  routes = {Routes}
+  />,
+  document.getElementById('react-container')
+);
