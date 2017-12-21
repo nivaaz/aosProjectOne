@@ -23,9 +23,10 @@
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "start": "concurrently \"nodemon -r babel-register server.js\" \"cd client && npm start\" ",
+    "start": "concurrently \"nodemon -r babel-register server/server.js\" \"cd client && npm start\" ",
     "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "server": "nodemon -r babel-register server.js"
+    "build": "concurrently \"babel ./server --ignore node_modules,build --out-dir ./server/build --copy-files \" \"cd client && npm run build\" ",
+    "build:server": "babel ./server --ignore node_modules,build --out-dir ./server/build --copy-files ",
+    "server": "nodemon -r babel-register server/server.js"
   }
 }

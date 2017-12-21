@@ -1,0 +1,693 @@
+/*contains data on what category each subject is in & how many units.*/
+{
+    [
+        {
+            "Course": "Aboriginal Studies",
+            "Unit": "2",
+            "Subject": "Aboriginal Studies"
+        },
+        {
+            "Course": "Agriculture",
+            "Unit": "2",
+            "Subject": "Agriculture"
+        },
+        {
+            "Course": "Ancient History",
+            "Unit": "2",
+            "Subject": "Ancient History"
+        },
+        {
+            "Course": "HSC History Extension1",
+            "Unit": "1",
+            "Subject": "Ancient History"
+        },
+        {
+            "Course": "Biology",
+            "Unit": "2",
+            "Subject": "Biology"
+        },
+        {
+            "Course": "Business Studies",
+            "Unit": "2",
+            "Subject": "Business Studies"
+        },
+        {
+            "Course": "Chemistry",
+            "Unit": "2",
+            "Subject": "Chemistry"
+        },
+        {
+            "Course": "Community and Family Studies",
+            "Unit": "2",
+            "Subject": "Community and Family"
+        },
+        {
+            "Course": "",
+            "Unit": "",
+            "Subject": "Studies"
+        },
+        {
+            "Course": "Dance",
+            "Unit": "2",
+            "Subject": "Dance"
+        },
+        {
+            "Course": "Design and Technology",
+            "Unit": "2",
+            "Subject": "Design and Technology"
+        },
+        {
+            "Course": "Drama",
+            "Unit": "2",
+            "Subject": "Drama"
+        },
+        {
+            "Course": "Earth and Environmental Science",
+            "Unit": "2",
+            "Subject": "Earth and Environmental Sciencce"
+        },
+        {
+            "Course": "Economics",
+            "Unit": "2",
+            "Subject": "Economics"
+        },
+        {
+            "Course": "Engineering Studies",
+            "Unit": "2",
+            "Subject": "Engineering Studies"
+        },
+        {
+            "Course": "English as a Second Language (ESL)",
+            "Unit": "2",
+            "Subject": "English"
+        },
+        {
+            "Course": "English (Standard)",
+            "Unit": "2",
+            "Subject": "English"
+        },
+        {
+            "Course": "English (Advanced)",
+            "Unit": "2",
+            "Subject": "English"
+        },
+        {
+            "Course": "HSC English Extension 1",
+            "Unit": "1",
+            "Subject": "English"
+        },
+        {
+            "Course": "HSC English Extension 2",
+            "Unit": "1",
+            "Subject": "English"
+        },
+        {
+            "Course": "Food Technology",
+            "Unit": "2",
+            "Subject": "Food Technology"
+        },
+        {
+            "Course": "Geography",
+            "Unit": "2",
+            "Subject": "Geography"
+        },
+        {
+            "Course": "Industrial Technology",
+            "Unit": "2",
+            "Subject": "Industrial Technology"
+        },
+        {
+            "Course": "Information Processes and",
+            "Unit": "2",
+            "Subject": "Information Processes"
+        },
+        {
+            "Course": "Technology",
+            "Unit": "",
+            "Subject": "and Technology"
+        },
+        {
+            "Course": "Legal Studies",
+            "Unit": "2",
+            "Subject": "Legal Studies"
+        },
+        {
+            "Course": "Mathematics General 2",
+            "Unit": "2",
+            "Subject": "Mathematics"
+        },
+        {
+            "Course": "Mathematics",
+            "Unit": "2",
+            "Subject": "Mathematics"
+        },
+        {
+            "Course": "HSC Mathematics Extension 16",
+            "Unit": "1/2",
+            "Subject": "Mathematics"
+        },
+        {
+            "Course": "HSC Mathematics Extension 2",
+            "Unit": "1",
+            "Subject": "Mathematics"
+        },
+        {
+            "Course": "Modern History",
+            "Unit": "2",
+            "Subject": "Modern History"
+        },
+        {
+            "Course": "HSC History Extension1",
+            "Unit": "1",
+            "Subject": "Modern History"
+        },
+        {
+            "Course": "Music 12",
+            "Unit": "2",
+            "Subject": "Music"
+        },
+        {
+            "Course": "Music 22",
+            "Unit": "2",
+            "Subject": "Music"
+        },
+        {
+            "Course": "HSC Music Extension2",
+            "Unit": "1",
+            "Subject": "Music"
+        },
+        {
+            "Course": "Personal Development, Health and Physical Education (PDHPE)",
+            "Unit": "2",
+            "Subject": "Personal Development,"
+        },
+        {
+            "Course": "Physics",
+            "Unit": "2",
+            "Subject": "Physics"
+        },
+        {
+            "Course": "Senior Science",
+            "Unit": "2",
+            "Subject": "Senior Science"
+        },
+        {
+            "Course": "Society and Culture",
+            "Unit": "2",
+            "Subject": "Society and Culture"
+        },
+        {
+            "Course": "Software Design and Development",
+            "Unit": "2",
+            "Subject": "Software Design and"
+        },
+        {
+            "Course": "Studies of Religion I",
+            "Unit": "1",
+            "Subject": "Studies of Religion"
+        },
+        {
+            "Course": "Studies of Religion II",
+            "Unit": "2",
+            "Subject": "Studies of Religion"
+        },
+        {
+            "Course": "Textiles and Design",
+            "Unit": "2",
+            "Subject": "Textiles and Design"
+        },
+        {
+            "Course": "Visual Arts",
+            "Unit": "2",
+            "Subject": "Visual Arts"
+        },
+        {
+            "Course": "Arabic Beginners",
+            "Unit": "2",
+            "Subject": "Arabic"
+        },
+        {
+            "Course": "Arabic Continuers",
+            "Unit": "2",
+            "Subject": "Arabic"
+        },
+        {
+            "Course": "HSC Arabic Extension",
+            "Unit": "1",
+            "Subject": "Arabic"
+        },
+        {
+            "Course": "Armenian Continuers",
+            "Unit": "2",
+            "Subject": "Armenian"
+        },
+        {
+            "Course": "Chinese Beginners",
+            "Unit": "2",
+            "Subject": "Chinese"
+        },
+        {
+            "Course": "Chinese Continuers",
+            "Unit": "2",
+            "Subject": "Chinese"
+        },
+        {
+            "Course": "Heritage Chinese",
+            "Unit": "2",
+            "Subject": "Chinese"
+        },
+        {
+            "Course": "Chinese Background Speakers",
+            "Unit": "2",
+            "Subject": "Chinese"
+        },
+        {
+            "Course": "HSC Chinese Extension",
+            "Unit": "1",
+            "Subject": "Chinese"
+        },
+        {
+            "Course": "Classical Greek Continuers",
+            "Unit": "2",
+            "Subject": "Classical Greek"
+        },
+        {
+            "Course": "HSC Classical Greek Extension",
+            "Unit": "1",
+            "Subject": "Classical Greek"
+        },
+        {
+            "Course": "Classical Hebrew Continuers",
+            "Unit": "2",
+            "Subject": "Classical Hebrew"
+        },
+        {
+            "Course": "HSC Classical Hebrew Extension",
+            "Unit": "1",
+            "Subject": "Classical Hebrew"
+        },
+        {
+            "Course": "Croatian Continuers4",
+            "Unit": "2",
+            "Subject": "Croatian"
+        },
+        {
+            "Course": "Course",
+            "Unit": "Unit",
+            "Subject": "Subject"
+        },
+        {
+            "Course": "name",
+            "Unit": "value",
+            "Subject": "area"
+        },
+        {
+            "Course": "Information and Digital Technology",
+            "Unit": "2",
+            "Subject": "Information and Digital"
+        },
+        {
+            "Course": "Examination (Digital Animation)",
+            "Unit": "",
+            "Subject": "Technology7"
+        },
+        {
+            "Course": "Information and Digital Technology",
+            "Unit": "2",
+            "Subject": "Information and Digital"
+        },
+        {
+            "Course": "Examination (Networking and",
+            "Unit": "",
+            "Subject": "Technology7"
+        },
+        {
+            "Course": "Hardware)",
+            "Unit": "",
+            "Subject": ""
+        },
+        {
+            "Course": "Information and Digital Technology",
+            "Unit": "2",
+            "Subject": "Information and Digital"
+        },
+        {
+            "Course": "Examination (Web and Software",
+            "Unit": "",
+            "Subject": "Technology7"
+        },
+        {
+            "Course": "Applications)",
+            "Unit": "",
+            "Subject": ""
+        },
+        {
+            "Course": "Metal and Engineering Examination",
+            "Unit": "2",
+            "Subject": "Metal and Engineering7"
+        },
+        {
+            "Course": "Primary Industries Examination",
+            "Unit": "2",
+            "Subject": "Primary Industries7"
+        },
+        {
+            "Course": "Retail Services Examination",
+            "Unit": "2",
+            "Subject": "Retail Services7"
+        },
+        {
+            "Course": "Tourism, Travel and Events",
+            "Unit": "2",
+            "Subject": "Tourism7"
+        },
+        {
+            "Course": "Examination",
+            "Unit": "",
+            "Subject": ""
+        },
+        {
+            "Course": "Dutch Continuers",
+            "Unit": "2",
+            "Subject": "Dutch"
+        },
+        {
+            "Course": "Filipino Continuers",
+            "Unit": "2",
+            "Subject": "Filipino"
+        },
+        {
+            "Course": "French Beginners",
+            "Unit": "2",
+            "Subject": "French"
+        },
+        {
+            "Course": "French Continuers",
+            "Unit": "2",
+            "Subject": "French"
+        },
+        {
+            "Course": "HSC French Extension",
+            "Unit": "1",
+            "Subject": "French"
+        },
+        {
+            "Course": "German Beginners",
+            "Unit": "2",
+            "Subject": "German"
+        },
+        {
+            "Course": "German Continuers",
+            "Unit": "2",
+            "Subject": "German"
+        },
+        {
+            "Course": "HSC German Extension",
+            "Unit": "1",
+            "Subject": "German"
+        },
+        {
+            "Course": "Hindi Continuers",
+            "Unit": "2",
+            "Subject": "Hindi"
+        },
+        {
+            "Course": "Hungarian Continuers",
+            "Unit": "2",
+            "Subject": "Hungarian"
+        },
+        {
+            "Course": "Indonesian Beginners",
+            "Unit": "2",
+            "Subject": "Indonesian"
+        },
+        {
+            "Course": "Indonesian Continuers",
+            "Unit": "2",
+            "Subject": "Indonesian"
+        },
+        {
+            "Course": "Heritage Indonesian",
+            "Unit": "2",
+            "Subject": "Indonesian"
+        },
+        {
+            "Course": "Indonesian Background Speakers5",
+            "Unit": "2",
+            "Subject": "Indonesian"
+        },
+        {
+            "Course": "HSC Indonesian Extension",
+            "Unit": "1",
+            "Subject": "Indonesian"
+        },
+        {
+            "Course": "Italian Beginners",
+            "Unit": "2",
+            "Subject": "Italian"
+        },
+        {
+            "Course": "Italian Continuers",
+            "Unit": "2",
+            "Subject": "Italian"
+        },
+        {
+            "Course": "HSC Italian Extension",
+            "Unit": "1",
+            "Subject": "Italian"
+        },
+        {
+            "Course": "Japanese Beginners",
+            "Unit": "2",
+            "Subject": "Japanese"
+        },
+        {
+            "Course": "Japanese Continuers",
+            "Unit": "2",
+            "Subject": "Japanese"
+        },
+        {
+            "Course": "Heritage Japanese",
+            "Unit": "2",
+            "Subject": "Japanese"
+        },
+        {
+            "Course": "Japanese Background Speakers",
+            "Unit": "2",
+            "Subject": "Japanese"
+        },
+        {
+            "Course": "HSC Japanese Extension",
+            "Unit": "1",
+            "Subject": "Japanese"
+        },
+        {
+            "Course": "Khmer Continuers",
+            "Unit": "2",
+            "Subject": "Khmer"
+        },
+        {
+            "Course": "Korean Continuers",
+            "Unit": "2",
+            "Subject": "Korean"
+        },
+        {
+            "Course": "Heritage Korean",
+            "Unit": "2",
+            "Subject": "Korean"
+        },
+        {
+            "Course": "Korean Background Speakers",
+            "Unit": "2",
+            "Subject": "Korean"
+        },
+        {
+            "Course": "Latin Continuers",
+            "Unit": "2",
+            "Subject": "Latin"
+        },
+        {
+            "Course": "HSC Latin Extension",
+            "Unit": "1",
+            "Subject": "Latin"
+        },
+        {
+            "Course": "Macedonian Continuers4",
+            "Unit": "2",
+            "Subject": "Macedonian"
+        },
+        {
+            "Course": "Malay Background Speakers5",
+            "Unit": "2",
+            "Subject": "Malay"
+        },
+        {
+            "Course": "Maltese Continuers",
+            "Unit": "2",
+            "Subject": "Maltese"
+        },
+        {
+            "Course": "Modern Greek Beginners",
+            "Unit": "2",
+            "Subject": "Modern Greek"
+        },
+        {
+            "Course": "Modern Greek Continuers",
+            "Unit": "2",
+            "Subject": "Modern Greek"
+        },
+        {
+            "Course": "HSC Modern Greek Extension",
+            "Unit": "1",
+            "Subject": "Modern Greek"
+        },
+        {
+            "Course": "Modern Hebrew Continuers",
+            "Unit": "2",
+            "Subject": "Modern Hebrew"
+        },
+        {
+            "Course": "Persian Background Speakers",
+            "Unit": "2",
+            "Subject": "Persian"
+        },
+        {
+            "Course": "Polish Continuers",
+            "Unit": "2",
+            "Subject": "Polish"
+        },
+        {
+            "Course": "Portuguese Continuers",
+            "Unit": "2",
+            "Subject": "Portuguese"
+        },
+        {
+            "Course": "Punjabi Continuers",
+            "Unit": "2",
+            "Subject": "Punjabi"
+        },
+        {
+            "Course": "Russian Continuers",
+            "Unit": "2",
+            "Subject": "Russian"
+        },
+        {
+            "Course": "Serbian Continuers4",
+            "Unit": "2",
+            "Subject": "Serbian"
+        },
+        {
+            "Course": "Spanish Beginners",
+            "Unit": "2",
+            "Subject": "Spanish"
+        },
+        {
+            "Course": "Spanish Continuers",
+            "Unit": "2",
+            "Subject": "Spanish"
+        },
+        {
+            "Course": "HSC Spanish Extension",
+            "Unit": "1",
+            "Subject": "Spanish"
+        },
+        {
+            "Course": "Swedish Continuers",
+            "Unit": "2",
+            "Subject": "Swedish"
+        },
+        {
+            "Course": "Tamil Continuers",
+            "Unit": "2",
+            "Subject": "Tamil"
+        },
+        {
+            "Course": "Turkish Continuers",
+            "Unit": "2",
+            "Subject": "Turkish"
+        },
+        {
+            "Course": "Ukrainian Continuers",
+            "Unit": "2",
+            "Subject": "Ukrainian"
+        },
+        {
+            "Course": "Vietnamese Continuers",
+            "Unit": "2",
+            "Subject": "Vietnamese"
+        },
+        {
+            "Course": "Automotive Examination",
+            "Unit": "2",
+            "Subject": "Automotive7"
+        },
+        {
+            "Course": "(Vehicle Body)",
+            "Unit": "",
+            "Subject": ""
+        }
+    ],
+    [
+        /**CATGEGORY B COURSES***/
+        {
+            "Course": "Automotive Examination",
+            "Unit": "2",
+            "Subject": "Automotive7"
+        },
+        {
+            "Course": "(Mechanical Technology)",
+            "Unit": "",
+            "Subject": ""
+        },
+        {
+            "Course": "Business Services Examination",
+            "Unit": "2",
+            "Subject": "Business Services7"
+        },
+        {
+            "Course": "Construction Examination",
+            "Unit": "2",
+            "Subject": "Construction7"
+        },
+        {
+            "Course": "Electrotechnology Examination",
+            "Unit": "2",
+            "Subject": "Electrotechnology7"
+        },
+        {
+            "Course": "Entertainment Industry Examination",
+            "Unit": "2",
+            "Subject": "Entertainment Industry7"
+        },
+        {
+            "Course": "Financial Services Examination",
+            "Unit": "2",
+            "Subject": "Financial Services 7"
+        },
+        {
+            "Course": "Hospitality Examination",
+            "Unit": "2",
+            "Subject": "Hospitality7"
+        },
+        {
+            "Course": "(Kitchen Operations and Cookery)",
+            "Unit": "",
+            "Subject": ""
+        },
+        {
+            "Course": "Hospitality Examination",
+            "Unit": "2",
+            "Subject": "Hospitality7"
+        },
+        {
+            "Course": "(Food and Beverage)",
+            "Unit": "",
+            "Subject": ""
+        },
+        {
+            "Course": "Human Services Examination",
+            "Unit": "2",
+            "Subject": "Human Services8"
+        }
+    ]
+}
