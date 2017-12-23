@@ -205,19 +205,19 @@ function atarToAggregate(newAtar) {
  */
 function reverseScale(index, mark) {
     //find subject 
-    mark = mark / 2;
-    console.log(index + " " + mark);
-    var Scaled = getMarks(index); //index will hold Scaled mark
+    console.log("ind & mark " + index + " " + mark);
+    var HSC = getMarks(index); //index will hold Scaled mark
     var index1 = ++index;
-    var HSC = getMarks(index1); //index + 1 will hold hsc mark 
+    var Scaled = getMarks(index1); //index + 1 will hold hsc mark 
 
     if (mark == Scaled[0]) {
         return HSC[0];
     }
     var i = 0;
     while (i < HSC.length) {
-        console.log(i);
-        console.log(Scaled[i]);
+        console.log(HSC[i]);
+        console.log(i + " " + Scaled[i]);
+
         if (mark == Scaled[i]) {
             console.log(" EXIT ONE");
             return HSC[i];
@@ -231,14 +231,18 @@ function reverseScale(index, mark) {
     var dmark = mark - Scaled[i - 1];
     console.log("dmark " + dmark);
     console.log(Scaled[i] + " " + Scaled[i - 1]);
+
     var dscale = Scaled[i] - Scaled[i - 1];
     console.log("dscale " + dscale);
+
     var dhsc = HSC[i] - HSC[i - 1];
     console.log(HSC[i] + " " + HSC[i - 1]);
     console.log("dhsc " + dhsc);
     console.log("HSC-1 " + HSC[i - 1]);
+    var one = dmark / dscale * dhsc;
+    console.log("one " + one);
 
-    return HSC[i - 1] + dmark / dscale * dhsc;
+    return HSC[i - 1] + one;
 }
 /**
  * 
