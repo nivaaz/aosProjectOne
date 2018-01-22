@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import SubjectListHeader from './SubjectListHeader.js'
 import SubjectItem from './SubjectItem.js'
-import AtarEstimate from '../AtarComponent/AtarEstimate.js'
 import _ from 'lodash'
  /* This class is for the LHS selection of a subject &  mark */
 export class SubjectList extends Component {  
@@ -12,11 +11,6 @@ export class SubjectList extends Component {
         };
     }
     renderSubjects (){            
-       //s console.log(this.props)
-       const props = _.omit(this.props, 'subjects');
-            //this will iterate through our subs & apply a function
-            //returns a subject in html
-            
             return _.map ( this.props.subjects, (subject, index) => {
                /* const scaledMark = this.props.scaledMarks[index];*/
                 return (

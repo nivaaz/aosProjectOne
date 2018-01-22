@@ -82,12 +82,12 @@ export default class Reverse extends Component {
 
     /*updates all the subjects to a new agg*/
     updateMarks(agg){
-        var i = 0;
-        for (i=0; i< this.subjects.length; i++){
+        var i = 0;  
+        for (i=0; i< this.state.subjects.length; i++){
             this.addMark(i, agg);
         }
         var subjects = this.subjects;
-        for (i=0; i< this.subjects.length; i++){
+        for (i=0; i< this.state.subjects.length; i++){
             subjects[i].scaled = (agg/10).toFixed(0);
         }
         this.setState({ subjects : this.state.subjects})          

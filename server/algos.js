@@ -79,12 +79,13 @@ function scaleArray(Courses, Rawmarks){
 /* normal ATAR Scaling functions */
 /**
  *  NEED TO IMPORT 
- * @param {*} agg 
+ * @param {*} agg aggregate
  */
 export function aggregateToAtar (agg){
     var i = 0;
     agg = agg*2;
-    while (i < atar.length){
+    
+    while (i < ranks.Atar.length){
         if (agg == ranks.Aggregate[i]){
             return ranks.Atar[i];
         }
@@ -94,6 +95,7 @@ export function aggregateToAtar (agg){
         }
         i++; 
     }
+    console.log(i)
     var datar = ranks.Atar[i] - ranks.Atar[i-1];
     var dscale = agg - ranks.Aggregate[i]
     var atar = ranks.Atar[i] + (dscale/50)*(datar);
@@ -245,7 +247,7 @@ export function reverseATAR (atar, subjects){
     //find the highest subejcts to match mark 
     
     //reorder subjects from highest marks to lowest 
-    
+    //this is done on client end
     return subjects; 
 }
 /**

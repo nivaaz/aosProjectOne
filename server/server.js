@@ -3,7 +3,7 @@ import subData from './data/subDat.json'
 import ranks from './data/agg.json'
 import { ScaleCourse, getMarks, aggregateToAtar, atarToAggregate, reverseScale } from './algos.js'
 import path from 'path'
-
+var atar = ranks.Atar;
 var subs = subData.subs;
 
 const express = require('express');

@@ -3,7 +3,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, browserHistory} from 'react-router'
 import Routes from './routes/index' //links to ./routes/index.js
-
 import styles from './css/style.css'
 import reverseStyles from './css/reverse.css'
 

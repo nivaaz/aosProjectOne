@@ -24,8 +24,8 @@
     text-align: center;
     margin:auto;
     background: transparent;
-    padding-bottom: 0;
-width: 100%;
+    padding-bottom: 0; 
+    width: 100%;
 }
 .reverse .title {
     text-transform: initial;
@@ -47,10 +47,12 @@ width: 100%;
 .markL.reverse{
     width: unset;
 }
+/*
 input.goalAtar:focus{
-background : rgba(255, 255, 255, 0.5);
-color: #52b760;
+    background : rgba(255, 255, 255, 0.5);
+    color: #52b760;
 }
+*/
 input.goalAtar:hover{
     cursor: pointer;
     box-shadow-color: green;

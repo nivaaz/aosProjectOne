@@ -19,7 +19,7 @@ export class ATAR extends Component {
     constructor(props){
         super(props);
         this.state = {
-            subjects: testsub,
+            subjects: [],
             atar : "Add more subjects"
         };
     }
@@ -114,11 +114,13 @@ export class ATAR extends Component {
             var subjects=  _.sortBy(subjects, [function(o) { return o.scaled; }]);
             console.log("LOG")
             console.log( subjects)
-             while (i < 5){ /* units is less than 5 */
+             while (i < (subjects.length -1)){ /* units is less than 5 */
                  sum = parseFloat(sum) + parseFloat(subjects[i++].scaled);
              console.log ("sum "+ i +" "+ sum)
              }
-             fetch("/atar/getatar/" + sum )
+             sum = Math.round(sum)
+             console.log("Passed in "+sum)
+             fetch("/atar/getatar/" + sum)
                 .then( res => res.json() ) //made json obj
                 .then (res => {
                     console.log(res.atar)

@@ -12,10 +12,6 @@ export default class SubjectItem extends Component {
     }
         renderSubjectSection (){
             const {marks,  name, scaled, isCompleted } = this.props;
-            const subjectStyle = {
-                color: isCompleted ? '#52b76' : '#52b70',
-                cursor: 'pointer'
-            }
             if (this.state.isEditing){
                 const renderOptions = subData.name.map((Name, index) =>
                 <option key = {index}> {Name}   </option>

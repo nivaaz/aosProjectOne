@@ -6,30 +6,12 @@ export class AddAtar extends Component {
         super (props);
         /*use props*/
     }
-    // calculateATAR(){
-    //     const mark = this.props.subjects.marks;
-    //     const atarInternal = _.sum(mark);
-    //     this.setState({
-    //         atar:atarInternal
-    //     })
+    
     render(){
         return (
             <div className = "ATAR reverse">
-                <div >
-                            <form onSubmit = {this.handleCreate.bind(this)} className = "addAtar" /* on change update subjects if enough */onSubmit={this.handleCreate.bind(this)}>
-                                <div className = "goalAtar">
-                                    <input 
-                                    ref="goal"
-                                    className = "goalAtar"
-                                    type = "number"
-                                    min = "0"
-                                    max = "99.95"
-                                    step="0.05"
-                                    defaultValue = "80.55" />
-                                </div>
-                            </form>        
-                            <p className = "info"> Add an ATAR goal and hit enter</p>      
-                </div>
+               {this.addAtar()}
+               <p className = "info"> Add an ATAR goal and hit enter</p>
             </div>           
         )
      }
@@ -42,6 +24,28 @@ export class AddAtar extends Component {
         this.props.addAgg(this.refs.goal.value); 
         this.props.updateMarks(this.props.agg); 
     }
+    addAtar(){
+        const atar = this.props.atar;
+        const atarStyle = {
+            color: (atar == '50.45') ? 'grey' : 'pink', 
+            cursor: 'pointer'
+        }
+        return (
+            <form onSubmit = {this.handleCreate.bind(this)} className = "addAtar" /* on change update subjects if enough */onSubmit={this.handleCreate.bind(this)}>
+                                        <div className = "goalAtar">
+                                            <input
+                                            styles= {atarStyle}
+                                            ref="goal"
+                                            type = "number"
+                                            min = "0"
+                                            max = "99.95"
+                                            step="0.05"
+                                            defaultValue = "50.45" />
+                                        </div>
+                </form>
+
+            )
+        }   
     }
 
 export default AddAtar
