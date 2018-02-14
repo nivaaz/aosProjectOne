@@ -15,7 +15,7 @@ body{
     margin:0;
 }
 .reactContainer{
-    background-image: filter;
+  
 }
 .backgroundBlur{
     background-image:  linear-gradient(
@@ -73,7 +73,7 @@ REVERSE ATAR
     font-size: 30px;
 }
 input.goalAtar {
-    /*color: #52b760;*/
+    color: #52b760;
     text-shadow: 0px 0px 30px white;
     background: transparent;
     width: auto;
@@ -107,8 +107,9 @@ HOME
 /* ATAR */
 
 .formAdd { 
-    margin: 1%;
     background:  transparent;
+    grid-column-start: 1;
+    grid-column-end: 3;
 /*does not have grid formattng applied*/
 }
 /**PARTITION**/
@@ -178,11 +179,7 @@ h1 {
 } */
 .headingCont {
     display: grid;
-    grid-template-columns: 5fr 1fr ;
-}
-.innerHeading {
-    display: grid;
-    grid-template-columns: 4fr 1fr 1fr ;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
 }
 .addedSubject {
     background : white;
@@ -219,18 +216,8 @@ h1 {
 }
 .addedcont {
     display:grid;
-    grid-template-columns: 4fr 1fr 1fr;
-    margin-left: 20px;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
 } 
-.subitem {
-    display: grid;
-    grid-gap: 0px;
-    grid-template-columns: 5fr 1fr;
-}
-.editContainer{
-    align-self: center;
-    /* margin: 2%; */
-}
 #mark{
     display: inline-block;
 }
@@ -367,6 +354,9 @@ a:visited {
 }
 .questionBox {
     padding-top: 20%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows:1fr 2fr;
 }
 .bodyCont{
     width: 100%;
@@ -392,6 +382,10 @@ a:visited {
 .middle{
     text-align: center;
     margin: auto;
+}
+.grid3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .ad {
     border-style: solid;

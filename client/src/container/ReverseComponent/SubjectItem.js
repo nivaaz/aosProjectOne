@@ -12,7 +12,7 @@ export class SubjectItem extends Component {
        renderSubjectSection (){
            const {hsc,  name, scaled, isCompleted } = this.props;
            const subjectStyle = {
-               color: isCompleted ? '#52b76' : '#52b70',
+               color: isCompleted ? '#52006' : '#52b70',
                cursor: 'pointer'
            }
            if (this.state.isEditing){
@@ -31,7 +31,7 @@ export class SubjectItem extends Component {
                );
            }
            return (
-                   <div className = "addedcont" onClick = {this.props.toggleSubject.bind(this, name)}>
+                   <div className = "addedcont" >
                         <h3 className = "addedSubject" >
                            {name}
                        </h3>   
@@ -41,8 +41,26 @@ export class SubjectItem extends Component {
                        <h3 className = "scaledMark" >
                            {2*scaled}
                        </h3>
+                       
+                       {this.renderActionSection()}
                    </div> 
            );
+       }
+       renderEditingSection(){
+        if (this.state.isEditing){
+            return (
+                <div className ="editContainer"> 
+                   <a>
+                   <i onClick={this.onSaveClick.bind(this)} 
+                       className="material-icons done">done</i> 
+                   </a>
+                   <a>
+                   <i onClick = {this.onCancelClick.bind(this)}
+                    className="material-icons cancel">close</i> 
+                   </a>
+               </div>
+               );
+        }else return ;
        }
        renderActionSection(){
        if (this.state.isEditing){
@@ -61,11 +79,15 @@ export class SubjectItem extends Component {
            }
            return (
                 <div className ="editContainer" > 
-                  <a className = "addSubject"> <i  className = "addSubject" onClick={this.onEditClick.bind(this)}
-                    className="material-icons edit">mode_edit</i></a>
-                    <a className = "addSubject"><i className = "addSubject" onClick={this.props.deleteSubject.bind(this, this.props.name)}
-                   className="material-icons delete">delete</i></a>
-                   
+                  <a className = "addSubject"> 
+                    <i  className = "addSubject" onClick={this.onEditClick.bind(this)}
+                        className="material-icons edit">mode_edit</i>
+                 </a>
+
+                 <a className = "addSubject">
+                    <i className = "addSubject" onClick={this.props.deleteSubject.bind(this, this.props.name)}
+                   className="material-icons delete">delete</i>
+                   </a>
                </div>
            );
        }
@@ -73,7 +95,7 @@ export class SubjectItem extends Component {
         return (
            <div className = "subItem">
                {this.renderSubjectSection()}
-               {this.renderActionSection()}
+               {this.renderEditingSection()}
            </div>
        )
     }
@@ -87,8 +109,8 @@ export class SubjectItem extends Component {
        event.preventDefault();
        const oldSub = this.props.name;
        const newSub = this.refs.createInput.value;
-       
-       this.props.saveSubject(oldSub, newSub);
+       this.props.saveSubject(oldSub, newSub); // also rescales
+    
        this.setState({
                isEditing: false
        })

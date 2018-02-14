@@ -28,12 +28,12 @@ export class ATAR extends Component {
           <div>
             <div className = "partContainer" href="#CALC">
                 <h1 className = "calcTitle">Atar Calculator</h1>
-                <div className ="partition left">
                     <CreateSubject 
                         subjects = {this.state.subjects} 
                         marks={this.state.marks} 
                         createSubject = {this.createSubject.bind(this)}
                         scaleSubject = {this.scaleSubject.bind(this)}/>
+                <div className ="partition left">
                     <SubjectsList 
                         subjects = {this.state.subjects}
                         scaledMarks = {this.state.scaledMarks}
@@ -54,10 +54,9 @@ export class ATAR extends Component {
                 </div>            
         </div>
         <List/> 
-        <div className ="middle">   
+        <div className ="middle grid3" >   
            <button className = "estimate"> What is an ATAR </button>
             <button className = "estimate"> More on goal setting </button> 
-            <button className = "estimate"> <i className="material-icons">arrow_downward</i> </button>
         </div>        
         </div>   
         );
@@ -111,15 +110,18 @@ export class ATAR extends Component {
         updateATAR(subjects){
             var i = 0 ;
              var sum = 0;
-            var subjects=  _.sortBy(subjects, [function(o) { return o.scaled; }]);
-            console.log("LOG")
-            console.log( subjects)
-             while (i < (subjects.length -1)){ /* units is less than 5 */
+            /*sorts subjects into lowest to highest scaled*/
+             var subjects=  _.sortBy(subjects, [function(o) { return o.scaled; }]);
+            console.log("LOG"); console.log( subjects)
+           /* finds top subjects*/  
+            while (i < subjects.length ){ /* units is less than 5 */
                  sum = parseFloat(sum) + parseFloat(subjects[i++].scaled);
              console.log ("sum "+ i +" "+ sum)
              }
+
              sum = Math.round(sum)
              console.log("Passed in "+sum)
+
              fetch("/atar/getatar/" + sum)
                 .then( res => res.json() ) //made json obj
                 .then (res => {

@@ -18,8 +18,8 @@ class Quiz extends Component {
          return (
             <div name ="quiz" className = "bodyCont">
                 <div className = "questionBox"> 
-                        <h1 className = "middle" >Do you have an ATAR goal?</h1>
-                        <div className = "btnWrapper middle">
+                        <h1 className = "middle mainQ" >Do you have an ATAR goal?</h1>
+                        <div className = "btnWrapper middle answers">
                             <button  id = "buttonNo" className = "addSubject">
                                 <a href = "/atar">I do not know my goal.</a></button>
                             <button id = "buttonYes" className = "addSubject">

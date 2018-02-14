@@ -50,6 +50,9 @@ export default class Reverse extends Component {
         var name = this.state.subjects[subIndex].name;
         var indexS = _.findIndex(data.subs, subject => subject.Course === name);
         var sub = this.state.subjects[subIndex];
+        console.log("ind  "+ subIndex);
+        console.log(this.state.subjects)
+        console.log("agg "+agg)
         var scale = (agg/10).toFixed(0)
         var query = "/reverse/reverseScale/" + indexS + "/"+ scale
         /*scale subjects & add to state*/
@@ -71,6 +74,8 @@ export default class Reverse extends Component {
         })
     } 
     addAgg(atar){
+        console.log("adding atar...");
+        console.log("atara is"+ atar)
         fetch("/reverse/atartoagg/" + atar )
         .then(res => res.json()) //made json obj
         .then (res => {
@@ -83,12 +88,12 @@ export default class Reverse extends Component {
     /*updates all the subjects to a new agg*/
     updateMarks(agg){
         var i = 0;  
-        for (i=0; i< this.state.subjects.length; i++){
+        for (i=0; i<this.state.subjects.length; i++){
             this.addMark(i, agg);
         }
-        var subjects = this.subjects;
-        for (i=0; i< this.state.subjects.length; i++){
-            subjects[i].scaled = (agg/10).toFixed(0);
+        var subjects = this.state.subjects;
+        for (i=0; i<this.state.subjects.length; i++){
+            subjects[i].scaled = (agg/10).toFixed(1);
         }
         this.setState({ subjects : this.state.subjects})          
     }
@@ -120,8 +125,10 @@ export default class Reverse extends Component {
         foundSubject.name = newSubject;
         // foundSubject.hsc = this.addMark(ind, agg); ??????
         var ind = _.findIndex(this.state.subjects, subject => subject.name === oldSubject);
+        
         // foundSubject.scaled =(this.state.agg/10).toFixed(0);
         this.setState({ subjects: this.state.subjects})
+        this.addMark(ind, this.state.agg)
     }
     deleteSubject(delName){
         //find the index of the subject and delete corrsp mark too 

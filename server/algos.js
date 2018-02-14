@@ -84,20 +84,24 @@ function scaleArray(Courses, Rawmarks){
 export function aggregateToAtar (agg){
     var i = 0;
     agg = agg*2;
-    
+    console.log("AGG "+agg)
     while (i < ranks.Atar.length){
         if (agg == ranks.Aggregate[i]){
+            console.log("atarfound " + ranks.Atar[i])
             return ranks.Atar[i];
         }
         //if in range
         if (agg > ranks.Aggregate[i]){
+            console.log("agg chosen "+ranks.Aggregate[i])
             break;
         }
         i++; 
     }
-    console.log(i)
-    var datar = ranks.Atar[i] - ranks.Atar[i-1];
+    console.log(i);
+    var datar = ranks.Atar[i-1] - ranks.Atar[i];
+    console.log("datar "+datar)
     var dscale = agg - ranks.Aggregate[i]
+    console.log("dsccale "+dscale)
     var atar = ranks.Atar[i] + (dscale/50)*(datar);
     console.log("ATAR: " + atar)
      return atar ;
@@ -184,14 +188,11 @@ export function reverseScale (index, mark){
     var index1 = ++index;
     var Scaled = getMarks(index1);   //index + 1 will hold hsc mark 
     
-    if(mark == Scaled[0]){
-        return HSC[0];
-    }
-    var i = 0 ;
-    while (i <HSC.length ){
-        console.log(HSC[i])
-        console.log(i +" "+Scaled[i])
-
+    console.log(HSC)
+    console.log(Scaled)
+    var i = -1 ;
+    while (i<HSC.length ){
+        i++;
         if (mark == Scaled[i]) {
             console.log(" EXIT ONE")
             return HSC[i];
@@ -200,8 +201,9 @@ export function reverseScale (index, mark){
             console.log(" EXIT TWO")
             break;
         }
-    i++;
     }
+    i = i-1;
+    console.log("exited on counter num  "+i)
     var dmark = mark-Scaled[i-1];
         console.log("dmark " +dmark);
         console.log( Scaled[i] + " " +  Scaled[i-1])
@@ -213,10 +215,12 @@ export function reverseScale (index, mark){
         console.log(HSC[i]+" "+ HSC [i-1])
         console.log("dhsc " +dhsc);    
         console.log("HSC-1 " +HSC[i-1]);    
-    var one =  (dmark/dscale) * dhsc;
+    
+     var one =  (dmark/dscale) * dhsc;
     console.log("one "+one)
-
-    return HSC[i-1] + one ;
+    var r = HSC[i-1] + one;
+    if (r >= 50) return 50;
+    return  r;
 }
 /**
  * 
@@ -260,6 +264,7 @@ export function ScaleCourse(index, hscMark){
     var index1 = ++index;
     var HSC = getMarks(index1);   //index + 1 will hold hsc mark 
     var  raw = hscMark/2;
+    
     console.log(HSC)
     console.log(Scaled)
         //is the max value
@@ -272,6 +277,7 @@ export function ScaleCourse(index, hscMark){
     /*iterate through array to find place*/
     var i = 1;
     while (i < (Scaled.length-1)){
+        i++;
         /*equal to scaling pt*/
         if (raw == HSC[i]){
             return Scaled[i]; //direct correlation
@@ -280,8 +286,9 @@ export function ScaleCourse(index, hscMark){
         if (raw < HSC[i]){
             break; // go onto scale
         }
-        i++;
-    } //end while loop
+        
+    } 
+    //end while loop
     /*scaling algo*/
     var dHSC = HSC[i] - HSC[i-1];
     var dscale =  Scaled[i] - Scaled[i-1] // this is getting rounded so it's buggy
@@ -294,9 +301,7 @@ export function ScaleCourse(index, hscMark){
 
     var draw = (raw - HSC[i-1]);
     var scale = Scaled[i-1] + ((draw/dHSC) * dscale)
-    // var dd =draw/dscale;
-    // var mark = hsc[i] + (dd* (hsc[i] - hsc[i-1]));
-    return scale.toFixed(1); //.toFixed(1)
+    return scale.toFixed(1);
 }
 /**
  * Math.ceil(4.4);     // returns 5 rounds up to nearest int

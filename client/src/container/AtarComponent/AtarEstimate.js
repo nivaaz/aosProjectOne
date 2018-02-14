@@ -11,9 +11,6 @@ export class AtarEstimate extends Component {
                     <div> 
                             <h1 className = "title"> Estimated ATAR </h1>
                            {this.renderATAR()}
-                    </div>
-                    <div>   
-                            <button className = "estimate"> <i className="material-icons">arrow_downward</i> </button>
                     </div>        
                 </div>
             </div>           

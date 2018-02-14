@@ -47,13 +47,12 @@
 .markL.reverse{
     width: unset;
 }
-/*
+
 input.goalAtar:focus{
     background : rgba(255, 255, 255, 0.5);
     color: #52b760;
 }
-*/
 input.goalAtar:hover{
     cursor: pointer;
-    box-shadow-color: green;
+    box-shadow: 0px 30px 20px -25px #52b760;
 }

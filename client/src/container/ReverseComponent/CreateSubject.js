@@ -35,6 +35,7 @@ export class CreateSubject extends Component {
                     <select name="subSelect" 
                                 type ="text" 
                                 defaultValue="Standard English" 
+                                placeholder = "ATAR"
                                 ref="createInput">
                                 { renderOptions }
                     </select>  

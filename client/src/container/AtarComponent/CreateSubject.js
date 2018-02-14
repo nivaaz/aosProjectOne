@@ -30,6 +30,7 @@ export class CreateSubject extends Component {
                     <h2 className="title"> Add subject </h2>
                     <select name="subSelect" 
                                 type ="text" 
+                                placeholder = "Add subject"
                                 defaultValue="Standard English" 
                                 ref="createInput">
                                 { renderOptions }

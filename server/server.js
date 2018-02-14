@@ -40,6 +40,7 @@ app.get('/atar/getAtar/:agg', function(req, res){
 /*
 Reverse
 */
+
 /**aggregate to atar 
  * works
 */
@@ -53,7 +54,7 @@ app.get('/reverse/atartoagg/:atar', function(req, res){
 app.get('/reverse/reverseScale/:in/:mark', function(req, res){
   var index = req.params.in; //can't put in name?
   var mark = req.params.mark;
- var nmark =  reverseScale( index, mark);
+ var nmark =  reverseScale(index, mark);
   res.send( {"mark" : nmark});
 });
 
