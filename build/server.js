@@ -17,6 +17,7 @@ var _path2 = _interopRequireDefault(_path);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //const scale = require(scaledSub)
+var atar = _agg2.default.Atar;
 var subs = _subDat2.default.subs;
 
 var express = require('express');
@@ -53,6 +54,7 @@ app.get('/atar/getAtar/:agg', function (req, res) {
 /*
 Reverse
 */
+
 /**aggregate to atar 
  * works
 */
