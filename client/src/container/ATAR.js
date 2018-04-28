@@ -82,7 +82,7 @@ export class ATAR extends Component {
             })
         }
      createSubject(name, mark){
-         console.log("create sub & mark" + name + mark)
+         console.log("create sub & mark" + name + mark);
             this.state.subjects.push({
                 name,
                 isCompleted: false, 

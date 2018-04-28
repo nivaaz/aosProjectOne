@@ -16,7 +16,7 @@ class Home extends Component {
                          <h2><a href="/">Quiz</a></h2>
                     </nav>
                 
-                    <div className="reactContainer">
+                    <div className="reactContainer" id="landing">
                         {this.props.children}
                     </div>
                 <footer >

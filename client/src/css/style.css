@@ -18,10 +18,7 @@ body{
   
 }
 .backgroundBlur{
-    background-image:  linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.9)),
+    background-image: linear-gradient( to bottom, #5555558c, #3333334d),
         url('../img/background.JPG');
     filter: blur(4px);
    position: fixed;
@@ -286,8 +283,11 @@ button {
     /* box-shadow: 0 0 1px grey; */
 }
 button a:hover, button a:link {
-  color: #339999;
-  text-shadow: 0 0 5px white;
+  color: white;
+  text-shadow: 0 0 5px grey;
+}
+a:visted {
+    color:whitesmoke;
 }
 buttonContainer {
     display: block;
@@ -325,6 +325,10 @@ buttonContainer {
 h1.middle {
     margin-bottom: 10%;
 }
+h1.middle.mainQ {
+    color:white;
+    font-size: -webkit-xxx-large;
+}
 #buttonNo{
     color:#FF6644;
 }
@@ -338,15 +342,13 @@ h1.middle {
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
-  background-color:rgba(255, 255, 255, 0.4) ;
+  background-color:#3da24b ;
   border: none;
   border-radius: 45px;
   cursor: pointer;
   outline: none;
 }
-a:visited {
-    color: #555;
-}
+
 .estimate {
     background: #52b760;
     padding: 15px;
