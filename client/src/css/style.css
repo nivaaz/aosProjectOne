@@ -22,8 +22,7 @@ body{
         url('../img/background.JPG');
     filter: blur(4px);
    position: fixed;
-    z-index: -1;  
-    height: 100%;
+    z-index: -1; 
     top: -20px;
     left: -50px;
     right: -50px;
@@ -164,6 +163,10 @@ header .title {
     padding: 10px; 
     padding-bottom: 20px;
 }
+.subItem{
+    display:grid;
+    grid-template-rows: 7fr 1fr;
+}
 h1 {
     font-size: x-large;
 }
@@ -213,13 +216,15 @@ h1 {
 }
 .addedcont {
     display:grid;
-    grid-template-columns: 5fr 1fr 1fr 1fr;
+    grid-template-columns: 5fr 1fr 1fr;
 } 
 #mark{
     display: inline-block;
 }
 .addSubject {
     margin: 0 auto;
+    display:grid;
+    grid-template-columns: 7fr 1fr;
 }
 .addSubject select {
     width: 75%;
@@ -282,7 +287,7 @@ button {
     background: white;
     /* box-shadow: 0 0 1px grey; */
 }
-button a:hover, button a:link {
+button a:hover, button a:link, button a:visited {
   color: white;
   text-shadow: 0 0 5px grey;
 }
@@ -301,6 +306,7 @@ buttonContainer {
     border-radius: 100%;
     padding: 5px;  
     vertical-align: middle;
+    margin: auto;
 }
 .add, .done, .edit{
     color: white;
@@ -412,10 +418,11 @@ display: inline-block;
 footer{
     height: 10%;
     padding: 20px;
-    background:#ccc;
     color: white;
     vertical-align: middle;
     text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr; 
 }
 footer a:link, footer a:visited{
    font-family: 'Lato', sans-serif;

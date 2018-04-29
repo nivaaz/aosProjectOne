@@ -20,6 +20,15 @@
     font-weight: initial;
     color: #333333;
 }
+.subItem {
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+}
+.addedcont {
+    display:grid;
+    grid-template-columns: 5fr 1fr 1fr;
+} 
+
 .ATAR.reverse{
     text-align: center;
     margin:auto;
