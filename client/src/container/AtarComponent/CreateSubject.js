@@ -23,39 +23,73 @@ export class CreateSubject extends Component {
         const renderOptions = subData.name.map((Name, index) =>
         <option key = {index}> {Name}   </option>
         );
-         return (
-            <form className = "formAdd" onSubmit={this.handleCreate.bind(this)} >
-               <div className = "markL" 
-                        id="left">
-                    <h2 className="title"> Add subject </h2>
-                    <select name="subSelect" 
-                                type ="text" 
-                                placeholder = "Add subject"
-                                defaultValue="Standard English" 
-                                ref="createInput">
-                                { renderOptions }
-                    </select>  
-                </div>
+         if(window.screen.width > 420){
+            return (
+                <form className = "formAdd" onSubmit={this.handleCreate.bind(this)} >
+                   <div className = "markL" 
+                            id="left">
+                        <h2 className="title"> Add subject </h2>
+                        <select name="subSelect" 
+                                    type ="text" 
+                                    placeholder = "Add subject"
+                                    defaultValue="Standard English" 
+                                    ref="createInput">
+                                    { renderOptions }
+                        </select>  
+                    </div>
+    
+                    <div className = "markR"
+                             id="right">
+                        <h2 className="title">Add mark </h2>
+                        <input name= "markInput" 
+                                    id="markInput" 
+                                    defaultValue='75' 
+                                    type="number" 
+                                    ref="createMark" 
+                                    step="0.5"/>
+                    </div> 
+    
+                    <div className = "buttonContainer">
+                                <button id = "addButton" >
+                                  <a>  <i className="fas fa-plus add"></i> </a>
+                                </button> 
+                                <h1> {this.state.error} </h1>
+                    </div>
+            </form>
+            );
+         }else {
+            return (
+                <form className = "formAdd" onSubmit={this.handleCreate.bind(this)} >
+                   <div className = "addSubCont" >
+                        <h2 className="title"> Add subject </h2>
+                        <select name="subSelect" 
+                                    type ="text" 
+                                    placeholder = "Add subject"
+                                    defaultValue="Standard English" 
+                                    ref="createInput">
+                                    { renderOptions }
+                        </select>  
+                    </div>
+    
+                    <div className = "addMarkCont">
+                        <h2 className="title">Add mark </h2>
+                        <input name= "markInput" 
+                                    id="markInput" 
+                                    defaultValue='75' 
+                                    type="number" 
+                                    ref="createMark" 
+                                    step="0.5"/>
+                    </div> 
 
-                <div className = "markR"
-                         id="right">
-                    <h2 className="title">Add mark </h2>
-                    <input name= "markInput" 
-                                id="markInput" 
-                                defaultValue='75' 
-                                type="number" 
-                                ref="createMark" 
-                                step="0.5"/>
-                </div> 
-
-                <div className = "buttonContainer">
-                            <button id = "addButton" >
-                              <a>  <i className="material-icons add"> add </i> </a>
-                            </button> 
-                            <h1> {this.state.error} </h1>
-                </div>
-        </form>
-        );
+                    <div className = "addButtonCont">
+                                <button id = "addButton" >
+                                  <a>  <i className="fas fa-plus add"></i> </a>
+                                </button> 
+                                <h1> {this.state.error} </h1>
+                    </div>
+            </form>
+            );
+         }
      }
 
      handleCreate(e){

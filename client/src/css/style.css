@@ -69,14 +69,13 @@ REVERSE ATAR
     font-size: 30px;
 }
 input.goalAtar {
-    color: #52b760;
-    text-shadow: 0px 0px 30px white;
+    color: white;
     background: transparent;
     width: auto;
     text-align: center;
     font-size: -webkit-xxx-large;    
     font-weight: bold;
-    box-shadow: 0px 30px 20px -25px lightgrey;
+    box-shadow: 0px 30px 20px -25px #6cc077;
 }
 /*
 HOME
@@ -112,7 +111,8 @@ HOME
 /* body {
 } */
 h1, h2, h3 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color:white;
 }
 header{
     padding: 50px;
@@ -122,6 +122,9 @@ header .title {
     text-transform: uppercase;
     color: white;
 }
+input{
+    color: #52b052;
+}
 .calcTitle{
     grid-column-start: 1;
     grid-column-end: 4;
@@ -129,7 +132,7 @@ header .title {
     font-size: xx-large;
     text-align: center;
     font-weight: initial;
-    color: #333333;
+    color: #eee;
     text-transform: uppercase;
 }
 .partContainer{
@@ -167,8 +170,9 @@ header .title {
     display:grid;
     grid-template-rows: 7fr 1fr;
 }
-h1 {
+h1, h2, h3 {
     font-size: x-large;
+    color: white;
 }
 /* #left {
     display: inline-block;
@@ -190,7 +194,8 @@ h1 {
     border-radius: 20px;
     display:inline-block;
     /*FONTS*/
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
     font-size: 150%;
     text-transform: uppercase;
 }
@@ -202,7 +207,8 @@ h1 {
     font-size: 150%;
     border-radius: 20px;
     display:inline-block;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
 }
 .scaledMark {
     background : white;
@@ -212,11 +218,12 @@ h1 {
     font-size: 150%;
     border-radius: 20px;
     display:inline-block;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
 }
 .addedcont {
     display:grid;
-    grid-template-columns: 5fr 1fr 1fr;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
 } 
 #mark{
     display: inline-block;
@@ -224,11 +231,11 @@ h1 {
 .addSubject {
     margin: 0 auto;
     display:grid;
-    grid-template-columns: 7fr 1fr;
 }
 .addSubject select {
     width: 75%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
     font-size: 150%;
     text-transform: uppercase;
 }
@@ -247,7 +254,8 @@ select {
     border:hidden;
     border-radius: 20px;
     color: #52b760;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
     font-size: 150%;
     /* width: 60%; */
     margin:10px;
@@ -270,7 +278,7 @@ input{
     border:hidden;
     border-radius: 20px;
     /*color: #52b052;*/
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 150%;
     background-color: white;
    }
@@ -282,9 +290,9 @@ button {
     border:hidden;
     border-radius: 100%;
     color: white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 150%;
-    background: white;
+    background: transparent;
     /* box-shadow: 0 0 1px grey; */
 }
 button a:hover, button a:link, button a:visited {
@@ -311,17 +319,11 @@ buttonContainer {
 .add, .done, .edit{
     color: white;
 }
+.add{
+    font-size: unset;
+}
 .cancel, .delete{
     color: white;
-}
-.add{
-    font-size:40px;
-}
-#addButton{
-    width: 50px;
-    height: 50px;
-    padding:0;
-    color:#336699;
 }
 .btnWrapper{
     display : grid;
@@ -343,7 +345,8 @@ h1.middle.mainQ {
 }
 #buttonYes, #buttonNo, #buttonMaybe{
   padding: 40px;    
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -383,9 +386,10 @@ h1.middle.mainQ {
     color: black;
 }
 .ATAR #estimated {
-    border-style: solid;
-    border-color: #52b760;    
+   color:white;
+   background:#11111145;  
     border-radius: 50px;
+    font-size:xx-large;
 }
 .middle{
     text-align: center;
@@ -403,7 +407,8 @@ h1.middle.mainQ {
     margin: 5%;
 }
 .info {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
     color: grey;
 }
 .markL{ 
@@ -425,15 +430,32 @@ footer{
     grid-template-columns: 1fr 1fr; 
 }
 footer a:link, footer a:visited{
-   font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color:white;
 }
 .error {
     color: #FF6644;
     text-align: center;
 }
+.subHold{
+    display:grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+}
 @media screen and (min-width: 480px) {
     .partition{
         display: block;
+    }
+   select{
+        font-size:  unset;
+        margin: 0;
+    }
+    .title{
+        font-size: unset;
+    }
+    input#markInput{
+        font-size:  unset;  
+    }
+    .addedSubject{
+        width: 90%;
     }
 }

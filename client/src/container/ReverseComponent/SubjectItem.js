@@ -12,7 +12,6 @@ export class SubjectItem extends Component {
        renderSubjectSection (){
            const {hsc,  name, scaled, isCompleted } = this.props;
            const subjectStyle = {
-               color: isCompleted ? '#52006' : '#52b70',
                cursor: 'pointer'
            }
            if (this.state.isEditing){
@@ -30,21 +29,45 @@ export class SubjectItem extends Component {
                    </form>
                );
            }
-           return (
-                   <div className = "addedcont" >
-                        <h3 className = "addedSubject" >
-                           {name}
-                       </h3>   
-                       <h3 className = "addedMark" >
-                           {2*hsc}
-                       </h3> 
-                       <h3 className = "scaledMark" >
-                           {2*scaled}
-                       </h3>
-                       
-                       {this.renderActionSection()}
-                   </div> 
-           );
+          if (window.screen.width<420){
+            return (
+                <div className = "addedcont" >
+                <h3 className = "addedSubject" >
+                   {name}
+               </h3>   
+             <div className = "subHold">
+                <div className = "mark" >
+                <h1> HSC </h1>
+                <h3 className = "addedMark" >
+                    {2*hsc}
+                </h3> 
+                </div>
+                <div  className = "mark">
+                <h1> Scaled </h1>
+                <h3 className = "scaledMark" >
+                        {2*scaled}
+                </h3>
+                </div>           
+                {this.renderActionSection()}
+                  </div>   
+           </div> 
+                )
+          }
+          else{
+               return (
+            <div className = "addedcont" >
+            <h3 className = "addedSubject" >
+               {name}
+           </h3>   
+           <h3 className = "addedMark" >
+               {2*hsc}
+           </h3> 
+           <h3 className = "scaledMark" >
+                {2*scaled}
+           </h3>
+           {this.renderActionSection()}
+       </div> 
+            )}
        }
        renderEditingSection(){
         if (this.state.isEditing){

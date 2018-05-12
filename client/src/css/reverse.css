@@ -18,17 +18,10 @@
     font-size: xx-large;
     text-align: center;
     font-weight: initial;
-    color: #333333;
 }
 .subItem {
     display: grid;
-    grid-template-columns: 7fr 1fr;
-}
-.addedcont {
-    display:grid;
-    grid-template-columns: 5fr 1fr 1fr;
 } 
-
 .ATAR.reverse{
     text-align: center;
     margin:auto;
@@ -58,10 +51,139 @@
 }
 
 input.goalAtar:focus{
-    background : rgba(255, 255, 255, 0.5);
+    background : #11111145;
     color: #52b760;
 }
 input.goalAtar:hover{
     cursor: pointer;
-    box-shadow: 0px 30px 20px -25px #52b760;
+    box-shadow: 0px 30px 20px -25px #eee;
+}
+.subHold{
+    display:grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+}
+/*****RESPONSIVE DESIGN******/
+@media screen and (max-width: 420px) {
+    .headingCont{
+        display:block;
+        font-size:x-large;
+    }
+    .mark{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .btnWrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #buttonNo, #buttonYes, #buttonMaybe{
+        font-size: 15px;
+        margin: 10px;
+    }
+    button{
+        margin: auto;    
+        background:transparent;
+    }
+    .formEdit{
+        margin:0;
+    }
+    .calcTitle.reverse{
+        color :white;
+        font-size: x-large;
+    }
+    input.goalAtar{
+        font-weight: normal;
+    }
+    .partContainer{
+        display:unset;
+    }
+    select{
+        margin: 0;
+        width:90%;
+    }
+    .markL select{
+        width: 90%;
+    }
+    .markL, .markR{
+        width:unset; 
+        margin: 0;
+    }
+    .formAdd{
+        display:grid;
+        grid-template-columns: 5fr 2fr 1fr;
+        grid-column-gap: 2px;
+    }
+    h1{
+        font-size: initial;
+        color: white;
+        margin: auto;
+    }
+    .info{
+        color:#eee;
+    }
+    .addedCont{
+        font-size:smaller;
+    }
+    .addButtonCont{
+        margin:auto;
+    }
+    .subItem{
+        grid:unset;
+    }
+    .addedcont{
+        grid:unset;
+    }
+    .addedSubject{
+        font-size:initial;
+    }
+    .addedMark, .scaledMark{
+        font-size:small;
+        margin:auto;
+    }
+    .partition{
+        display: block;
+    }
+    .addSubject{
+        grid-template-columns: 6fr 1fr;
+    }
+   select{
+        font-size:  unset;
+        width: 100%;
+        margin: 0;
+    }
+    .title{
+        font-size: unset;
+    }
+    input{
+        margin: 0;
+        font-size:unset;
+        color: #52b760; 
+        width: 100%;       
+    }
+    #markInput{
+        width: 70%;
+    }
+    .addedSubject{
+        width: 90%;
+        font-size:unset;
+    }
+    .ATAR #estimated{
+        background: #11111145;
+        border: none;
+        padding:15px;
+    }
+    .ATAR h1{
+        color: #eee;
+        font-size: xx-large;
+    }
+    .ad h3{
+        font-size: smaller;
+    }
+    .ad{
+        border-color:transparent;
+    }
+    .estimate {
+        font-size: smaller;
+    }
+
 }
