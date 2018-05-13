@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "aosProjectOne Atar Calculator Frontend",
   "author": "nks",
-  "engines": {
-    "node": "5.0.3" 
-  }, 
   "devDependencies": {
     "react-scripts": "1.0.7"
   },
