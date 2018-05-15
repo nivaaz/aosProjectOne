@@ -14,9 +14,6 @@ html {
 body{
     margin:0;
 }
-.reactContainer{
-  
-}
 .backgroundBlur{
     background-image: linear-gradient( to bottom, #5555558c, #3333334d),
         url('../img/background.JPG');
@@ -110,7 +107,7 @@ HOME
 /**PARTITION**/
 /* body {
 } */
-h1, h2, h3 {
+h1, h2, h3,p {
     font-family: 'Open Sans', sans-serif;
     color:white;
 }
@@ -408,8 +405,7 @@ h1.middle.mainQ {
 }
 .info {
     font-family: 'Open Sans', sans-serif;
-
-    color: grey;
+    color: lightgrey;
 }
 .markL{ 
  display: inline-block;
